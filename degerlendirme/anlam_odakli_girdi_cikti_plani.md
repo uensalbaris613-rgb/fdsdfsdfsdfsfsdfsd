@@ -1,7 +1,7 @@
 # Anlam Odaklı Girdi ve Çıktı Planı — Sıfırdan B2.2'ye
 
 **Mevcut 180 günlük plana entegre sürüm** · 12 Ekim 2026
-İlgili belge: [180 günlük planın değerlendirmesi](180_gunluk_plan_degerlendirmesi.md)
+İlgili belgeler: [180 günlük planın değerlendirmesi](180_gunluk_plan_degerlendirmesi.md) · **Günlük uygulama için:** [8 basamaklı uygulama planı](girdi_cikti_uygulama_plani.md) (mevcut planınıza blok blok yerleşen, haftalık hacimleri hesaplanmış sürüm)
 
 Bu belge iki soruyu yanıtlar:
 1. **Nasıl kurulur?** Anlam odaklı girdi (MFI: okuma, dinleme, izleme) ve anlam odaklı çıktı (MFO: konuşma, yazma) planı hangi kurallara göre seçilir ve ayarlanır?

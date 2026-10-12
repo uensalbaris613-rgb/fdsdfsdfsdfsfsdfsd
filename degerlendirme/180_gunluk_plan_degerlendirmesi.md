@@ -498,7 +498,7 @@ Ayrıntı için §6'daki doğrulama tablosuna bakın. Öne çıkanlar: ❓ "Oqou
 
 ## 8. Önerilen revizyon (planı bozmadan)
 
-Okuma, dinleme, yazma ve konuşma bloklarının seviye seviye ayrıntılı hali ayrı bir belgede: [Anlam Odaklı Girdi ve Çıktı Planı](anlam_odakli_girdi_cikti_plani.md).
+Okuma, dinleme, yazma ve konuşma bloklarının seviye seviye ayrıntılı hali ayrı belgelerde: [8 basamaklı uygulama planı](girdi_cikti_uygulama_plani.md) ve araştırma gerekçeleri için [Anlam Odaklı Girdi ve Çıktı Planı](anlam_odakli_girdi_cikti_plani.md).
 
 ### 8.1 İlkeler
 
