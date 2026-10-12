@@ -498,6 +498,8 @@ Ayrıntı için §6'daki doğrulama tablosuna bakın. Öne çıkanlar: ❓ "Oqou
 
 ## 8. Önerilen revizyon (planı bozmadan)
 
+Okuma, dinleme, yazma ve konuşma bloklarının seviye seviye ayrıntılı hali ayrı bir belgede: [Anlam Odaklı Girdi ve Çıktı Planı](anlam_odakli_girdi_cikti_plani.md).
+
 ### 8.1 İlkeler
 
 1. **Zaman bütçesi gerçek olsun:** Her bloğa içindeki işlerin gerçek süresi yazılsın; 8 saat = 6–6,5 saat yoğun + 1,5–2 saat hafif.
