@@ -1,0 +1,2529 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nihai Dört Bileşen Planı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Gentium+Book+Plus:ital,wght@0,400;0,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: a study handbook. A 180-day ruler under the title, a sticky section index beside the text on wide screens, one column on phones. */
+:root {
+  --bg: #f4f6f9;
+  --surface: #ffffff;
+  --surface-2: #eaeff5;
+  --ink: #14202e;
+  --ink-2: #43505f;
+  --muted: #5f6c7b;
+  --line: #d5dde7;
+  --rule: #14202e;
+  --accent: #1c5cab;
+  --accent-soft: #e3edf9;
+  --p1: #86b6ef;
+  --p2: #5598e7;
+  --p3: #256abf;
+  --p4: #184f95;
+  --p5: #0d366b;
+  --p1-ink: #14202e;
+  --p2-ink: #14202e;
+  --p3-ink: #ffffff;
+  --p4-ink: #ffffff;
+  --p5-ink: #ffffff;
+  --ok-fg: #1d6b3f;
+  --ok-bg: #e3f3e9;
+  --lim-fg: #7a4b00;
+  --lim-bg: #fbefd9;
+  --bad-fg: #a3261f;
+  --bad-bg: #fbe5e3;
+  --unk-fg: #43505f;
+  --unk-bg: #eaeff5;
+  --tip-bg: #14202e;
+  --tip-fg: #ffffff;
+  --font-display: "Bricolage Grotesque", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-ipa: "Gentium Book Plus", "Charis SIL", "Doulos SIL", "Noto Serif", "Times New Roman", serif;
+  --radius: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e141b;
+    --surface: #16202b;
+    --surface-2: #1d2a38;
+    --ink: #e6edf5;
+    --ink-2: #b9c5d1;
+    --muted: #93a1b0;
+    --line: #2b3846;
+    --rule: #b9c5d1;
+    --accent: #7fb2ef;
+    --accent-soft: #1b2d44;
+    --p1: #184f95;
+    --p2: #256abf;
+    --p3: #3987e5;
+    --p4: #6da7ec;
+    --p5: #9ec5f4;
+    --p1-ink: #f2f6fb;
+    --p2-ink: #f2f6fb;
+    --p3-ink: #0b1118;
+    --p4-ink: #0b1118;
+    --p5-ink: #0b1118;
+    --ok-fg: #7fd3a2;
+    --ok-bg: #17322a;
+    --lim-fg: #f0c36d;
+    --lim-bg: #3a2e15;
+    --bad-fg: #f4a29b;
+    --bad-bg: #3d1f1d;
+    --unk-fg: #b9c5d1;
+    --unk-bg: #1d2a38;
+    --tip-bg: #e6edf5;
+    --tip-fg: #0e141b;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0e141b;
+  --surface: #16202b;
+  --surface-2: #1d2a38;
+  --ink: #e6edf5;
+  --ink-2: #b9c5d1;
+  --muted: #93a1b0;
+  --line: #2b3846;
+  --rule: #b9c5d1;
+  --accent: #7fb2ef;
+  --accent-soft: #1b2d44;
+  --p1: #184f95;
+  --p2: #256abf;
+  --p3: #3987e5;
+  --p4: #6da7ec;
+  --p5: #9ec5f4;
+  --p1-ink: #f2f6fb;
+  --p2-ink: #f2f6fb;
+  --p3-ink: #0b1118;
+  --p4-ink: #0b1118;
+  --p5-ink: #0b1118;
+  --ok-fg: #7fd3a2;
+  --ok-bg: #17322a;
+  --lim-fg: #f0c36d;
+  --lim-bg: #3a2e15;
+  --bad-fg: #f4a29b;
+  --bad-bg: #3d1f1d;
+  --unk-fg: #b9c5d1;
+  --unk-bg: #1d2a38;
+  --tip-bg: #e6edf5;
+  --tip-fg: #0e141b;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+a.xref { white-space: nowrap; font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+strong { font-weight: 600; }
+code { font-family: var(--font-mono); font-size: 0.9em; }
+
+.page {
+  max-width: 82rem;
+  margin: 0 auto;
+  padding-inline: clamp(16px, 4vw, 40px);
+  padding-block: 28px 72px;
+}
+
+/* ---------- masthead */
+.masthead { max-width: 60rem; display: grid; gap: 14px; padding-block: 4px 18px; }
+.eyebrow {
+  margin: 0;
+  font: 600 0.78rem/1.3 var(--font-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.95rem, 1.35rem + 2.5vw, 3.1rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.lede { margin: 0; font-size: 1.125rem; color: var(--ink-2); max-width: 62ch; }
+.meta { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 0.92rem; color: var(--ink-2); max-width: 72ch; }
+.meta strong { color: var(--ink); }
+.legend { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; font-size: 0.875rem; color: var(--ink-2); }
+.legend-label { font-weight: 600; color: var(--ink); }
+.legend-item { display: inline-flex; gap: 2px; align-items: center; }
+
+/* ---------- verification marks */
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.45em;
+  height: 1.45em;
+  padding: 0 0.3em;
+  margin-right: 0.35em;
+  border-radius: 5px;
+  font: 600 0.8rem/1 var(--font-body);
+  vertical-align: 0.06em;
+}
+.mark.ok { color: var(--ok-fg); background: var(--ok-bg); }
+.mark.lim { color: var(--lim-fg); background: var(--lim-bg); }
+.mark.bad { color: var(--bad-fg); background: var(--bad-bg); }
+.mark.unk { color: var(--unk-fg); background: var(--unk-bg); }
+
+.ipa { font-family: var(--font-ipa); font-size: 1.08em; white-space: nowrap; }
+
+/* ---------- 180-day ruler */
+.ruler {
+  margin: 6px 0 30px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 14px;
+}
+.ruler figcaption { display: flex; flex-wrap: wrap; gap: 2px 14px; align-items: baseline; }
+.ruler-title { font: 700 1.05rem/1.3 var(--font-display); }
+.ruler-hint { font-size: 0.85rem; color: var(--muted); }
+.ruler-body { position: relative; }
+.ruler-marks { position: relative; height: 18px; z-index: 2; }
+.tick { position: absolute; top: 0; height: 18px; cursor: default; }
+.tick::before { content: ""; position: absolute; left: 50%; transform: translateX(-50%); width: 22px; top: -4px; bottom: -4px; }
+.tick i {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2px;
+  width: 2px;
+  height: 12px;
+  border-radius: 1px;
+  background: var(--ink-2);
+}
+.tick.range i { width: 100%; height: 4px; bottom: 4px; border-radius: 2px; }
+.tick:hover i, .tick:focus-visible i { background: var(--accent); }
+.today-mark { position: absolute; top: 0; width: 0; height: 18px; }
+.today-mark::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: -2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 2px solid var(--surface);
+}
+.today-mark i { position: absolute; left: -1px; top: 10px; width: 2px; height: 46px; background: var(--ink); pointer-events: none; }
+.ruler-track, .ruler-days { display: grid; grid-template-columns: 28fr 35fr 42fr 28fr 47fr; gap: 2px; }
+.seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  min-width: 0;
+  text-decoration: none;
+  font: 600 0.85rem/1 var(--font-body);
+}
+.seg:first-child { border-radius: 6px 0 0 6px; }
+.seg:last-child { border-radius: 0 6px 6px 0; }
+.seg:hover, .seg:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; position: relative; z-index: 1; }
+.seg.p1 { background: var(--p1); color: var(--p1-ink); }
+.seg.p2 { background: var(--p2); color: var(--p2-ink); }
+.seg.p3 { background: var(--p3); color: var(--p3-ink); }
+.seg.p4 { background: var(--p4); color: var(--p4-ink); }
+.seg.p5 { background: var(--p5); color: var(--p5-ink); }
+.ruler-days {
+  margin-top: 6px;
+  font: 500 0.72rem/1.2 var(--font-body);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  white-space: nowrap;
+}
+.ruler-tip {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  transform: translateX(-50%);
+  max-width: min(20rem, 86vw);
+  padding: 6px 9px;
+  border-radius: 6px;
+  background: var(--tip-bg);
+  color: var(--tip-fg);
+  font-size: 0.8rem;
+  line-height: 1.35;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 5;
+}
+.milestones {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 6px 18px;
+  font-size: 0.86rem;
+}
+.milestones li { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
+.ms-day { flex: none; min-width: 5.8rem; font: 500 0.78rem/1.4 var(--font-mono); color: var(--ink); font-variant-numeric: tabular-nums; }
+.ms-what { color: var(--ink-2); }
+
+/* ---------- layout + index */
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; align-items: start; }
+.toc-side { display: none; }
+main { min-width: 0; }
+@media (min-width: 1100px) {
+  .layout { grid-template-columns: 14.5rem minmax(0, 1fr); gap: 44px; }
+  .toc-side {
+    display: block;
+    position: sticky;
+    top: calc(env(safe-area-inset-top, 0px) + 16px);
+    max-height: calc(100vh - 32px - env(safe-area-inset-top, 0px));
+    overflow: auto;
+    padding-right: 4px;
+  }
+  .toc-mobile { display: none; }
+}
+.toc-title {
+  margin: 0 0 8px;
+  font: 600 0.75rem/1.3 var(--font-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; font-size: 0.9rem; }
+.toc a {
+  display: grid;
+  grid-template-columns: 2.7rem minmax(0, 1fr);
+  gap: 4px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  color: var(--ink-2);
+  text-decoration: none;
+  line-height: 1.35;
+}
+.toc a:hover { background: var(--surface-2); color: var(--ink); }
+.toc a[aria-current="true"] { background: var(--accent-soft); color: var(--ink); }
+.toc-num { font: 500 0.78rem/1.75 var(--font-mono); color: var(--muted); }
+.toc-mobile { margin-bottom: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.toc-mobile summary { cursor: pointer; padding: 12px 14px; font-weight: 600; }
+.toc-mobile nav { padding: 0 8px 10px; }
+
+/* ---------- today panel */
+.today {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  scroll-margin-top: 16px;
+}
+.today-top { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; justify-content: space-between; }
+.today h2 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; line-height: 1.2; }
+.today-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0; }
+.today-form label { font-size: 0.9rem; color: var(--ink-2); }
+.today-form input {
+  font: 500 0.95rem/1.2 var(--font-body);
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+}
+.btn-quiet {
+  font: 500 0.88rem/1.2 var(--font-body);
+  padding: 7px 11px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.btn-quiet:hover { border-color: var(--accent); color: var(--accent); }
+.today-status { margin: 10px 0 16px; color: var(--muted); font-size: 0.92rem; max-width: 72ch; }
+.today-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+@media (min-width: 760px) { .today-grid { grid-template-columns: minmax(12rem, 15rem) minmax(0, 1fr); gap: 28px; } }
+.today-pos { display: grid; align-content: start; gap: 8px; }
+.today-day { font: 600 2.3rem/1.05 var(--font-body); }
+.today-sub { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; color: var(--ink-2); }
+.today-next, .today-check { margin: 0; font-size: 0.92rem; color: var(--ink-2); }
+.today-detail { min-width: 0; }
+.mini-h {
+  margin: 0 0 8px;
+  font: 600 0.75rem/1.3 var(--font-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.kv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(7.4rem, 1fr)); gap: 8px; margin: 0 0 18px; }
+.kv-grid .kv { background: var(--surface-2); border-radius: 8px; padding: 8px 10px; min-width: 0; }
+.kv dt { font-size: 0.78rem; color: var(--muted); line-height: 1.3; }
+.kv dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.kv-grid .kv-total { background: var(--accent-soft); }
+.kv-list { margin: 0; display: grid; gap: 8px; }
+.kv-list .kv { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.kv-list .kv:last-child { border-bottom: 0; padding-bottom: 0; }
+.kv-list dd { font-weight: 400; color: var(--ink); }
+@media (min-width: 640px) { .kv-list .kv { grid-template-columns: 11rem minmax(0, 1fr); gap: 14px; } }
+
+/* ---------- sections */
+.sec { margin-top: 60px; scroll-margin-top: 16px; }
+.sec-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  border-top: 2px solid var(--rule);
+  padding-top: 14px;
+  margin-bottom: 14px;
+}
+.sec-num { flex: none; font: 500 0.9rem/1.2 var(--font-mono); color: var(--accent); }
+.sec h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.45rem, 1.15rem + 1.1vw, 1.95rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.sec h3 { margin: 32px 0 10px; font: 600 1.15rem/1.3 var(--font-body); text-wrap: balance; scroll-margin-top: 16px; }
+.h-num { margin-right: 6px; font: 500 0.85rem/1 var(--font-mono); color: var(--muted); }
+.sec p, .sec li { max-width: 72ch; }
+.sec p { margin: 0 0 12px; }
+.sec ul, .sec ol { padding-left: 1.3rem; margin: 0 0 14px; }
+.sec li + li { margin-top: 4px; }
+.sec li > ul { margin-top: 4px; }
+
+.sub-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px; margin: 30px 0 10px; }
+.sub-head h3 { margin: 0; }
+.sub-note { margin: 0 !important; color: var(--muted); font-size: 0.9rem; }
+.block { margin: 0; }
+
+.loop { list-style: none; counter-reset: step; margin: 0; padding: 0 !important; display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 8px; }
+.loop li {
+  counter-increment: step;
+  position: relative;
+  display: grid;
+  gap: 2px;
+  margin: 0 !important;
+  max-width: none;
+  padding: 10px 12px 10px 38px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.loop li::before { content: counter(step); position: absolute; left: 13px; top: 10px; font: 600 0.88rem/1.5 var(--font-mono); color: var(--accent); }
+.step-name { font-weight: 600; line-height: 1.3; }
+.step-kind { font-size: 0.82rem; color: var(--muted); }
+
+.figures { list-style: none; margin: 0; padding: 0 !important; display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 12px 26px; }
+.figures li { margin: 0 !important; max-width: none; display: grid; padding-top: 8px; border-top: 1px solid var(--line); }
+.fig-val { font: 600 1.35rem/1.25 var(--font-body); }
+.fig-lab { color: var(--ink-2); font-size: 0.92rem; }
+
+.callout { margin: 22px 0 0; padding: 14px 16px; border-radius: 8px; background: var(--accent-soft); max-width: 72ch; }
+
+/* ---------- tables */
+.table-wrap {
+  overflow-x: auto;
+  margin: 12px 0 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+table { width: 100%; border-collapse: collapse; font-size: 0.93rem; line-height: 1.5; }
+.cols-3 { min-width: 34rem; }
+.cols-4 { min-width: 42rem; }
+.cols-5, .cols-6 { min-width: 50rem; }
+.cols-7 { min-width: 58rem; }
+.cols-8 { min-width: 66rem; }
+table#minutes { min-width: 46rem; }
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+thead th { background: var(--surface-2); color: var(--ink-2); font-weight: 600; font-size: 0.82rem; line-height: 1.35; }
+tbody tr:last-child > td { border-bottom: 0; }
+td:first-child { font-weight: 500; }
+#minutes td { font-variant-numeric: tabular-nums; white-space: nowrap; }
+#minutes td:last-child { white-space: normal; }
+#minutes .chip { margin-right: 8px; }
+#minutes .days { font-size: 0.8rem; color: var(--muted); }
+#minutes tr.is-current > td { background: var(--accent-soft); }
+
+.chip {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font: 600 0.74rem/1.2 var(--font-body);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.chip.p1 { background: var(--p1); color: var(--p1-ink); }
+.chip.p2 { background: var(--p2); color: var(--p2-ink); }
+.chip.p3 { background: var(--p3); color: var(--p3-ink); }
+.chip.p4 { background: var(--p4); color: var(--p4-ink); }
+.chip.p5 { background: var(--p5); color: var(--p5-ink); }
+
+.cal tr { scroll-margin-top: 24px; }
+.cal td:first-child, .cal th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 6.6rem;
+  background: var(--surface);
+  box-shadow: 1px 0 0 var(--line);
+}
+.cal th:first-child { background: var(--surface-2); }
+.cal .wk { display: block; font-weight: 600; white-space: nowrap; }
+.cal .days { display: block; font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cal .chip { margin-top: 6px; }
+.cal td.same { color: var(--muted); }
+.cal tr:target > td, .cal tr.is-current > td { background: var(--accent-soft); }
+.cal tr.is-current > td:first-child { box-shadow: inset 3px 0 0 var(--accent), 1px 0 0 var(--line); }
+
+/* ---------- checklist */
+.checklist { list-style: none; padding: 0 !important; margin: 10px 0 18px; display: grid; gap: 6px; }
+.checklist li { margin: 0 !important; }
+.checklist label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  max-width: 40rem;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  cursor: pointer;
+}
+.checklist input { flex: none; width: 1.1rem; height: 1.1rem; margin: 0.22rem 0 0; accent-color: var(--accent); }
+.checklist input:checked + span { color: var(--muted); text-decoration: line-through; }
+
+/* ---------- prompts */
+.prompt { margin: 14px 0 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+.prompt figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--line);
+}
+.prompt-id { font: 600 0.82rem/1.2 var(--font-mono); color: var(--accent); }
+.prompt-title { flex: 1 1 14rem; min-width: 0; font-weight: 600; line-height: 1.35; }
+.copy {
+  font: 600 0.82rem/1.2 var(--font-body);
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 11px;
+  cursor: pointer;
+}
+.copy:hover { border-color: var(--accent); color: var(--accent); }
+.prompt pre {
+  margin: 0;
+  padding: 14px;
+  overflow-x: auto;
+  font: 400 0.84rem/1.6 var(--font-mono);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+}
+.prompt pre code { font-size: inherit; }
+
+/* ---------- footer */
+.foot { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; }
+.foot p { margin: 0; max-width: 72ch; }
+
+</style>
+</head>
+<body>
+
+<div class="page" lang="tr">
+
+<header class="masthead">
+  <p class="eyebrow">Sıfırdan B2.2'ye · 180 gün · dil odaklı öğrenme hariç</p>
+  <h1>Telaffuz, anlam odaklı girdi, anlam odaklı çıktı ve akıcılık</h1>
+  <p class="lede">Dört bileşen için uygulayacağınız tek plan: en az bilişsel yük, en az kaynak. Dil odaklı planınız (Anki, Empower, Murphy) burada tasarlanmaz; yalnızca ona kalan süre gösterilir.</p>
+  <ul class="meta">
+    <li>Derin araştırmayla güncellenmiş, tek başına yeterli sürüm · 13 Ekim 2026</li>
+    <li><strong>Nasıl kullanılır:</strong> Uygulamak için <a class="xref" href="#s0">§0</a> (tek sayfa özet), <a class="xref" href="#s3">§3</a> (günlük döngü) ve <a class="xref" href="#s5">§5</a> (26 haftalık takvim) yeterli. Diğer bölümler "neden?" ve "nasıl?" sorularının cevabıdır; gerektiğinde bakın.</li>
+    <li>Önceki üç belge (<a href="https://github.com/uensalbaris613-rgb/fdsdfsdfsdfsfsdfsd/blob/claude/180-day-english-plan-s81skx/degerlendirme/anlam_odakli_girdi_cikti_plani.md" target="_blank" rel="noopener noreferrer">araştırma ve araç seti</a>, <a href="https://github.com/uensalbaris613-rgb/fdsdfsdfsdfsfsdfsd/blob/claude/180-day-english-plan-s81skx/degerlendirme/girdi_cikti_uygulama_plani.md" target="_blank" rel="noopener noreferrer">8 basamaklı uygulama planı</a>, <a href="https://github.com/uensalbaris613-rgb/fdsdfsdfsdfsfsdfsd/blob/claude/180-day-english-plan-s81skx/degerlendirme/en_az_kaynakla_dort_bilesen_plani.md" target="_blank" rel="noopener noreferrer">en az kaynakla plan</a>) yalnızca arka plan olarak kalır.</li>
+  </ul>
+  <p class="legend"><span class="legend-label">İşaretler</span>
+    <span class="legend-item"><span class="mark ok" aria-hidden="true">✓</span>doğrulandı ya da güçlü kanıt</span>
+    <span class="legend-item"><span class="mark lim" aria-hidden="true">≈</span>sınırlı ya da koşullu kanıt</span>
+    <span class="legend-item"><span class="mark bad" aria-hidden="true">✕</span>doğrulamayı geçemedi</span>
+    <span class="legend-item"><span class="mark unk" aria-hidden="true">?</span>doğrulanamadı</span>
+  </p>
+</header>
+
+
+<figure class="ruler" aria-labelledby="ruler-cap">
+  <figcaption id="ruler-cap"><span class="ruler-title">180 gün, beş faz</span><span class="ruler-hint">Bir faza dokunun: takvimde o fazın ilk haftası açılır. İşaretler deneme ve karar günleridir.</span></figcaption>
+  <div class="ruler-body">
+    <div class="ruler-marks"><span class="tick" tabindex="0" role="img" aria-label="Gün 90 · ilk tam IELTS denemesi" data-tip="Gün 90 · ilk tam IELTS denemesi" style="left:49.444%;width:0.556%"><i></i></span><span class="tick" tabindex="0" role="img" aria-label="Gün 120 · tam IELTS denemesi" data-tip="Gün 120 · tam IELTS denemesi" style="left:66.111%;width:0.556%"><i></i></span><span class="tick" tabindex="0" role="img" aria-label="Yaklaşık gün 145 · IELTS Progress Check" data-tip="Yaklaşık gün 145 · IELTS Progress Check" style="left:80.000%;width:0.556%"><i></i></span><span class="tick" tabindex="0" role="img" aria-label="Gün 150 · sınav tarihi kararı" data-tip="Gün 150 · sınav tarihi kararı" style="left:82.778%;width:0.556%"><i></i></span><span class="tick range" tabindex="0" role="img" aria-label="Gün 170–175 · iki tam deneme ve son karar" data-tip="Gün 170–175 · iki tam deneme ve son karar" style="left:93.889%;width:3.333%"><i></i></span><span class="tick" tabindex="0" role="img" aria-label="Gün 180 · sınav ya da kaydırılmış tarih" data-tip="Gün 180 · sınav ya da kaydırılmış tarih" style="left:99.444%;width:0.556%"><i></i></span><span class="today-mark" id="ruler-today" tabindex="0" role="img" aria-label="Bugün" data-tip="Bugün" hidden><i></i></span></div>
+    <div class="ruler-track"><a class="seg p1" href="#w1" data-tip="A1 · gün 1–28 (28 gün) · takvimde göster"><span>A1</span></a><a class="seg p2" href="#w5" data-tip="A2 · gün 29–63 (35 gün) · takvimde göster"><span>A2</span></a><a class="seg p3" href="#w10" data-tip="B1 · gün 64–105 (42 gün) · takvimde göster"><span>B1</span></a><a class="seg p4" href="#w16" data-tip="B2.1 · gün 106–133 (28 gün) · takvimde göster"><span>B2.1</span></a><a class="seg p5" href="#w20" data-tip="B2.2 · gün 134–180 (47 gün) · takvimde göster"><span>B2.2</span></a></div>
+    <div class="ruler-days"><span>1–28</span><span>29–63</span><span>64–105</span><span>106–133</span><span>134–180</span></div>
+    <div class="ruler-tip" id="ruler-tip" role="tooltip" hidden></div>
+  </div>
+  <ol class="milestones"><li><span class="ms-day">Gün 28</span><span class="ms-what">A1 çıkış ölçütü</span></li><li><span class="ms-day">Gün 63</span><span class="ms-what">A2 çıkış ölçütü</span></li><li><span class="ms-day">Gün 90</span><span class="ms-what">ilk tam IELTS denemesi</span></li><li><span class="ms-day">Gün 105</span><span class="ms-what">B1 çıkış ölçütü</span></li><li><span class="ms-day">Gün 120</span><span class="ms-what">tam IELTS denemesi</span></li><li><span class="ms-day">Gün 133</span><span class="ms-what">B2.1 çıkış ölçütü</span></li><li><span class="ms-day">Gün ~145</span><span class="ms-what">IELTS Progress Check</span></li><li><span class="ms-day">Gün 150</span><span class="ms-what">sınav tarihi kararı</span></li><li><span class="ms-day">Gün 170–175</span><span class="ms-what">iki tam deneme, son karar</span></li><li><span class="ms-day">Gün 180</span><span class="ms-what">sınav</span></li></ol>
+</figure>
+
+<div class="layout">
+  <nav class="toc-side" aria-label="İçindekiler"><p class="toc-title">İçindekiler</p><ol class="toc"><li><a href="#bugun"><span class="toc-num"></span><span class="toc-text">Bugün</span></a></li><li><a href="#s0"><span class="toc-num">§0</span><span class="toc-text">Tek sayfada plan</span></a></li><li><a href="#degisiklik"><span class="toc-num"></span><span class="toc-text">Bu sürümde ne değişti?</span></a></li><li><a href="#s1"><span class="toc-num">§1</span><span class="toc-text">Kaynaklar (6 temel, 1 süreli)</span></a></li><li><a href="#s2"><span class="toc-num">§2</span><span class="toc-text">Bilişsel yükü düşüren 8 kural</span></a></li><li><a href="#s3"><span class="toc-num">§3</span><span class="toc-text">Günlük döngü</span></a></li><li><a href="#s4"><span class="toc-num">§4</span><span class="toc-text">Fazlar, süreler ve çıkış ölçütleri</span></a></li><li><a href="#s5"><span class="toc-num">§5</span><span class="toc-text">26 haftalık takvim</span></a></li><li><a href="#s6"><span class="toc-num">§6</span><span class="toc-text">Telaffuz</span></a></li><li><a href="#s7"><span class="toc-num">§7</span><span class="toc-text">Anlam odaklı girdi</span></a></li><li><a href="#s8"><span class="toc-num">§8</span><span class="toc-text">Anlam odaklı çıktı</span></a></li><li><a href="#s9"><span class="toc-num">§9</span><span class="toc-text">Akıcılık</span></a></li><li><a href="#s10"><span class="toc-num">§10</span><span class="toc-text">Ölçüm ve karar kuralları</span></a></li><li><a href="#s11"><span class="toc-num">§11</span><span class="toc-text">Yeterlilik hesabı</span></a></li><li><a href="#s12"><span class="toc-num">§12</span><span class="toc-text">Araştırma özeti</span></a></li><li><a href="#s13"><span class="toc-num">§13</span><span class="toc-text">Kaynakça</span></a></li><li><a href="#ek-a"><span class="toc-num">Ek A</span><span class="toc-text">Yapay zekâ komutları</span></a></li><li><a href="#ek-b"><span class="toc-num">Ek B</span><span class="toc-text">Haftalık kayıt şablonu</span></a></li></ol></nav>
+  <main id="main">
+    <details class="toc-mobile"><summary>İçindekiler</summary><nav aria-label="İçindekiler"><ol class="toc"><li><a href="#bugun"><span class="toc-num"></span><span class="toc-text">Bugün</span></a></li><li><a href="#s0"><span class="toc-num">§0</span><span class="toc-text">Tek sayfada plan</span></a></li><li><a href="#degisiklik"><span class="toc-num"></span><span class="toc-text">Bu sürümde ne değişti?</span></a></li><li><a href="#s1"><span class="toc-num">§1</span><span class="toc-text">Kaynaklar (6 temel, 1 süreli)</span></a></li><li><a href="#s2"><span class="toc-num">§2</span><span class="toc-text">Bilişsel yükü düşüren 8 kural</span></a></li><li><a href="#s3"><span class="toc-num">§3</span><span class="toc-text">Günlük döngü</span></a></li><li><a href="#s4"><span class="toc-num">§4</span><span class="toc-text">Fazlar, süreler ve çıkış ölçütleri</span></a></li><li><a href="#s5"><span class="toc-num">§5</span><span class="toc-text">26 haftalık takvim</span></a></li><li><a href="#s6"><span class="toc-num">§6</span><span class="toc-text">Telaffuz</span></a></li><li><a href="#s7"><span class="toc-num">§7</span><span class="toc-text">Anlam odaklı girdi</span></a></li><li><a href="#s8"><span class="toc-num">§8</span><span class="toc-text">Anlam odaklı çıktı</span></a></li><li><a href="#s9"><span class="toc-num">§9</span><span class="toc-text">Akıcılık</span></a></li><li><a href="#s10"><span class="toc-num">§10</span><span class="toc-text">Ölçüm ve karar kuralları</span></a></li><li><a href="#s11"><span class="toc-num">§11</span><span class="toc-text">Yeterlilik hesabı</span></a></li><li><a href="#s12"><span class="toc-num">§12</span><span class="toc-text">Araştırma özeti</span></a></li><li><a href="#s13"><span class="toc-num">§13</span><span class="toc-text">Kaynakça</span></a></li><li><a href="#ek-a"><span class="toc-num">Ek A</span><span class="toc-text">Yapay zekâ komutları</span></a></li><li><a href="#ek-b"><span class="toc-num">Ek B</span><span class="toc-text">Haftalık kayıt şablonu</span></a></li></ol></nav></details>
+    
+<section id="bugun" class="today" aria-labelledby="bugun-title">
+  <div class="today-top">
+    <h2 id="bugun-title">Bugün</h2>
+    <form class="today-form" id="today-form" autocomplete="off">
+      <label for="start-date">Başlangıç tarihi</label>
+      <input type="date" id="start-date" name="start-date">
+      <button type="button" id="start-clear" class="btn-quiet">Temizle</button>
+    </form>
+  </div>
+  <p class="today-status" id="today-status">Örnek gösterim: 1. gün. Başlangıç tarihinizi seçin; bugünün günü, haftası ve hedefleri burada görünür. Tarih yalnızca bu tarayıcıda saklanır.</p>
+  <div class="today-grid">
+    <div class="today-pos">
+      <span class="today-day" id="t-day">Gün 1</span>
+      <span class="today-sub"><span id="t-week">1. hafta / 26</span> <span class="chip p1" id="t-phase">A1</span></span>
+      <p class="today-next" id="t-next">Sıradaki kontrol noktası: gün 28, A1 çıkış ölçütü (27 gün sonra).</p>
+      <p class="today-check" id="t-check">Günlük kontrol listesi: <a class="xref" href="#s3-list">§3</a></p>
+    </div>
+    <div class="today-detail">
+      <h3 class="mini-h">Bugünün süreleri (dk)</h3>
+      <dl class="kv-grid kv-min" id="t-min"><div class="kv"><dt>Telaffuz</dt><dd>30</dd></div><div class="kv"><dt>Okuma</dt><dd>60</dd></div><div class="kv"><dt>Dinleme</dt><dd>60</dd></div><div class="kv"><dt>Akşam hafif girdi</dt><dd>60</dd></div><div class="kv"><dt>Çıktı</dt><dd>60</dd></div><div class="kv"><dt>Akıcılık</dt><dd>30</dd></div><div class="kv kv-total"><dt>4 bileşen</dt><dd>300</dd></div><div class="kv kv-rest"><dt>Kalan</dt><dd>180 dil odaklı</dd></div></dl>
+      <h3 class="mini-h">Bu haftanın hedefleri</h3>
+      <dl class="kv-list" id="t-weekrow"><div class="kv"><dt>Okuma (düzey · haftalık kelime)</dt><dd>Starter; okurken dinleme, her bölüm 2–3 kez · ~10 bin</dd></div><div class="kv"><dt>Dinleme ve izleme</dt><dd>Bölüm sesleri (akşam tekrar)</dd></div><div class="kv"><dt>Telaffuz odağı</dt><dd>Ses sistemi, ses-yazım; /iː/ – /ɪ/ ( sheep/ship )</dd></div><div class="kv"><dt>Çıktı</dt><dd>10 sabit soruya sesli cevap (kayıt); 30–50 kelime kendini tanıtma</dd></div><div class="kv"><dt>Akıcılık</dt><dd>Dünkü bölümü hızlı yeniden okuma</dd></div><div class="kv"><dt>Ölçüm / karar</dt><dd>Gün 1: başlangıç kaydı ( §6.4 )</dd></div></dl>
+    </div>
+  </div>
+</section>
+
+    <section id="s0" class="sec" aria-labelledby="s0-title"><div class="sec-head"><span class="sec-num">§0</span><h2 id="s0-title">Tek sayfada plan</h2></div><div class="sub-head"><h3 id="s0-kaynaklar">Kaynaklar</h3><p class="sub-note">180 gün boyunca başka uygulama yok.</p></div>
+<div class="table-wrap"><table class="cols-4">
+<thead>
+<tr>
+<th>#</th>
+<th>Kaynak</th>
+<th>Ne için</th>
+<th>Ne zaman</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Sesli derecelendirilmiş kitap kütüphanesi</strong> (Xreading ya da Oxford Reading Club; ücretsiz yedek: ER Central + Mid-frequency Readers)</td>
+<td>Girdi, akıcılık, gölgeleme malzemesi, çıktının konusu</td>
+<td>1–180. gün</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ELSA Speak</strong></td>
+<td>Telaffuz: üretim + açık geri bildirim</td>
+<td>1–180. gün</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Tek bir sesli yapay zekâ asistanı</strong></td>
+<td>Konuşma partneri; yazma ve gecikmeli düzeltme geri bildirimi; IELTS canlandırma</td>
+<td>15–180. gün</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>BBC Learning English — 6 Minute English</strong></td>
+<td>Dinleme, gölgeleme</td>
+<td>~64–180. gün</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Tek bir dizi</strong>, İngilizce altyazıyla</td>
+<td>Akşam hafif girdisi (izleme)</td>
+<td>Başlama testini geçince (~64–90. gün)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>English Online canlı dersleri</strong> ya da tek bir eğitmen</td>
+<td>İnsanla etkileşim ve geri bildirim</td>
+<td>29–180. gün</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>English Accent Coach</strong> (süreli)</td>
+<td>Telaffuz: algı eğitimi</td>
+<td>Yalnızca 1–8. hafta, toplam ~400 dk</td>
+</tr>
+</tbody>
+</table></div>
+<p>Kaynak sayılmayan araçlar: telefonun ses kaydedicisi ve dikte (sesle yazma) özelliği, kronometre, Anki (dil odaklı planınız), son fazdaki IELTS deneme kitapları ("Son Faz" planınızda zaten var).</p>
+<p><strong>En az kaynakla da çalışır:</strong> Diziyi çıkarırsanız plan 5 sürekli kaynağa iner; akşam girdisi kütüphanenin sesli kitapları olur. Dizi yalnızca doğal konuşma ve motivasyon için önerilir.</p>
+<div class="block"><div class="sub-head"><h3 id="s0-dongu">Her gün aynı döngü</h3><p class="sub-note">Tek bir kitap bölümü dört bileşenin de malzemesidir. Ayrıntı: <a class="xref" href="#s3">§3</a>.</p></div><ol class="loop"><li><span class="step-name">Dünü hızlı tekrar</span><span class="step-kind">Akıcılık</span></li><li><span class="step-name">Yeni bölümü oku</span><span class="step-kind">Girdi</span></li><li><span class="step-name">Aynı bölümü dinle</span><span class="step-kind">Girdi</span></li><li><span class="step-name">Bir parçasını gölgele</span><span class="step-kind">Telaffuz</span></li><li><span class="step-name">Sesli anlat</span><span class="step-kind">Çıktı</span></li><li><span class="step-name">Hakkında yaz</span><span class="step-kind">Çıktı</span></li><li><span class="step-name">Akşam hafif dinleme ya da izleme</span><span class="step-kind">Girdi, akıcılık</span></li></ol></div>
+<div class="sub-head"><h3 id="s0-sure">Günlük süre (dakika)</h3><p class="sub-note">Haftada 6 gün; pazar en fazla 3 saatlik hafif gün.</p></div>
+<div class="table-wrap"><table class="cols-8" id="minutes">
+<thead>
+<tr>
+<th>Faz (gün)</th>
+<th>Telaffuz</th>
+<th>Okuma</th>
+<th>Dinleme</th>
+<th>Akşam hafif girdi</th>
+<th>Çıktı</th>
+<th>Akıcılık</th>
+<th>4 bileşen</th>
+<th>Kalan (480 − toplam)</th>
+</tr>
+</thead>
+<tbody>
+<tr data-phase="A1">
+<td><span class="chip p1">A1</span><span class="days">gün 1–28</span></td>
+<td>30</td>
+<td>60</td>
+<td>60</td>
+<td>60</td>
+<td>60</td>
+<td>30</td>
+<td><strong>300</strong></td>
+<td>180 dil odaklı</td>
+</tr>
+<tr data-phase="A2">
+<td><span class="chip p2">A2</span><span class="days">gün 29–63</span></td>
+<td>25</td>
+<td>60</td>
+<td>55</td>
+<td>65</td>
+<td>75</td>
+<td>40</td>
+<td><strong>320</strong></td>
+<td>160 dil odaklı</td>
+</tr>
+<tr data-phase="B1">
+<td><span class="chip p3">B1</span><span class="days">gün 64–105</span></td>
+<td>20</td>
+<td>60</td>
+<td>45</td>
+<td>70</td>
+<td>110</td>
+<td>45</td>
+<td><strong>350</strong></td>
+<td>130 dil odaklı</td>
+</tr>
+<tr data-phase="B2.1">
+<td><span class="chip p4">B2.1</span><span class="days">gün 106–133</span></td>
+<td>15</td>
+<td>60</td>
+<td>45</td>
+<td>70</td>
+<td>120</td>
+<td>45</td>
+<td><strong>355</strong></td>
+<td>105 dil odaklı + 20 IELTS tekniği</td>
+</tr>
+<tr data-phase="B2.2">
+<td><span class="chip p5">B2.2</span><span class="days">gün 134–180</span></td>
+<td>15</td>
+<td>50</td>
+<td>30</td>
+<td>55</td>
+<td>140</td>
+<td>35</td>
+<td><strong>325</strong></td>
+<td>80 dil odaklı + 75 IELTS tekniği</td>
+</tr>
+</tbody>
+</table></div>
+<div class="block"><div class="sub-head"><h3 id="s0-hacim">180 günlük hacim</h3><p class="sub-note">Hesap: <a class="xref" href="#s11">§11</a>.</p></div><ul class="figures"><li><span class="fig-val">~1,05–1,1 milyon</span><span class="fig-lab">okunmuş kelime</span></li><li><span class="fig-val">~300 saat</span><span class="fig-lab">dinleme ve izleme</span></li><li><span class="fig-val">~52 saat</span><span class="fig-lab">telaffuz (~7 saati algı eğitimi)</span></li><li><span class="fig-val">~160 saat</span><span class="fig-lab">konuşma (~38 saati insanla)</span></li><li><span class="fig-val">~110 saat</span><span class="fig-lab">yazma (~160 metin)</span></li><li><span class="fig-val">~100 saat</span><span class="fig-lab">ayrı akıcılık çalışması</span></li></ul></div>
+<div class="block"><div class="sub-head"><h3 id="s0-kontrol">Kontrol noktaları</h3><p class="sub-note">Zaman çizelgesinde de işaretli.</p></div><p>Gün 28, 63, 105 ve 133'te faz çıkış ölçütleri (<a class="xref" href="#s4-3">§4.3</a>) · gün 90 ve 120'de tam IELTS denemesi · ~145. gün IELTS Progress Check · gün 150 ve 170–175'te sınav tarihi kararı (<a class="xref" href="#s10-4">§10.4</a>).</p></div>
+<p class="callout"><strong>Dürüst sınır:</strong> Hiçbir plan sonucu garanti etmez. Saat olarak plan, Cambridge'in B2 için verdiği rehber süreyi aşıyor (<a class="xref" href="#s11">§11</a>). Asıl riskler takvimin çok sıkışık olması ve kelime dağarcığının 180 günde büyümesinin büyük ölçüde Anki'ye bağlı olması.</p>
+
+</section>
+    <section id="degisiklik" class="sec" aria-labelledby="degisiklik-title"><div class="sec-head"><span class="sec-num">Not</span><h2 id="degisiklik-title">Bu sürümde ne değişti?</h2></div><p>Önceki en az kaynaklı plana göre değişenler. Gerekçeler <a class="xref" href="#s12">§12</a>’de.</p><div class="table-wrap"><table class="cols-3">
+<thead>
+<tr>
+<th>#</th>
+<th>Değişiklik</th>
+<th>Gerekçe (<a class="xref" href="#s12">§12</a>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Algı eğitimi (English Accent Coach) artık isteğe bağlı değil: <strong>ilk 8 hafta, toplam ~400 dk</strong></td>
+<td>Çok konuşmacılı algı eğitimi programları ortalama 294 dk sürüyor; 400 dk'nın altındaki programlarda süre arttıkça kazanç artıyor</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Her hedef ses algıdan sonra <strong>üretimde de</strong> çalışılıyor (ELSA + gölgeleme + anlatımda aktarım)</td>
+<td>Algı eğitiminin konuşmaya etkisi küçük-orta; kalıcılığına ve yeni kelimelere aktarımına dair güçlü kanıt yok</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4/3/2'ye <strong>gecikmeli düzeltme</strong> eklendi (B1'den, haftada 2)</td>
+<td>4/3/2 akıcılığı artırıyor, doğruluğu artırmıyor; gecikmeli düzeltmeyle birlikte ikisi de arttı</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Diziye başlama tarihe değil <strong>ölçüme</strong> bağlandı</td>
+<td>İzlemede iyi anlama için ~%95 bilinen kelime gerekiyor</td>
+</tr>
+<tr>
+<td>5</td>
+<td>A1–A2'de metinsiz dinleme yalnızca <strong>okunmuş</strong> malzemeyle yapılıyor; yeni malzeme önce okurken dinleniyor</td>
+<td>Yalnız dinlemede kelimeler neredeyse hiç kalıcı olmadı; düşük düzeyde yazılı + sözlü sunum yalnız sözlüden daha iyi</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Kelime büyümesinin yükü açıkça <strong>Anki'nize</strong> verildi; girdi pekiştirme ve akıcılık sağlar</td>
+<td>Girdiden kendiliğinden öğrenme kelime başına yavaş (%9–18); Nation'ın girdi hesapları yılda ~1.000 kelime ailesi varsayar</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>26 haftalık tam takvim</strong>, faz çıkış ölçütleri, yeni komutlar</td>
+<td>"Eksiksiz plan" isteği</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Önceki belgelerdeki <strong>iki hatalı ifade</strong> düzeltildi</td>
+<td><a class="xref" href="#s12-7">§12.7</a></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+    <section aria-labelledby="s1-title" class="sec" id="s1"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s1">§1</a></span><h2 id="s1-title">Kaynaklar (6 temel, 1 süreli)</h2></div>
+<h3 id="s1-1"><span class="h-num">1.1</span> Sesli kitap kütüphanesi — planın omurgası</h3>
+<p>Bir kütüphane seçin ve 180 gün değiştirmeyin.</p>
+<div class="table-wrap"><table class="cols-4">
+<thead>
+<tr>
+<th>Seçenek</th>
+<th>Neler var</th>
+<th>Ücret</th>
+<th>Not</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. Xreading</strong></td>
+<td>2.000+ derecelendirilmiş kitap (birçok yayınevi), çoğunda ses, kitap sonu kısa test, okunan kelimenin otomatik kaydı</td>
+<td>Yıllık bireysel lisans (<a href="https://www.xreading.com/" rel="noopener noreferrer" target="_blank">Xreading</a>); güncel fiyat doğrulanamadı</td>
+<td>Okunan kelimeyi kendisi saydığı için ölçüm yükü sıfır</td>
+</tr>
+<tr>
+<td><strong>B. Oxford Reading Club</strong></td>
+<td>700–1.000+ e-kitap (Oxford Bookworms ve diğer Oxford dizileri); ses, yerleşik sözlük, kendi sesini kaydetme ve konuşma tanımayla telaffuz kontrolü</td>
+<td>İspanya'da 12 ay €27, 14 gün deneme (<a href="https://www.oup.es/en/oxfordreadingclub" rel="noopener noreferrer" target="_blank">OUP Spain</a>); Japonya'da aylık ¥990'dan (<a href="https://www.oupjapan.co.jp/en/node/62840" rel="noopener noreferrer" target="_blank">OUP Japan</a>)</td>
+<td>Türkiye'de bireysel satış doğrulanamadı; OUP Türkiye'ye sorun</td>
+</tr>
+<tr>
+<td><strong>C. Ücretsiz yedek</strong></td>
+<td>ER Central (düzeylere ayrılmış okuma ve dinleme metinleri) (<a href="https://www.er-central.com/help/" rel="noopener noreferrer" target="_blank">yardım sayfası</a>) → B2'de Nation'ın Mid-frequency Readers'ı (4.000/6.000/8.000 düzeyleri) (<a href="https://www.wgtn.ac.nz/lals/resources/readers" rel="noopener noreferrer" target="_blank">Wellington</a>)</td>
+<td>Ücretsiz</td>
+<td>Haftalık kelime hedefini tutturmak zorlaşabilir; iki hafta üst üste hedefin %70'inin altında kalırsanız A ya da B'ye geçin</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Seçim kuralı:</strong> İkisini de alabiliyorsanız A (kelime sayımı otomatik, yayınevi çeşidi fazla). Yalnızca birini alabiliyorsanız onu. Hiçbirini alamıyorsanız C.</p>
+<p><strong>Oxford Bookworms düzeyleri</strong> (diğer serilerde de benzer basamaklar var): Starter 250 headword (A1) · Stage 1: 400 (A1/A2, kitap başına ~5.200 kelime) · Stage 2: 700 (A2/B1, ~6.500) · Stage 3: 1.000 (B1, ~10.000) · Stage 4: 1.400 (B1/B2, ~16.000) · Stage 5: 1.800 (B2, ~23.000) · Stage 6: 2.500 (B2/C1, ~30.000) (<a href="https://www.oupjapan.co.jp/en/gradedreaders/bookworms.shtml" rel="noopener noreferrer" target="_blank">OUP Japan</a>).</p>
+<p><strong>Kitap listesi önceden hazır olsun:</strong> Her düzey için ilginizi çeken 8–10 kitabı bir listeye yazın ve sırayla gidin. Mümkünse aynı yazarın ya da aynı dizinin kitaplarını art arda okuyun (dar okuma). Her gün "ne okusam" kararı vermeyin.</p>
+<h3 id="s1-2"><span class="h-num">1.2</span> ELSA Speak</h3>
+<ul>
+<li><strong>Neden:</strong> Konuşma tanımaya (ASR) dayalı telaffuz eğitiminin etkisi orta (g=0,69). Hatayı açıkça gösteren geri bildirimle yapılan çalışmalarda etki büyük (g=0,86), dikte gibi dolaylı geri bildirimde orta (g=0,50). Etki bireysel seslerde büyük, vurgu-ritim-tonlamada küçük. Orta ve uzun süreli kullanım daha iyi sonuç veriyor; kısa süreli kullanım ASR'siz öğretimden farklı çıkmadı (<a href="https://resolve.cambridge.org/core/journals/recall/article/effectiveness-of-automatic-speech-recognition-in-eslefl-pronunciation-a-metaanalysis/A915444CF252B61D14961D2FE733822D" rel="noopener noreferrer" target="_blank">Ngo, Chen &amp; Lai 2024</a>).</li>
+<li><strong>Bu yüzden:</strong> ELSA 180 gün boyunca, bireysel sesler ve kelime vurgusu için kullanılır. Ritim ve tonlama gölgeleme ve insanla konuşmayla çalışılır.</li>
+<li><strong>Not:</strong> ELSA'ya özgü çalışmalar küçük ve sonuçları olumlu ama kesin değil (<a href="https://journal.ikipsiliwangi.ac.id/project/article/view/26923" rel="noopener noreferrer" target="_blank">derleme</a>).</li>
+</ul>
+<h3 id="s1-3"><span class="h-num">1.3</span> Tek bir sesli yapay zekâ asistanı (15. günden)</h3>
+<ul>
+<li><strong>Neden:</strong> Diyalog tabanlı sistemlerin konuşma gelişimine etkisi orta (g≈0,61) (<a href="https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/31847710516602398819C5E594038E7B/S0958344025100268a.pdf/dialogue-based-computer-assisted-language-learning-systems-for-second-language-speaking-development-a-three-level-meta-analysis.pdf" rel="noopener noreferrer" target="_blank">meta-analiz</a>). Yapay zekânın yazma geri bildirimi uzmanlarınkine yakın ama daha zayıf (5 üzerinden 3,6'ya 4,0) (<a href="https://hechingerreport.org/proof-points-writing-ai-feedback/" rel="noopener noreferrer" target="_blank">Steiss vd. 2024 — özet</a>).</li>
+<li><strong>Seçim:</strong> Zaten kullandığınız genel bir sesli asistan. Hazır düzeltme raporu istiyorsanız alternatif olarak yalnızca Langua (<a href="https://languatalk.com/blog/whats-the-best-ai-for-language-learning/" rel="noopener noreferrer" target="_blank">LanguaTalk</a>). İkinci bir yapay zekâ uygulaması eklemeyin.</li>
+<li><strong>Komutlar:</strong> Ek A.</li>
+</ul>
+<h3 id="s1-4"><span class="h-num">1.4</span> BBC Learning English — 6 Minute English (~64. günden)</h3>
+<p>Haftalık, ücretsiz, transkriptli, orta düzeye yönelik program (<a href="https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" rel="noopener noreferrer" target="_blank">BBC Learning English</a>). Hem dinleme girdisi hem gölgeleme malzemesi. Başka podcast yok; B2'de isterseniz yalnızca bir doğal hızlı podcast (Luke's English Podcast ya da All Ears English).</p>
+<h3 id="s1-5"><span class="h-num">1.5</span> Tek bir dizi (başlama testini geçince)</h3>
+<ul>
+<li><strong>Neden:</strong> TV programlarında %95 bilinen kelime oranı için ~3.000 kelime ailesi (+ özel adlar) gerekiyor (<a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.992638/full" rel="noopener noreferrer" target="_blank">Webb &amp; Rodgers 2009 — özet</a>). Aynı alt türdeki programların bölümleri rastgele programlardan daha az kelime ailesi içeriyor ve düşük sıklıklı kelimeler daha sık tekrar ediyor (<a href="https://revistas.um.es/ijes/article/view/137131" rel="noopener noreferrer" target="_blank">Webb 2011</a>). İngilizce altyazılı video kelime öğrenimine güçlü katkı yapıyor (g≈0,87; <a href="https://doi.org/10.1016/j.system.2013.07.013" rel="noopener noreferrer" target="_blank">Montero Perez vd. 2013</a>, ikincil aktarım).</li>
+<li><strong>Kurallar:</strong> <a class="xref" href="#s7-4">§7.4</a>.</li>
+</ul>
+<h3 id="s1-6"><span class="h-num">1.6</span> İnsanla etkileşim (29. günden)</h3>
+<ul>
+<li><strong>Neden:</strong> Konuşma sırasındaki etkileşim ve anlam pazarlığı dil gelişimini destekliyor (<a href="https://eprints.lancs.ac.uk/id/eprint/59863/" rel="noopener noreferrer" target="_blank">Mackey &amp; Goo 2007</a>). Öğrenciyi kendi hatasını düzeltmeye iten geri bildirim (prompt), doğru biçimi söyleyiveren geri bildirimden (recast) daha etkili (<a href="https://www.cambridge.org/core/product/4999EE1C8379B2BF026B148EAF373CA1" rel="noopener noreferrer" target="_blank">Lyster &amp; Saito 2010</a>). Yapay zekâ geri bildirimi uzmanınkinden zayıf olduğu için insan şart.</li>
+<li><strong>Doz:</strong> A2'de haftada 30 dk · B1'de English Online haftada 3 canlı ders · B2'de eğitmenle haftada 2 × 50 dk.</li>
+</ul>
+<h3 id="s1-7"><span class="h-num">1.7</span> English Accent Coach (yalnızca 1–8. hafta)</h3>
+<ul>
+<li><strong>Ne:</strong> Brock Üniversitesi'nden Ron Thomson'ın geliştirdiği, aynı kelimeyi farklı konuşmacılardan dinletip ses ayırt ettiren web tabanlı algı eğitimi; ünlüleri ve ünsüzleri kapsıyor; amacı aksanı değil algıyı değiştirmek (<a href="https://apps-cce.grad-college.iastate.edu/resource-database/view/556" rel="noopener noreferrer" target="_blank">Iowa State kaynak kaydı</a>). Ücretini sitesinden kontrol edin (<a href="https://www.englishaccentcoach.com" rel="noopener noreferrer" target="_blank">englishaccentcoach.com</a>).</li>
+<li><strong>Neden süreli:</strong> Bu tür algı eğitiminin etkisi orta-büyük ve kalıcı, ama programlar ortalama 294 dk sürüyor ve kazanç ~400 dk'ya kadar artıyor (<a class="xref" href="#s6-1">§6.1</a>). Bu yüzden 8 hafta × haftada 5 gün × 10 dk = 400 dk, sonra bırakılır.</li>
+<li><strong>Şeffaflık notu:</strong> Ron Thomson, aşağıda kullanılan iki algı eğitimi meta-analizinin de yazarlarından biridir.</li>
+</ul>
+<h3 id="s1-8"><span class="h-num">1.8</span> Planda olmayanlar</h3>
+<p>İkinci bir yapay zekâ uygulaması (Praktika, TalkPal), ikinci bir kelime tekrar sistemi (LingQ, Readlang), Busuu, ESLPod, VOA, English e-Reader, birden fazla podcast ya da kitap havuzu. Gerekçeleri: <a href="https://github.com/uensalbaris613-rgb/fdsdfsdfsdfsfsdfsd/blob/claude/180-day-english-plan-s81skx/degerlendirme/en_az_kaynakla_dort_bilesen_plani.md#1-paylaştığınız-listenin-değerlendirmesi" rel="noopener noreferrer" target="_blank">en az kaynakla plan, §1</a>.</p>
+
+</section><section aria-labelledby="s2-title" class="sec" id="s2"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s2">§2</a></span><h2 id="s2-title">Bilişsel yükü düşüren 8 kural</h2></div>
+<div class="table-wrap"><table class="cols-3">
+<thead>
+<tr>
+<th>Kural</th>
+<th>Uygulama</th>
+<th>Dayanak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. <strong>Kolay girdi</strong></td>
+<td>Okumada ≥%98 bilinen kelime: başlangıçta sayfada ≤1–2, orta düzeyde ≤4–5 bilinmeyen kelime</td>
+<td>Yaygın okumanın ilk ilkesi kolay materyaldir (<a href="https://www2.hawaii.edu/~readfl/rfl/October2002/day/day.html" rel="noopener noreferrer" target="_blank">Day &amp; Bamford 2002</a>); <a href="https://assets.cambridge.org/97810090/98359/excerpt/9781009098359_excerpt.pdf" rel="noopener noreferrer" target="_blank">Nation</a></td>
+</tr>
+<tr>
+<td>2. <strong>Tek metin, dört bileşen</strong></td>
+<td>Günün kitap bölümü hem girdi, hem gölgeleme malzemesi, hem anlatma/yazma konusu, hem ertesi günün akıcılık metni</td>
+<td>Akıcılık tanıdık malzemeyle çalışılır (Nation); aynı konuyu tekrar anlatanlar akıcılık kazanımını korudu (<a href="https://www.lrdc.pitt.edu/perfettilab/pubpdfs/de%20Jong%20Language%20Learning.pdf" rel="noopener noreferrer" target="_blank">De Jong &amp; Perfetti 2011</a>)</td>
+</tr>
+<tr>
+<td>3. <strong>Başta destek, sonra azalt</strong></td>
+<td>A1–A2'de okurken dinleme ve İngilizce altyazı; B2'de sessiz okuma ve altyazısız ikinci izleme</td>
+<td>Acemiye yararlı destek, bilgi arttıkça gereksiz yüke dönüşür (<a href="https://www.uky.edu/~gmswan3/EDC608/Kalyuga2007_Article_ExpertiseReversalEffectAndItsI.pdf" rel="noopener noreferrer" target="_blank">Kalyuga 2007</a>); yazılı + sözlü sunum yalnız sözlüden iyi, özellikle ön bilgi düşükken ve hızı kaydın belirlediği materyalde (<a href="https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842" rel="noopener noreferrer" target="_blank">Adesope &amp; Nesbit 2012</a>)</td>
+</tr>
+<tr>
+<td>4. <strong>Dar girdi</strong></td>
+<td>Tek kütüphane, tek dizi, tek podcast; mümkünse aynı yazar ya da dizi art arda</td>
+<td>Aynı alt türde daha az kelime ailesi, nadir kelimelerde daha çok tekrar (<a href="https://revistas.um.es/ijes/article/view/137131" rel="noopener noreferrer" target="_blank">Webb 2011</a>)</td>
+</tr>
+<tr>
+<td>5. <strong>Her gün aynı sıra</strong></td>
+<td>Döngü 180 gün değişmez; yalnızca düzey değişir</td>
+<td>Basit günlük davranışların otomatikleşmesi medyan ~66 gün sürdü (18–254) (<a href="https://bps.org.uk/research-digest/how-form-habit" rel="noopener noreferrer" target="_blank">Lally vd. 2010 — özet</a>)</td>
+</tr>
+<tr>
+<td>6. <strong>Az araç</strong></td>
+<td>6 sürekli kaynak + 8 haftalık algı aracı</td>
+<td>Görevler arası geçiş yavaşlama ve hata maliyeti doğurur (<a href="https://modeldb.science/citations/102732" rel="noopener noreferrer" target="_blank">Monsell 2003</a>)</td>
+</tr>
+<tr>
+<td>7. <strong>Önceden karar</strong></td>
+<td>Kitap listesi, haftanın hedef sesi ve görev türü önceden yazılı (<a class="xref" href="#s5">§5</a>)</td>
+<td>Günlük karar sayısını azaltır (pratik ilke)</td>
+</tr>
+<tr>
+<td>8. <strong>Otomatik ölçüm</strong></td>
+<td>Kütüphane okunan kelimeyi, ELSA ve EAC puanları kendisi tutar; haftada yalnızca 3 sayı kaydedilir</td>
+<td>Ölçüm yükünü azaltır (pratik ilke)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Altyazı ve okurken dinleme üzerine:</strong> Bilişsel yük kuramı, aynı metni hem görüp hem duymanın gereksiz yük getirebileceğini öngörür ("redundancy"). Ama 57 çalışmalık bir meta-analizde yazılı + sözlü sunum yalnız sözlü sunumdan daha iyi sonuç verdi. Üstünlük ön bilgisi düşük öğrenenlerde, hızı sistemin belirlediği materyalde ve resimsiz materyalde görüldü. Yazılı + sözlü ile yalnız yazılı arasında fark çıkmadı; anlatımın tamamı yerine anahtar kelimeleri göstermek daha iyi sonuç verdi (<a href="https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842" rel="noopener noreferrer" target="_blank">Adesope &amp; Nesbit 2012</a>). Ses kaydı hızı kendisi belirlenen bir materyaldir ve başlangıçta ön bilginiz düşüktür. Bu yüzden destek <strong>başta tam, sonra kademeli olarak azalır</strong>.</p>
+
+</section><section aria-labelledby="s3-title" class="sec" id="s3"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s3">§3</a></span><h2 id="s3-title">Günlük döngü</h2></div>
+<div class="table-wrap"><table class="cols-6">
+<thead>
+<tr>
+<th>Sıra</th>
+<th>Adım</th>
+<th>Bileşen</th>
+<th>A1–A2</th>
+<th>B1</th>
+<th>B2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Dünü hızlı tekrar</strong></td>
+<td>Akıcılık</td>
+<td>Dünkü bölümü daha hızlı okuma; dünkü anlatımı azalan sürede tekrarlama (2/1,5/1 → 3/2/1 dk)</td>
+<td>4/3/2 (dünkü konu); haftada 2 kez son tura gecikmeli düzeltme (<a class="xref" href="#prompt-a7">A-7</a>)</td>
+<td>4/3/2 (IELTS konusu) + gecikmeli düzeltme</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Yeni bölümü oku</strong></td>
+<td>Girdi</td>
+<td>Okurken dinleme; bölüm 2–3 kez</td>
+<td>Sessiz okuma, sözlük yok</td>
+<td>Aynı; ~120. günden Mid-frequency Readers</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Aynı bölümü dinle</strong></td>
+<td>Girdi</td>
+<td>Okuduktan sonra metinsiz dinleme: içerik bilindiği için tanıdık kelimelerin sesi çalışılır</td>
+<td>Önce dinle, sonra oku (ya da tersi) + 6 Minute English</td>
+<td>6 Minute English; B2.2'de IELTS dinleme bölümleri</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Bir parçayı gölgele</strong></td>
+<td>Telaffuz</td>
+<td>Bölüm sesinden 30–45 sn + EAC (1–8. hafta) + ELSA</td>
+<td>6 Minute English'ten 60 sn + ELSA</td>
+<td>IELTS Part 2 model cevabından gölgeleme + ELSA (kişisel hata listesi)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Sesli anlat</strong></td>
+<td>Çıktı</td>
+<td>3–5 cümle → 1–2 dk anlatım (kayıt); 15. günden yapay zekâyla soru-cevap</td>
+<td>2–3 dk anlatım ya da gerekçeli görüş; yapay zekâyla tartışma; canlı ders</td>
+<td>Part 2 kartı (ertesi gün aynı kart); Part 3; eğitmen</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Hakkında yaz</strong></td>
+<td>Çıktı</td>
+<td>30–70 → 70–120 kelime; A2'den 10 dk günlük</td>
+<td>130–200 kelime; ertesi gün kilit cümleleri yeniden yazma</td>
+<td>Task 1 / Task 2; odaklı geri bildirim + yeniden yazma</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Akşam hafif girdi</strong></td>
+<td>Girdi, akıcılık</td>
+<td>Daha önce okunan bölümlerin ve kitapların sesleri</td>
+<td>Dizi (İngilizce altyazı) + eski 6 Minute English bölümleri</td>
+<td>Dizi; sevdiğiniz bölümleri altyazısız ikinci kez izleme</td>
+</tr>
+</tbody>
+</table></div>
+<p>A2'den itibaren akıcılık süresine 10 dakikalık durmadan yazma da girer (<a class="xref" href="#s9-4">§9.4</a>).</p>
+<p><strong>Günlük kontrol listesi</strong> (kâğıda yazın, işaretleyin):</p>
+<ul class="checklist" id="s3-list">
+<li><label for="chk-1"><input class="daily-check" disabled="" id="chk-1" type="checkbox"/><span>Dünü tekrar (okuma + anlatım)</span></label></li>
+<li><label for="chk-2"><input class="daily-check" disabled="" id="chk-2" type="checkbox"/><span>Yeni bölüm okundu ve dinlendi</span></label></li>
+<li><label for="chk-3"><input class="daily-check" disabled="" id="chk-3" type="checkbox"/><span>Telaffuz: EAC (1–8. hafta) · ELSA · gölgeleme</span></label></li>
+<li><label for="chk-4"><input class="daily-check" disabled="" id="chk-4" type="checkbox"/><span>Anlatım kaydı</span></label></li>
+<li><label for="chk-5"><input class="daily-check" disabled="" id="chk-5" type="checkbox"/><span>Yazı → geri bildirim → kilit cümleleri düzeltme</span></label></li>
+<li><label for="chk-6"><input class="daily-check" disabled="" id="chk-6" type="checkbox"/><span>Akşam hafif girdi</span></label></li>
+</ul>
+<p><strong>Pazar (hafif gün, ≤3 saat):</strong> 10 dk haftalık ölçüm (<a class="xref" href="#s10-1">§10.1</a>) ve kayıt şablonu (Ek B) · hafif okuma ya da izleme · gelecek haftanın kitabına ve hedef sesine 5 dk bakış. Yeni malzeme yok.</p>
+
+</section><section aria-labelledby="s4-title" class="sec" id="s4"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s4">§4</a></span><h2 id="s4-title">Fazlar, süreler ve çıkış ölçütleri</h2></div>
+<h3 id="s4-1"><span class="h-num">4.1</span> Mevcut bloklarınızla eşleşme</h3>
+<p>Süreler <a class="xref" href="#s0">§0</a>'daki tabloda. Bloklarınızın karşılığı:</p>
+<div class="table-wrap"><table class="cols-2">
+<thead>
+<tr>
+<th>Bloğunuz</th>
+<th>Bu plandaki karşılığı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sabah dil odaklı blok</td>
+<td>Sizin planınız (tablodaki "kalan" sütunu). Ses-yazım ve ELSA "telaffuz" sütununa taşındı</td>
+</tr>
+<tr>
+<td>Aşama 1 (MFI)</td>
+<td>Okuma + dinleme</td>
+</tr>
+<tr>
+<td>Aşama 2 (MFO)</td>
+<td>Çıktı</td>
+</tr>
+<tr>
+<td>Aşama 3 (FD)</td>
+<td>Akıcılık (döngünün 1. adımı + süreli okuma ve yazma)</td>
+</tr>
+<tr>
+<td>Busuu / English Online bloğu</td>
+<td>Busuu çıkar. Bu blok A1–A2'de akşam hafif dinleme, B1'de English Online + dizi, B2'de eğitmen + dizi olur</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s4-2"><span class="h-num">4.2</span> Fazların amacı</h3>
+<div class="table-wrap"><table class="cols-2">
+<thead>
+<tr>
+<th>Faz</th>
+<th>Amaç</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A1 (1–28)</strong></td>
+<td>İngilizce ses sistemini kurmak; Anki'de öğrendiğiniz en sık kelimelerle bağlam içinde, sesli ve yazılı olarak karşılaşmak; kalıp cümlelerle ilk günden konuşmak</td>
+</tr>
+<tr>
+<td><strong>A2 (29–63)</strong></td>
+<td>Kolay kitaplarla hacim; günlük konuşma; ilk insan etkileşimi</td>
+</tr>
+<tr>
+<td><strong>B1 (64–105)</strong></td>
+<td>Gerçek dinleme (6 Minute English) ve izleme başlar; gerekçeli görüş; düzenli canlı ders; gün 90'da IELTS ile ilk temas</td>
+</tr>
+<tr>
+<td><strong>B2.1 (106–133)</strong></td>
+<td>IELTS görev türleriyle çıktı; orta sıklıklı kelimeler için Mid-frequency Readers</td>
+</tr>
+<tr>
+<td><strong>B2.2 (134–180)</strong></td>
+<td>IELTS koşullarında çıktı; "Son Faz" planınızla birleşir</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s4-3"><span class="h-num">4.3</span> Faz çıkış ölçütleri</h3>
+<p>Bunlar pratik hedeflerdir, araştırma eşiği değildir. Bir ölçüt tutmazsa <a class="xref" href="#s10-4">§10.4</a>'teki kurala bakın.</p>
+<div class="table-wrap"><table class="cols-6">
+<thead>
+<tr>
+<th>Gün</th>
+<th>Okuma</th>
+<th>Dinleme</th>
+<th>Konuşma</th>
+<th>Yazma</th>
+<th>Telaffuz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>28 (A1)</strong></td>
+<td>Stage 1, okurken dinlemeyle sayfada ≤2 bilinmeyen kelime</td>
+<td>Okunmuş bölümün sesini metinsiz takip edebilme</td>
+<td>Bir sayfayı 3–5 cümleyle anlatma; 10 sabit soruya duraksamadan cevap</td>
+<td>50–70 kelime</td>
+<td>EAC'de <span class="ipa">/iː/</span>–<span class="ipa">/ɪ/</span> ve <span class="ipa">/æ/</span>–<span class="ipa">/e/</span> ayrımında ≥%80 doğru</td>
+</tr>
+<tr>
+<td><strong>63 (A2)</strong></td>
+<td>Stage 2 rahat (sayfada ≤2 bilinmeyen), kaba hız ~80–100 kelime/dk</td>
+<td>Stage 1–2 kitap seslerini metinsiz anlama</td>
+<td>2 dk anlatım, uzun duraklama az; insanla 10 dk günlük konuşma</td>
+<td>120 kelimelik özet</td>
+<td>EAC hedef karşıtlıklarında ≥%85; ELSA hedef ses puanları yükseliyor</td>
+</tr>
+<tr>
+<td><strong>105 (B1)</strong></td>
+<td>Stage 4 rahat, kaba hız ~120–150 kelime/dk</td>
+<td>6 Minute English bölümünün ana fikirleri transkriptsiz</td>
+<td>3 dk gerekçeli görüş</td>
+<td>200 kelimelik görüş yazısı</td>
+<td>Kişisel hata listesi ≤5 madde</td>
+</tr>
+<tr>
+<td><strong>133 (B2.1)</strong></td>
+<td>Stage 6 ya da Mid-frequency Readers 4.000 rahat, kaba hız ~150–180 kelime/dk</td>
+<td>Dizi bölümünün ana olayı altyazısız (ikinci izlemede)</td>
+<td>IELTS Part 2'de 2 dk kesintisiz</td>
+<td>Task 2: 40 dk'da 250+ kelime</td>
+<td>Aylık kayıtlarda anlaşılırlık puanı yükseliyor</td>
+</tr>
+<tr>
+<td><strong>180 (B2.2)</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>IELTS kararları (<a class="xref" href="#s10-4">§10.4</a>)</td>
+</tr>
+</tbody>
+</table></div>
+
+</section><section aria-labelledby="s5-title" class="sec" id="s5"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s5">§5</a></span><h2 id="s5-title">26 haftalık takvim</h2></div>
+<p>Kelime sayıları tekrar okumalar dahil haftalık hedeflerdir; ±%20 sapma normaldir. Okuma düzeyi tarihe göre değil, ölçüme göre değişir (<a class="xref" href="#s10-4">§10.4</a>). Takvim yalnızca beklenen tempoyu gösterir.</p>
+<div class="table-wrap cal-wrap"><table class="cols-7 cal">
+<thead>
+<tr>
+<th>Hafta · gün</th>
+<th>Okuma (düzey · haftalık kelime)</th>
+<th>Dinleme ve izleme</th>
+<th>Telaffuz odağı</th>
+<th>Çıktı</th>
+<th>Akıcılık</th>
+<th>Ölçüm / karar</th>
+</tr>
+</thead>
+<tbody>
+<tr data-phase="A1" data-week="1" id="w1">
+<td><span class="wk">1. hafta</span><span class="days">gün 1–7</span><span class="chip p1">A1</span></td>
+<td>Starter; okurken dinleme, her bölüm 2–3 kez · ~10 bin</td>
+<td>Bölüm sesleri (akşam tekrar)</td>
+<td>Ses sistemi, ses-yazım; <span class="ipa">/iː/</span>–<span class="ipa">/ɪ/</span> (<em>sheep/ship</em>)</td>
+<td>10 sabit soruya sesli cevap (kayıt); 30–50 kelime kendini tanıtma</td>
+<td>Dünkü bölümü hızlı yeniden okuma</td>
+<td>Gün 1: başlangıç kaydı (<a class="xref" href="#s6-4">§6.4</a>)</td>
+</tr>
+<tr data-phase="A1" data-week="2" id="w2">
+<td><span class="wk">2. hafta</span><span class="days">gün 8–14</span><span class="chip p1">A1</span></td>
+<td>Starter · ~14 bin</td>
+<td class="same">Aynı</td>
+<td><span class="ipa">/æ/</span>–<span class="ipa">/e/</span> (<em>bad/bed</em>), <span class="ipa">/ʌ/</span>–<span class="ipa">/ɑː/</span> (<em>cut/cart</em>)</td>
+<td>Kitaptan bir sahneyi 3–5 cümleyle anlatma; 40–60 kelime</td>
+<td>+ 2/1,5/1 dk mini anlatım</td>
+<td>—</td>
+</tr>
+<tr data-phase="A1" data-week="3" id="w3">
+<td><span class="wk">3. hafta</span><span class="days">gün 15–21</span><span class="chip p1">A1</span></td>
+<td>Starter → Stage 1 · ~17 bin</td>
+<td class="same">Aynı</td>
+<td><span class="ipa">/ʊ/</span>–<span class="ipa">/uː/</span> (<em>full/fool</em>), <span class="ipa">/ɔː/</span>, <span class="ipa">/əʊ/</span>, <span class="ipa">/aʊ/</span>; schwa <span class="ipa">/ə/</span></td>
+<td><strong>Yapay zekâyla 10 dk soru-cevap başlar</strong> (<a class="xref" href="#prompt-a1">A-1</a>); 50–60 kelime</td>
+<td class="same">Aynı</td>
+<td>—</td>
+</tr>
+<tr data-phase="A1" data-week="4" id="w4">
+<td><span class="wk">4. hafta</span><span class="days">gün 22–28</span><span class="chip p1">A1</span></td>
+<td>Stage 1 · ~20 bin</td>
+<td class="same">Aynı</td>
+<td><span class="ipa">/v/</span>–<span class="ipa">/w/</span> (<em>vest/west</em>)</td>
+<td>Günlük rutin anlatımı; 50–70 kelime</td>
+<td class="same">Aynı</td>
+<td>Gün 28: A1 çıkış ölçütü; 1. ay kaydı</td>
+</tr>
+<tr data-phase="A2" data-week="5" id="w5">
+<td><span class="wk">5. hafta</span><span class="days">gün 29–35</span><span class="chip p2">A2</span></td>
+<td>Stage 1 · ~26 bin</td>
+<td>Okunmuş kitapların sesleri</td>
+<td><span class="ipa">/ŋ/</span> (<em>sin/sing</em>); söz sonu ötümlü ünsüzler (<em>bag/back</em>)</td>
+<td>1–2 dk anlatım (kaydet → dinle → yeniden kaydet); 70–100 kelime özet; <strong>ilk insan dersi (haftada 30 dk)</strong></td>
+<td>3/2/1; 10 dk durmadan yazma başlar</td>
+<td>—</td>
+</tr>
+<tr data-phase="A2" data-week="6" id="w6">
+<td><span class="wk">6. hafta</span><span class="days">gün 36–42</span><span class="chip p2">A2</span></td>
+<td>Stage 1 → 2 · ~30 bin</td>
+<td class="same">Aynı</td>
+<td>Ünsüz kümeleri, araya ünlü eklememe (<em>school, street, spring</em>)</td>
+<td>Canlandırma: alışveriş, yol tarifi, randevu (<a class="xref" href="#prompt-a2">A-2</a>); 80–120 kelime e-posta</td>
+<td class="same">Aynı</td>
+<td>—</td>
+</tr>
+<tr data-phase="A2" data-week="7" id="w7">
+<td><span class="wk">7. hafta</span><span class="days">gün 43–49</span><span class="chip p2">A2</span></td>
+<td>Stage 2 · ~32 bin</td>
+<td class="same">Aynı</td>
+<td><span class="ipa">/θ/</span>–<span class="ipa">/ð/</span> algı + temel üretim (<em>think, this</em>)</td>
+<td>Geçmiş bir olayı anlatma; 100–120 kelime</td>
+<td class="same">Aynı</td>
+<td>—</td>
+</tr>
+<tr data-phase="A2" data-week="8" id="w8">
+<td><span class="wk">8. hafta</span><span class="days">gün 50–56</span><span class="chip p2">A2</span></td>
+<td>Stage 2 · ~34 bin</td>
+<td class="same">Aynı</td>
+<td>Kelime vurgusu (<em>-tion, -ic, -ity</em>); <strong>EAC biter (~400 dk)</strong></td>
+<td>Basit görüş (1–2 dk); 100–120 kelime</td>
+<td class="same">Aynı</td>
+<td>2. ay kaydı</td>
+</tr>
+<tr data-phase="A2" data-week="9" id="w9">
+<td><span class="wk">9. hafta</span><span class="days">gün 57–63</span><span class="chip p2">A2</span></td>
+<td>Stage 2 → 3 · ~36 bin</td>
+<td class="same">Aynı</td>
+<td>Zayıf biçimler (<em>to, for, can, of</em>)</td>
+<td>2 dk anlatım; 120 kelimelik özet</td>
+<td class="same">Aynı</td>
+<td>Gün 63: A2 çıkış ölçütü</td>
+</tr>
+<tr data-phase="B1" data-week="10" id="w10">
+<td><span class="wk">10. hafta</span><span class="days">gün 64–70</span><span class="chip p3">B1</span></td>
+<td>Stage 3 · ~43 bin</td>
+<td><strong>6 Minute English başlar</strong> (haftada 3–4 bölüm); <strong>dizi başlama testi</strong> (<a class="xref" href="#s7-4">§7.4</a>)</td>
+<td>Cümle vurgusu, bağlama; 6 Minute English'ten 60 sn gölgeleme</td>
+<td>2–3 dk anlatım ya da gerekçeli görüş; yapay zekâyla tartışma (<a class="xref" href="#prompt-a3">A-3</a>); 130–200 kelime; <strong>English Online haftada 3 ders</strong></td>
+<td>4/3/2; haftada 3 süreli hızlı okuma</td>
+<td>—</td>
+</tr>
+<tr data-phase="B1" data-week="11" id="w11">
+<td><span class="wk">11. hafta</span><span class="days">gün 71–77</span><span class="chip p3">B1</span></td>
+<td>Stage 3 · ~45 bin</td>
+<td>6 Minute English + dizi (İngilizce altyazı)</td>
+<td>Düşünce gruplarına bölme (chunking)</td>
+<td>Karşılaştırma, artı ve eksiler; 150–200 kelime</td>
+<td><strong>+ gecikmeli düzeltme, haftada 2</strong> (<a class="xref" href="#prompt-a7">A-7</a>)</td>
+<td>—</td>
+</tr>
+<tr data-phase="B1" data-week="12" id="w12">
+<td><span class="wk">12. hafta</span><span class="days">gün 78–84</span><span class="chip p3">B1</span></td>
+<td>Stage 3 → 4 · ~47 bin</td>
+<td class="same">Aynı</td>
+<td>Tonlama: soru türleri</td>
+<td>Sorun-çözüm konuşması; resmî e-posta</td>
+<td class="same">Aynı</td>
+<td>3. ay kaydı</td>
+</tr>
+<tr data-phase="B1" data-week="13" id="w13">
+<td><span class="wk">13. hafta</span><span class="days">gün 85–91</span><span class="chip p3">B1</span></td>
+<td>Stage 4 · ~48 bin</td>
+<td class="same">Aynı</td>
+<td>Tonlama: liste, karşıtlık vurgusu</td>
+<td><strong>Gün 90: ilk tam IELTS denemesi</strong> (bilgi amaçlı)</td>
+<td class="same">Aynı</td>
+<td>Gün 90 kararı</td>
+</tr>
+<tr data-phase="B1" data-week="14" id="w14">
+<td><span class="wk">14. hafta</span><span class="days">gün 92–98</span><span class="chip p3">B1</span></td>
+<td>Stage 4 · ~50 bin</td>
+<td class="same">Aynı</td>
+<td>Kayıtlardan kişisel hata listesi</td>
+<td>IELTS Part 1–2 tarzı konuşma; ~200 kelimelik görüş yazısı</td>
+<td class="same">Aynı</td>
+<td>—</td>
+</tr>
+<tr data-phase="B1" data-week="15" id="w15">
+<td><span class="wk">15. hafta</span><span class="days">gün 99–105</span><span class="chip p3">B1</span></td>
+<td>Stage 4 → 5 · ~50 bin</td>
+<td class="same">Aynı</td>
+<td>Kişisel hata listesi</td>
+<td>Bir 6 Minute English bölümünün 150 kelimelik özeti; Part 2 kartları</td>
+<td class="same">Aynı</td>
+<td>Gün 105: B1 çıkış ölçütü</td>
+</tr>
+<tr data-phase="B2.1" data-week="16" id="w16">
+<td><span class="wk">16. hafta</span><span class="days">gün 106–112</span><span class="chip p4">B2.1</span></td>
+<td>Stage 5 · ~55 bin</td>
+<td>6 Minute English + dizi (sevdiğiniz bölümler altyazısız 2. kez); isteğe bağlı tek doğal hızlı podcast</td>
+<td>Part 2 cevaplarında düşünce grupları ve vurgu; model cevaplardan gölgeleme</td>
+<td>Her gün bir Part 2 kartı (ertesi gün aynı kart); haftada 3 Part 3 (<a class="xref" href="#prompt-a5">A-5</a>); haftada 2 Task 2 + 1 Task 1 + 2 özet (<a class="xref" href="#prompt-a6">A-6</a>); <strong>eğitmen haftada 2 × 50 dk</strong></td>
+<td>4/3/2 (IELTS konuları) + gecikmeli düzeltme; hızlı okuma</td>
+<td>4. ay kaydı</td>
+</tr>
+<tr data-phase="B2.1" data-week="17" id="w17">
+<td><span class="wk">17. hafta</span><span class="days">gün 113–119</span><span class="chip p4">B2.1</span></td>
+<td>Stage 5 → 6 · ~57 bin</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td>—</td>
+</tr>
+<tr data-phase="B2.1" data-week="18" id="w18">
+<td><span class="wk">18. hafta</span><span class="days">gün 120–126</span><span class="chip p4">B2.1</span></td>
+<td>Stage 6 → Mid-frequency Readers 4.000 · ~58 bin</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td><strong>Gün 120: tam deneme</strong></td>
+<td class="same">Aynı</td>
+<td>Gün 120 kararı</td>
+</tr>
+<tr data-phase="B2.1" data-week="19" id="w19">
+<td><span class="wk">19. hafta</span><span class="days">gün 127–133</span><span class="chip p4">B2.1</span></td>
+<td>Mid-frequency Readers 4.000 · ~58 bin</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td>Gün 133: B2.1 çıkış ölçütü</td>
+</tr>
+<tr data-phase="B2.2" data-week="20" id="w20">
+<td><span class="wk">20. hafta</span><span class="days">gün 134–140</span><span class="chip p5">B2.2</span></td>
+<td>Mid-frequency Readers 4.000 → 6.000 + IELTS okuma metinleri · ~56 bin</td>
+<td>6 Minute English + IELTS dinleme + dizi</td>
+<td>Kişisel hata listesi; Speaking akışı</td>
+<td>Haftada 5 Task 2 + 3 Task 1; 2–3 tam Speaking denemesi; eğitmen haftada 2 kez</td>
+<td>4/3/2 + hızlı okuma</td>
+<td>5. ay kaydı</td>
+</tr>
+<tr data-phase="B2.2" data-week="21" id="w21">
+<td><span class="wk">21. hafta</span><span class="days">gün 141–147</span><span class="chip p5">B2.2</span></td>
+<td>Aynı · ~56 bin</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td><strong>~145. gün IELTS Progress Check</strong></td>
+<td class="same">Aynı</td>
+<td>—</td>
+</tr>
+<tr data-phase="B2.2" data-week="22" id="w22">
+<td><span class="wk">22. hafta</span><span class="days">gün 148–154</span><span class="chip p5">B2.2</span></td>
+<td>Aynı · ~56 bin</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td><strong>Gün 150 kararı</strong></td>
+</tr>
+<tr data-phase="B2.2" data-week="23" id="w23">
+<td><span class="wk">23. hafta</span><span class="days">gün 155–161</span><span class="chip p5">B2.2</span></td>
+<td>Aynı · ~56 bin</td>
+<td class="same">Aynı</td>
+<td><span class="ipa">/θ/</span>–<span class="ipa">/ð/</span> inceltme</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td>—</td>
+</tr>
+<tr data-phase="B2.2" data-week="24" id="w24">
+<td><span class="wk">24. hafta</span><span class="days">gün 162–168</span><span class="chip p5">B2.2</span></td>
+<td>Aynı · ~56 bin</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td>6. ay kaydı</td>
+</tr>
+<tr data-phase="B2.2" data-week="25" id="w25">
+<td><span class="wk">25. hafta</span><span class="days">gün 169–175</span><span class="chip p5">B2.2</span></td>
+<td>Aynı · ~56 bin</td>
+<td class="same">Aynı</td>
+<td class="same">Aynı</td>
+<td><strong>İki tam deneme</strong></td>
+<td class="same">Aynı</td>
+<td><strong>Gün 170–175 kararı</strong></td>
+</tr>
+<tr data-phase="B2.2" data-week="26" id="w26">
+<td><span class="wk">26. hafta</span><span class="days">gün 176–180</span><span class="chip p5">B2.2</span></td>
+<td>Hafif, kolay okuma · ~25 bin</td>
+<td>Hafif</td>
+<td>Bakım</td>
+<td>Sınav öncesi hafif tekrar</td>
+<td>Hafif</td>
+<td>Sınav (ya da kaydırılmış tarih)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Birikimli okuma:</strong> ~60 bin (gün 28) · ~220 bin (gün 63) · ~500 bin (gün 105) · ~730 bin (gün 133) · ~1,07 milyon (gün 175) · ~1,09 milyon (gün 180).</p>
+
+</section><section aria-labelledby="s6-title" class="sec" id="s6"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s6">§6</a></span><h2 id="s6-title">Telaffuz</h2></div>
+<h3 id="s6-1"><span class="h-num">6.1</span> Kanıttan tasarıma</h3>
+<div class="table-wrap"><table class="cols-3">
+<thead>
+<tr>
+<th>#</th>
+<th>Bulgu</th>
+<th>Plana etkisi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Telaffuz eğitimi işe yarıyor (86 çalışma, d=0,80–0,89); daha uzun ve geri bildirimli eğitimlerde etki daha büyük (<a href="https://experts.nau.edu/en/publications/the-effectiveness-of-second-language-pronunciation-instruction-a-/" rel="noopener noreferrer" target="_blank">Lee, Jang &amp; Plonsky 2015</a>)</td>
+<td>180 güne yayılmış ~52 saat, her gün geri bildirimli</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Kazanç en çok kontrollü görevlerde görülüyor, kendiliğinden konuşmada daha belirsiz (<a href="https://experts.nau.edu/en/publications/effects-of-second-language-pronunciation-teaching-revisited-a-pro/" rel="noopener noreferrer" target="_blank">Saito &amp; Plonsky 2019</a>)</td>
+<td>Her hedef ses aynı gün anlatma kaydında da izlenir (aktarım adımı)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Algı eğitimi algıda orta (d=0,92), üretimde küçük (d=0,54) gelişme sağladı; iki kazanç arasındaki ilişki istatistiksel olarak anlamlı değildi (<a href="https://www.cambridge.org/core/product/57401D28450902EE96659AD10AA11488" rel="noopener noreferrer" target="_blank">Sakai &amp; Moorman 2018</a>)</td>
+<td>Önce duymak, ama üretimi ayrıca çalışmak</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Çok konuşmacılı algı eğitimi (HVPT): 79 çalışma; ön-son test g=0,92, kontrol grubuna göre g=0,67; kazanç kalıcı, yeni uyaranlara kısmen aktarılıyor (<a href="https://resolve.cambridge.org/core/journals/studies-in-second-language-acquisition/article/high-variability-phonetic-training-hvpt-a-metaanalysis-of-l2-perceptual-training-studies/6ABB8C1F32D88D53EA8D05A4565E76F6/core-reader" rel="noopener noreferrer" target="_blank">Uchihara, Karas &amp; Thomson 2025</a>)</td>
+<td>EAC 1–8. hafta</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Aynı çalışmada programlar ortalama 294 dk (60–1.125 dk); 400 dk'nın altındaki programlarda süre arttıkça kazanç arttı <span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> (bulgular bölümünden, arama özetleriyle doğrulandı)</td>
+<td>Toplam ~400 dk: 8 hafta × 5 gün × 10 dk</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Algı eğitiminin konuşmaya etkisi küçük-orta; kalıcılığına ve eğitilmemiş kelimelere aktarımına dair güçlü kanıt yok; bireysel düzeyde algı kazancı üretim kazancıyla ilişkisiz (<a href="https://www.cambridge.org/core/product/E38D8F5CE65DC708137B0E95F97C6BC7" rel="noopener noreferrer" target="_blank">Uchihara, Karas &amp; Thomson 2024</a>)</td>
+<td>Algı eğitimi tek başına yetmez: ELSA + gölgeleme + aktarım</td>
+</tr>
+<tr>
+<td>7</td>
+<td>ASR eğitimi: genel g=0,69; açık düzeltici geri bildirimde büyük (g=0,86), dolaylı geri bildirimde orta (g=0,50) etki; bireysel seslerde büyük, vurgu-ritim-tonlamada küçük etki; kısa süreli kullanım işe yaramadı; yetişkinlerde ve orta düzeyde etki en büyük (<a href="https://resolve.cambridge.org/core/journals/recall/article/effectiveness-of-automatic-speech-recognition-in-eslefl-pronunciation-a-metaanalysis/A915444CF252B61D14961D2FE733822D" rel="noopener noreferrer" target="_blank">Ngo, Chen &amp; Lai 2024</a>)</td>
+<td>ELSA 180 gün; ritim ve tonlama için gölgeleme ve insan</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Aynı meta-analizde akranla yapılan ASR pratiğinde etki büyük, yalnız pratikte küçük çıktı <span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> (farklı çalışmaların karşılaştırması; farkın anlamlılığı özette yok)</td>
+<td>ELSA'da çalıştığınız sesi canlı derste ve eğitmenle kullanın</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Gölgeleme: 16 öğrenci 8 hafta boyunca haftada en az 4 kez, en az 10'ar dk gölgeleme yapıp kendini kaydetti. Anlaşılırlık ve akıcılık arttı, aksan değişmedi (<a href="https://doi.org/10.1075/jslp.3.1.02foo" rel="noopener noreferrer" target="_blank">Foote &amp; McDonough 2017</a>). 44 çalışmalık bir sistematik derlemede anlaşılırlık, akıcılık ve ritimde iyileşme görüldü; bireysel seslerde sonuç belirsiz (<a href="https://ora.ox.ac.uk/objects/uuid:3104cae1-3a6b-400a-b173-de44384238d2" rel="noopener noreferrer" target="_blank">Oxford, yüksek lisans çalışması</a>). Gölgeleme dinlemede ses birimlerini algılamayı da destekliyor (Hamada 2016, <em>Language Teaching Research</em>; <a href="https://journals.sagepub.com/doi/10.1177/0033688218771380" rel="noopener noreferrer" target="_blank">Hamada'nın RELC derlemesi</a>)</td>
+<td>Haftada en az 5 gün, 5–10 dk gölgeleme + kayıt</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Hedef ana dili İngilizce olan biri gibi konuşmak değil, anlaşılır konuşmak; CEFR B2: aksan diğer dillerden etkilenmiş olabilir, ama anlaşılırlığa etkisi az ya da hiç yoktur (<a href="https://rm.coe.int/the-new-scale-for-phonological-control-piccardo-/1680788b29" rel="noopener noreferrer" target="_blank">CEFR sesbilgisel denetim ölçeği</a>)</td>
+<td>Öncelik anlaşılırlığı en çok bozan hatalarda</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s6-2"><span class="h-num">6.2</span> Türkçe konuşanlar için hedefler</h3>
+<p><strong>Kanıt:</strong> Kuzey Kıbrıs'taki Türk öğrencilerle yapılan bir çalışmada <span class="ipa">/θ/</span>, <span class="ipa">/ð/</span>, <span class="ipa">/w/</span>, <span class="ipa">/v/</span>, <span class="ipa">/ŋ/</span> ünsüzleri ile <span class="ipa">/ɪ/</span>, <span class="ipa">/ʊ/</span>, <span class="ipa">/ɔː/</span>, <span class="ipa">/əʊ/</span>, <span class="ipa">/aʊ/</span> ünlüleri ciddi sorun çıkardı (<a href="https://oalib-perpustakaan.upi.edu/Record/doaj_a0d041011de64b18853c1d55df365628/Details" rel="noopener noreferrer" target="_blank">çalışma kaydı</a>). Ortaokul öğrencileriyle yapılan bir ODTÜ tezinde en çok hata ünlülerde görüldü (<a href="https://avesis.metu.edu.tr/yonetilen-tez/48e68483-9832-4cc4-8092-d9628a571741/common-pronunciation-errors-of-seventh-grade-efl-learners-a-case-from-turkey" rel="noopener noreferrer" target="_blank">ODTÜ tezi</a>). İleri düzey öğrencilerle yapılan bir Bilkent tezinde (Kaçmaz 1993) üç strateji bulundu: zor sesi benzer bir Türkçe sesle değiştirmek, sesi düşürmek ve araya ses eklemek. Türkçede söz sonu ötümsüzleşme (<em>kitap/kitabı</em>) ve söz başında ünsüz kümesinin olmaması (<em>ıstasyon</em>) da İngilizceye taşınabilir.</p>
+<p><strong>Sıralama ilkesi:</strong> Önce anlaşılırlığı en çok etkileyen ünlü karşıtlıkları ve <span class="ipa">/v/</span>–<span class="ipa">/w/</span>; <span class="ipa">/θ/</span>–<span class="ipa">/ð/</span> daha sonra ve hafif (sık kullanılan <em>the, this, think</em> kelimelerinde algı + temel üretim, son haftalarda inceltme). Ayrıntı: <a href="https://github.com/uensalbaris613-rgb/fdsdfsdfsdfsfsdfsd/blob/claude/180-day-english-plan-s81skx/degerlendirme/180_gunluk_plan_degerlendirmesi.md#49-elsa-sesletim-protokolü-faz-13-ve-kritik-kurallar" rel="noopener noreferrer" target="_blank">değerlendirme raporu §4.9</a>.</p>
+<div class="table-wrap"><table class="cols-3">
+<thead>
+<tr>
+<th>Hafta</th>
+<th>Hedef</th>
+<th>Örnek</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>İngilizce ses sistemi, ses-yazım; <span class="ipa">/iː/</span>–<span class="ipa">/ɪ/</span></td>
+<td><em>sheep/ship, leave/live</em></td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="ipa">/æ/</span>–<span class="ipa">/e/</span>, <span class="ipa">/ʌ/</span>–<span class="ipa">/ɑː/</span></td>
+<td><em>bad/bed, cut/cart</em></td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="ipa">/ʊ/</span>–<span class="ipa">/uː/</span>, <span class="ipa">/ɔː/</span>, <span class="ipa">/əʊ/</span>, <span class="ipa">/aʊ/</span>; schwa <span class="ipa">/ə/</span></td>
+<td><em>full/fool, law, go, now, about</em></td>
+</tr>
+<tr>
+<td>4</td>
+<td><span class="ipa">/v/</span>–<span class="ipa">/w/</span></td>
+<td><em>vest/west, very/wary</em></td>
+</tr>
+<tr>
+<td>5</td>
+<td><span class="ipa">/ŋ/</span>; söz sonu ötümlü ünsüzler</td>
+<td><em>sin/sing; bag/back, dog/dock</em></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Ünsüz kümeleri, araya ünlü eklememe</td>
+<td><em>school, street, spring</em></td>
+</tr>
+<tr>
+<td>7</td>
+<td><span class="ipa">/θ/</span>–<span class="ipa">/ð/</span> algı + temel üretim</td>
+<td><em>think/sink, then/den</em></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Kelime vurgusu (ek kuralları) — EAC biter</td>
+<td><em>phoTOgraphy / PHOtograph</em></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Zayıf biçimler</td>
+<td><em>to, for, can, of</em></td>
+</tr>
+<tr>
+<td>10–11</td>
+<td>Cümle vurgusu, bağlama, düşünce grupları</td>
+<td><em>What do you think → whaddya think</em> (doğal hızda)</td>
+</tr>
+<tr>
+<td>12–13</td>
+<td>Tonlama (soru türleri, liste, karşıtlık)</td>
+<td><em>Do you like it?</em> ↗ / <em>Where do you live?</em> ↘</td>
+</tr>
+<tr>
+<td>14–22</td>
+<td>Kayıtlardan kişisel hata listesi (en çok 5 madde) + IELTS Part 2 akışı</td>
+<td>Kayıtlarınızdan çıkan hatalar</td>
+</tr>
+<tr>
+<td>23–26</td>
+<td><span class="ipa">/θ/</span>–<span class="ipa">/ð/</span> inceltme + bakım</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s6-3"><span class="h-num">6.3</span> Günlük protokol (15–30 dk)</h3>
+<ol type="1">
+<li><p><strong>Algı</strong> — 1–8. hafta: EAC'de haftanın karşıtlığı, 10 dk, haftada 5 gün. 9. haftadan sonra: hedef sesi içeren kelimeleri 2–3 dk bölüm sesinden dinleme.</p></li>
+<li><p><strong>Üretim</strong> — ELSA'da hedef ses, 5–15 dk. Kelime başına en fazla 3–5 deneme; olmazsa işaretleyip ertesi güne bırakın.</p></li>
+<li><p><strong>Gölgeleme</strong> — haftada en az 5 gün, 5–10 dk, günün 30–60 saniyelik parçasıyla:</p>
+<ul>
+<li>(a) metne bakmadan dinleyin;</li>
+<li>(b) metne bakarak sesle eşzamanlı okuyun;</li>
+<li>(c) mırıldanarak gölgeleyin;</li>
+<li>(d) metne bakmadan tam sesle gölgeleyin;</li>
+<li>(e) kaydedip dinleyin.</li>
+</ul>
+<p>Bu sıra uygulayıcı önerisidir. Parçanın neredeyse tamamını zaten anlıyor olmanız gerekir.</p></li>
+<li><p><strong>Aktarım</strong> — çıktı adımındaki anlatma kaydında hedef sese dikkat edin. Haftada bir kez kaydı dinleyip hedef sesi kaç kez doğru söylediğinizi sayın.</p></li>
+</ol>
+<h3 id="s6-4"><span class="h-num">6.4</span> Başlangıç ve aylık ölçüm (her 4 haftada, 10 dk)</h3>
+<ul>
+<li>Aynı 1 dakikalık metni okuyun ve 1 dakika serbest konuşun; ikisini de kaydedin. Gün 1 kaydıyla karşılaştırın.</li>
+<li><strong>Dikte testi:</strong> 1 dakikalık serbest konuşmanızı telefonun dikte özelliğine söyleyin; doğru yazılan kelimelerin yüzdesini not edin. Bu yalnızca kaba bir anlaşılırlık göstergesidir; makine insan dinleyicinin yerini tutmaz.</li>
+<li>B1'den itibaren eğitmenden 1–9 arası "anlaşılırlık" puanı isteyin.</li>
+<li>ELSA hedef ses puanlarını ve (1–8. hafta) EAC doğruluk yüzdelerini not edin.</li>
+</ul>
+
+</section><section aria-labelledby="s7-title" class="sec" id="s7"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s7">§7</a></span><h2 id="s7-title">Anlam odaklı girdi</h2></div>
+<h3 id="s7-1"><span class="h-num">7.1</span> Ne kadar bilinen kelime gerekir?</h3>
+<div class="table-wrap"><table class="cols-4">
+<thead>
+<tr>
+<th>Girdi türü</th>
+<th>Rahat anlama</th>
+<th>Asgari anlama</th>
+<th>Kaynak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kolay (yaygın) okuma</td>
+<td>≥%98 bilinen kelime</td>
+<td>—</td>
+<td><a href="https://assets.cambridge.org/97810090/98359/excerpt/9781009098359_excerpt.pdf" rel="noopener noreferrer" target="_blank">Nation</a>; Hu &amp; Nation 2000</td>
+</tr>
+<tr>
+<td>Gerçek metin okuma</td>
+<td>%98 ≈ 8.000 kelime ailesi ("optimal")</td>
+<td>%95 ≈ 4.000–5.000 aile ("asgari")</td>
+<td><a href="https://scholarspace.manoa.hawaii.edu/items/eaead47e-853e-4797-ba6f-596df150c1d7" rel="noopener noreferrer" target="_blank">Laufer &amp; Ravenhorst-Kalovski 2010</a></td>
+</tr>
+<tr>
+<td>Dinleme</td>
+<td>%95 çoğu dinleyici için yeterli; 2.000–3.000 aileyle ulaşılabilir</td>
+<td>—</td>
+<td>van Zeeland &amp; Schmitt 2013, <em>Applied Linguistics</em> 34(4)</td>
+</tr>
+<tr>
+<td>İzleme (kısa belgeseller)</td>
+<td>%95 ("optimal yeterli")</td>
+<td>%80 ("asgari yeterli")</td>
+<td><a href="https://www.cambridge.org/core/product/DFCA6605076705D5762C98F286D16B27" rel="noopener noreferrer" target="_blank">Durbahn, Rodgers, Macis &amp; Peters 2024</a></td>
+</tr>
+<tr>
+<td>TV dizileri</td>
+<td>3.000 aile + özel adlar ≈ %95</td>
+<td>—</td>
+<td><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.992638/full" rel="noopener noreferrer" target="_blank">Webb &amp; Rodgers 2009 — özet</a></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Önemli ayrıntı:</strong> Laufer &amp; Ravenhorst-Kalovski'de kelime bilgisindeki küçük artışlar, metin kapsamasını neredeyse değiştirmese de okuduğunu anlamayı artırdı. Eşik bir duvar değildir; her yeni kelime işe yarar. Bu eşikler, ulusal bir sınavın okuma metinlerinden çıkarılmıştır; kolay okuma kitapları için değil.</p>
+<h3 id="s7-2"><span class="h-num">7.2</span> Düzey seçimi</h3>
+<ul>
+<li><strong>Sayfa testi:</strong> Kitabın ilk iki sayfasını okuyun, bilinmeyen kelimeleri sayın. Başlangıçta sayfada ≤1–2, orta düzeyde ≤4–5 bilinmeyen kelime varsa düzey uygundur; daha fazlası varsa bir düzey aşağı inin.</li>
+<li><strong>Dinleme materyali:</strong> Okuma düzeyinizin 1–2 düzey altında olsun. Birçok öğrenen, akıcı okuyabildiği düzeyin iki altındaki materyali akıcı dinleyebiliyor (<a href="https://www.er-central.com/?p=1076" rel="noopener noreferrer" target="_blank">ER Central</a>).</li>
+<li><strong>Yükselme:</strong> İki hafta üst üste sayfada ≤2 bilinmeyen kelime ve rahat okuma → bir üst düzey.</li>
+</ul>
+<h3 id="s7-3"><span class="h-num">7.3</span> Okurken dinlemeden yalnız dinlemeye</h3>
+<ul>
+<li><strong>A1–A2: önce okurken dinleme.</strong> Okuma, okurken dinleme ve yalnız dinlemeyi karşılaştıran çalışmada üç yolla da kelime öğrenildi, ama çoğu kelime öğrenilmedi. Üç ay sonra, ipucu verilmeden hatırlamada, okuma yollarında 28 kelimeden yalnızca 1'inin anlamı kaldı; yalnız dinlemede hiçbiri kalmadı. Metinde sık geçen kelimeler daha iyi öğrenildi ve daha geç unutuldu (<a href="https://www2.hawaii.edu/~readfl/rfl/October2008/brown/brown.html" rel="noopener noreferrer" target="_blank">Brown, Waring &amp; Donkaewbua 2008</a>). Yazılı + sözlü sunum da düşük ön bilgide yalnız sözlüden iyi (<a class="xref" href="#s2">§2</a>).</li>
+<li><strong>Bu yüzden:</strong> A1–A2'de yeni bölüm önce okurken dinlenir. Metinsiz dinleme yalnızca <strong>okunmuş</strong> malzemeyle yapılır; amaç yeni kelime değil, tanıdık kelimelerin sesini tanımaktır.</li>
+<li><strong>B1:</strong> Önce dinle, sonra oku (ya da tersi). <strong>B2:</strong> Yalnız dinleme; transkript sonra.</li>
+<li>Orta-ileri düzeyde aynı belgeseli okumak, dinlemek ve izlemek arasında kelime öğreniminde anlamlı fark çıkmadı (<a href="https://www.cambridge.org/core/journals/studies-in-second-language-acquisition/article/learning-vocabulary-through-reading-listening-and-viewing/415CF118C5A114BB2D9C3B79B9656AFF" rel="noopener noreferrer" target="_blank">Feng &amp; Webb 2020</a>). B1'den sonra izleme de geçerli bir girdi yoludur.</li>
+</ul>
+<h3 id="s7-4"><span class="h-num">7.4</span> Dizi kuralları</h3>
+<ul>
+<li><strong>Seçim:</strong> Günlük hayat dili ağırlıklı, bölümleri 20–45 dk, çok sezonlu <strong>tek</strong> dizi. Aynı karakterler ve konular kelime yükünü azaltır (<a class="xref" href="#s2">§2</a>, kural 4).</li>
+<li><strong>Başlama testi</strong> (~64. günden, olmazsa 2 haftada bir tekrar): İngilizce altyazıyla bir bölüm izleyin. Ana olayı 5 cümleyle anlatabiliyor ve bilinmeyen kelimeler anlamayı bozmuyorsa başlayın. Değilse akşam girdisi kitap sesleri ve eski 6 Minute English bölümleri olarak kalır.</li>
+<li><strong>B1–B2.1:</strong> İlk izleme İngilizce altyazılı. <strong>B2:</strong> Sevdiğiniz bölümleri altyazısız ikinci kez izleyin.</li>
+<li><strong>Türkçe altyazı yok:</strong> İngilizce altyazı kelimenin biçimini öğrenmede üstün çıktı; ana dil altyazısı anlamada üstün çıkmadı (<a href="https://lirias.kuleuven.be/bitstream/123456789/652883/2/Peters_imagery_final.pdf" rel="noopener noreferrer" target="_blank">Peters, Heynen &amp; Puimège 2016</a>).</li>
+</ul>
+<h3 id="s7-5"><span class="h-num">7.5</span> 6 Minute English protokolü (~64. günden, haftada 3–4 bölüm)</h3>
+<ol type="1">
+<li>Transkriptsiz bir kez dinleyin; ana fikri bir cümleyle söyleyin.</li>
+<li>Transkripti okuyun.</li>
+<li>Tekrar dinleyin.</li>
+<li>60 saniyelik bir parçayı gölgeleyin (<a class="xref" href="#s6-3">§6.3</a>).</li>
+<li>B1'de 3 cümlelik sözlü özet; B2'de haftada bir 150 kelimelik yazılı özet.</li>
+</ol>
+<h3 id="s7-6"><span class="h-num">7.6</span> Kelime konusunda gerçekçilik</h3>
+<ul>
+<li>Anlam odaklı girdiden kendiliğinden kelime öğrenimi kelime başına yavaş: 24 çalışmalık meta-analizde hedef kelimelerin ortalama %9–18'i hemen sonraki testte, %6–17'si gecikmeli testte öğrenilmiş bulundu (<a href="https://www.cambridge.org/core/product/E38E3468FD2090B1FA3051051DE8E70C" rel="noopener noreferrer" target="_blank">Webb, Uchihara &amp; Yanagisawa 2023</a>).</li>
+<li>Nation'ın modelinde en sık 2. bin kelime düzeyiyle ortalama ≥12 kez karşılaşmak için ~200 bin, 9. bin düzeyi için ~3 milyon kelimelik girdi gerekiyor. 12 karşılaşma her kelime için değil, düzeyin ortalaması için. Nation bu miktarları ancak yılda ~1.000 kelime ailesi öğrenme hızı varsayımıyla "yönetilebilir" buluyor (<a href="https://nflrc.hawaii.edu/rfl/item-detail/303" rel="noopener noreferrer" target="_blank">Nation 2014</a>).</li>
+<li><strong>Sonuç:</strong> 180 günde B2 kelime dağarcığına (~4.000 kelime; <a class="xref" href="#s12-6">§12.6</a>) yalnız girdiyle ulaşmak gerçekçi değil. Yeni kelimeyi Anki'niz tanıtır; kitaplar o kelimelerle tekrar tekrar karşılaştırır ve onları "tanımaktan" akıcı anlamaya taşır. ~120. günden Mid-frequency Readers, 4.000+ düzeyindeki kelimeler için özel olarak yazılmış metinlerdir.</li>
+</ul>
+
+</section><section aria-labelledby="s8-title" class="sec" id="s8"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s8">§8</a></span><h2 id="s8-title">Anlam odaklı çıktı</h2></div>
+<h3 id="s8-1"><span class="h-num">8.1</span> Görev döngüsü (her konuşma ve yazma görevi)</h3>
+<div class="table-wrap"><table class="cols-3">
+<thead>
+<tr>
+<th>Adım</th>
+<th>Ne yapılır</th>
+<th>Dayanak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. <strong>Plan</strong></td>
+<td>1–5 dk not (IELTS Part 2'de tam 1 dk)</td>
+<td>Görev öncesi planlama akıcılığı tutarlı biçimde artırıyor; doğruluk ve karmaşıklıkta sonuçlar karışık (<a href="https://english.ecu.edu/?p=13678" rel="noopener noreferrer" target="_blank">Johnson &amp; Abdi Tabari</a>)</td>
+</tr>
+<tr>
+<td>2. <strong>Yap</strong></td>
+<td>Kayıtla konuşma ya da yazma; bilmediğiniz dili kullanmaya zorlanın</td>
+<td>Çıktı, eksiklerinizi fark ettirir (Swain'in çıktı hipotezi — <a href="https://en.wikipedia.org/wiki/Merrill_Swain" rel="noopener noreferrer" target="_blank">özet</a>)</td>
+</tr>
+<tr>
+<td>3. <strong>Geri bildirim</strong></td>
+<td>Yapay zekâdan ya da insandan, en fazla 2–3 hata türü</td>
+<td><a class="xref" href="#s8-2">§8.2</a></td>
+</tr>
+<tr>
+<td>4. <strong>Düzelt</strong></td>
+<td>Kilit cümleleri yeniden söyleyin ya da yazın</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5. <strong>Tekrar</strong></td>
+<td>Aynı görevi 1–3 gün içinde tekrarlayın</td>
+<td>Görev tekrarı sözlüde karmaşıklık ve doğruluğu, yazılıda doğruluk ve akıcılığı artırıyor; tekrarlar arası süre uzadıkça etki azalıyor (Abdi Tabari vd. 2025 — <a href="https://hilpub.uni-hildesheim.de/handle/ubhi/19120" rel="noopener noreferrer" target="_blank">kayıt</a>)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s8-2"><span class="h-num">8.2</span> Geri bildirim kuralları</h3>
+<ul>
+<li><strong>Sözlü:</strong> Önce ipucu, sonra doğru biçim. Yapay zekâya "hatamı tekrar et ve düzeltmemi iste" deyin (<a class="xref" href="#prompt-a3">A-3</a>) (<a href="https://www.cambridge.org/core/product/4999EE1C8379B2BF026B148EAF373CA1" rel="noopener noreferrer" target="_blank">Lyster &amp; Saito 2010</a>).</li>
+<li><strong>Yazılı:</strong> Odaklı (2–3 hata türü), dolaylı işaretleme ve yeniden yazma (<a class="xref" href="#prompt-a4">A-4</a>). Yazılı düzeltici geri bildirim dilbilgisi doğruluğunu artırıyor (<a href="https://doi.org/10.1111/j.1540-4781.2015.12187.x" rel="noopener noreferrer" target="_blank">Kang &amp; Han 2015</a>); otomatik yazma geri bildiriminin etkisi orta (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10351274/" rel="noopener noreferrer" target="_blank">Fleckenstein vd. 2023</a>).</li>
+<li><strong>İnsan geri bildirimi şart:</strong> Yapay zekâ geri bildirimi uzmanınkinden zayıf; en büyük fark, önerilen sonraki adımın öğrencinin düzeyine uygunluğunda (<a href="https://hechingerreport.org/proof-points-writing-ai-feedback/" rel="noopener noreferrer" target="_blank">Steiss vd. 2024 — özet</a>).</li>
+<li><strong>Bant puanı istemeyin:</strong> Yapay zekânın IELTS puan tahminlerinin insan değerlendiricilerle uyumu araştırmalarda tutarsız; nitel geri bildirim isteyin.</li>
+</ul>
+<h3 id="s8-3"><span class="h-num">8.3</span> Faz faz görevler</h3>
+<div class="table-wrap"><table class="cols-4">
+<thead>
+<tr>
+<th>Faz</th>
+<th>Konuşma</th>
+<th>Yazma</th>
+<th>İnsan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A1</strong></td>
+<td>10 sabit soruya kayıtlı cevap; okunan sayfayı 3–5 cümleyle anlatma; 15. günden yapay zekâyla 10 dk soru-cevap (<a class="xref" href="#prompt-a1">A-1</a>)</td>
+<td>30–70 kelime: kendiniz; kitaptan bir model cümleyi kendinize uyarlama</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>A2</strong></td>
+<td>1–2 dk anlatım (kaydet → dinle → yeniden kaydet); yapay zekâyla bölüm sohbeti ve günlük durum canlandırmaları (<a class="xref" href="#prompt-a2">A-2</a>)</td>
+<td>10 dk günlük + 70–120 kelimelik özet ya da e-posta; odaklı geri bildirim (<a class="xref" href="#prompt-a4">A-4</a>)</td>
+<td>Haftada 30 dk</td>
+</tr>
+<tr>
+<td><strong>B1</strong></td>
+<td>2–3 dk anlatım ya da gerekçeli görüş; yapay zekâyla tartışma, "önce sen düzelt" türü geri bildirim (<a class="xref" href="#prompt-a3">A-3</a>)</td>
+<td>130–200 kelime anlatı, görüş, özet; ertesi gün kilit cümleleri yeniden yazma; 14. haftadan ~200 kelimelik görüş yazısı</td>
+<td>English Online haftada 3 canlı ders</td>
+</tr>
+<tr>
+<td><strong>B2.1</strong></td>
+<td>Her gün bir Part 2 kartı (1 dk plan + 2 dk), ertesi gün aynı kart; haftada 3 kez yapay zekâyla Part 3 (<a class="xref" href="#prompt-a5">A-5</a>)</td>
+<td>Haftada 2 Task 2 + 1 Task 1 + 2 özet; geri bildirim (<a class="xref" href="#prompt-a6">A-6</a>) + yeniden yazma</td>
+<td>Eğitmen haftada 2 × 50 dk</td>
+</tr>
+<tr>
+<td><strong>B2.2</strong></td>
+<td>Haftada 2–3 tam Speaking denemesi; Part 2/3 tekrarları</td>
+<td>Haftada 5 Task 2 + 3 Task 1</td>
+<td>Eğitmen haftada 2 kez; ~145. gün IELTS Progress Check</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s8-4"><span class="h-num">8.4</span> Canlı dersi ve eğitmeni verimli kullanmak</h3>
+<ul>
+<li>Derse o haftanın 4/3/2 konusunu ya da Part 2 kartını getirin. Önce siz konuşun; eğitmenden doğru biçimi söylemek yerine ipucu vermesini isteyin.</li>
+<li>Dersin son 5 dakikasında en sık 3 hatanızı yazdırın ve kişisel hata listenize ekleyin (telaffuz hataları <a class="xref" href="#s6-2">§6.2</a>'deki listeye).</li>
+</ul>
+
+</section><section aria-labelledby="s9-title" class="sec" id="s9"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s9">§9</a></span><h2 id="s9-title">Akıcılık</h2></div>
+<p><strong>İlke:</strong> Akıcılık çalışmasında yeni dil olmaz: tanıdık malzeme + daha hızlı yapma baskısı + bol miktar. Nation, toplam sürenin yaklaşık dörtte birini önerir. Bu planda ayrı akıcılık süresi 4 bileşenin ~%10–13'ü; akşam hafif girdisi (kolay, tanıdık malzeme) eklenince ~%30.</p>
+<h3 id="s9-1"><span class="h-num">9.1</span> Konuşma: 4/3/2 + gecikmeli düzeltme</h3>
+<ul>
+<li><strong>4/3/2:</strong> Aynı konuyu azalan sürede üç kez anlatma. A1'de 2/1,5/1 dk → A2'de 3/2/1 → B1'den 4/3/2. Konu: dünkü bölüm ya da (B2'de) dünkü IELTS konusu.</li>
+<li><strong>Kanıt:</strong> Aynı konuyu tekrar anlatanlar akıcılık kazanımını korudu, farklı konular anlatanlar korumadı (<a href="https://www.lrdc.pitt.edu/perfettilab/pubpdfs/de%20Jong%20Language%20Learning.pdf" rel="noopener noreferrer" target="_blank">De Jong &amp; Perfetti 2011</a>). Azalan süreyle tekrar en büyük akıcılık kazancını sağladı, ama karmaşıklık ve doğrulukta anlamlı değişiklik olmadı (<a href="https://metatoc.com/papers/74068-repeating-a-monologue-under-increasing-time-pressure-effects-on-fluency-complexity-and-accuracy" rel="noopener noreferrer" target="_blank">Thai &amp; Boers 2016</a>). 4/3/2'ye gecikmeli üstdilsel düzeltme eklenince akıcılık ve doğruluk birlikte ve farklı konularda arttı (36 öğrenci) (<a href="https://discovery.ucl.ac.uk/10128571/1/LTR2021.pdf" rel="noopener noreferrer" target="_blank">Tran &amp; Saito 2021</a>).</li>
+<li><strong>Uygulama (B1'den, haftada 2):</strong> Son turu (2 dk) kaydedin → telefonun dikte özelliğiyle metne çevirin (makinenin yanlış duyduğu yerleri hızlıca düzeltin) → <a class="xref" href="#prompt-a7">A-7</a> komutuyla yapay zekâya verin → en fazla 3 hata ve kısa kural → ertesi gün aynı konuyu tekrar anlatın.</li>
+</ul>
+<h3 id="s9-2"><span class="h-num">9.2</span> Okuma: hızlı tekrar okuma + süreli hızlı okuma</h3>
+<ul>
+<li><strong>Her gün:</strong> Dünkü bölümü daha hızlı yeniden okuyun.</li>
+<li><strong>B1'den haftada 3:</strong> Bir düzey aşağı kitaptan 5–7 dk süreli okuma; kelime/dk'yı not edin.</li>
+<li><strong>Kanıt:</strong> Hızlı okuma kursuna katılan öğrencilerin okuma hızı arttı; kazancın başka metinlere aktarımına dair bulgular ön çalışma düzeyinde (<a href="https://scholarspace.manoa.hawaii.edu/items/5e8ccae9-2c47-4614-9877-3dae5c7810ad" rel="noopener noreferrer" target="_blank">Macalister 2010</a>). Okuma hızında en büyük kazancı sağlayanlar bir yılda ~200 bin kelime kolay metin okudu (<a href="https://scholarspace.manoa.hawaii.edu/items/dd514c21-74d8-457f-8813-acb63bf3e596/full" rel="noopener noreferrer" target="_blank">Beglar &amp; Hunt 2014</a>).</li>
+<li><strong>Uzun vadeli hedef:</strong> İyi anlamayla dakikada ~250 kelime (Nation; <a href="https://jalt-publications.org/tlt/departments/book-reviews/articles/514-reading-speed-and-fluency-1" rel="noopener noreferrer" target="_blank">kitap incelemesi</a>).</li>
+</ul>
+<h3 id="s9-3"><span class="h-num">9.3</span> Dinleme</h3>
+<p>Akşam: A1–A2'de daha önce okunan kitapların sesleri; B1'den eski 6 Minute English bölümleri ve dizi. Materyal okuma düzeyinin 1–2 altında. Yaygın dinleme, dinleme akıcılığını ve anlamayı artırdı (Chang &amp; Millett 2014, <em>ELT Journal</em> 68(1)).</p>
+<h3 id="s9-4"><span class="h-num">9.4</span> Yazma</h3>
+<p>A2'den her gün 10 dk durmadan yazma (konu: dünkü bölüm); kelime sayısını not edin. Kanıt zayıf-orta (<a href="https://jalt-publications.org/tlt/departments/myshare/articles/3053-boosting-writing-speed-through-timed-continuous-writing" rel="noopener noreferrer" target="_blank">JALT</a>); maliyeti düşük olduğu için planda.</p>
+
+</section><section aria-labelledby="s10-title" class="sec" id="s10"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s10">§10</a></span><h2 id="s10-title">Ölçüm ve karar kuralları</h2></div>
+<h3 id="s10-1"><span class="h-num">10.1</span> Haftada 3 sayı (pazar, 10 dk)</h3>
+<ol type="1">
+<li><strong>Okuma:</strong> Haftalık okunan kelime (kütüphane kaydı) + bir sayfadaki bilinmeyen kelime sayısı.</li>
+<li><strong>Konuşma:</strong> 2 dakikalık anlatım kaydında dakikadaki kelime sayısı ve hata sayısı.</li>
+<li><strong>Telaffuz:</strong> Haftanın hedef sesinde ELSA puanı (1–8. hafta EAC doğruluk yüzdesi de).</li>
+</ol>
+<h3 id="s10-2"><span class="h-num">10.2</span> Her 4 haftada bir (+10 dk)</h3>
+<p>Telaffuz kayıtları ve dikte testi (<a class="xref" href="#s6-4">§6.4</a>) · bir düzey aşağı metinde okuma hızı (kelime/dk).</p>
+<h3 id="s10-3"><span class="h-num">10.3</span> Faz çıkış ölçütleri</h3>
+<p><a class="xref" href="#s4-3">§4.3</a>'teki tablo; gün 28, 63, 105 ve 133'te.</p>
+<h3 id="s10-4"><span class="h-num">10.4</span> Karar kuralları</h3>
+<p><strong>Girdi</strong></p>
+<ul>
+<li>İki hafta üst üste sayfada ≤2 bilinmeyen kelime ve rahat okuma → bir üst düzey. Sayfada 4–5'ten fazla bilinmeyen kelime → bir düzey aşağı.</li>
+<li>Okunan kelime iki hafta üst üste hedefin %70'inin altındaysa süreyi değil düzeyi düşürün (kolay metin daha hızlı okunur).</li>
+<li>Dizi başlama testi başarısızsa 2 hafta sonra tekrar deneyin.</li>
+</ul>
+<p><strong>Telaffuz</strong></p>
+<ul>
+<li>EAC 8. haftanın sonunda bırakılır. Bir karşıtlıkta doğruluk hâlâ %70'in altındaysa yalnızca o karşıtlık için 2 hafta daha devam edin (toplam en fazla ~500 dk).</li>
+<li>ELSA'da hedef ses puanı 2 hafta ilerlemiyorsa o sesi bir hafta daha tutun, takvimdeki sonraki hedefleri kaydırın.</li>
+</ul>
+<p><strong>Çıktı ve akıcılık</strong></p>
+<ul>
+<li>Konuşma hızı 3 hafta artmıyorsa 4/3/2 konusunu daha tanıdık seçin, süre baskısını koruyun, aynı görevi tekrar edin.</li>
+<li>Hata sayısı 3 hafta düşmüyorsa gecikmeli düzeltmeyi haftada 3'e çıkarın ve yalnızca 1 hata türüne odaklanın.</li>
+</ul>
+<p><strong>Genel</strong></p>
+<ul>
+<li>Faz çıkış ölçütü tutmuyorsa o fazı 1 hafta uzatın; takvimin geri kalanı bir hafta kayar. Bu iki kez olursa gün 150'de sınav tarihini kaydırmayı ciddi olarak düşünün.</li>
+<li>Yorgunluk 2 hafta üst üste yüksekse yoğun blokları 30 dk kısaltın, o süreyi akşam hafif girdisine verin.</li>
+</ul>
+<p><strong>IELTS</strong> (planınızdaki karar noktaları, değişmedi)</p>
+<ul>
+<li><strong>Gün 90:</strong> İlk tam deneme, bilgi amaçlı.</li>
+<li><strong>Gün 120:</strong> Tam deneme; zayıf bölüme göre B2.1'in son haftalarında çıktı görevlerini ayarlayın.</li>
+<li><strong>Gün 150:</strong> İki tam denemenin ortalaması ≥6,0 ve Writing ≥5,5 değilse sınavı 2–3 ay kaydırın.</li>
+<li><strong>Gün 170–175:</strong> İki denemede ≥6,5 yoksa (Writing ve Speaking insan tarafından puanlanmış olmalı) sınavı kaydırın.</li>
+</ul>
+
+</section><section aria-labelledby="s11-title" class="sec" id="s11"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s11">§11</a></span><h2 id="s11-title">Yeterlilik hesabı</h2></div>
+<div class="table-wrap"><table class="cols-4">
+<thead>
+<tr>
+<th>Hacim</th>
+<th>Bu plan (180 gün)</th>
+<th>Araştırma eşiği ya da kanıt</th>
+<th>Durum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Okuma</strong></td>
+<td>~1,05–1,1 milyon kelime (~147 saat); gün 63'te ~220 bin, gün 105'te ~500 bin</td>
+<td>2. bin düzeyi için ~200 bin, 9. bin düzeyi için ~3 milyon kelime (<a href="https://nflrc.hawaii.edu/rfl/item-detail/303" rel="noopener noreferrer" target="_blank">Nation 2014</a>)</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> 2.000 aile için gereken girdi ~60. günde aşılıyor. <span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> Önceki belgelerde kullandığım ara değerleri (3.000 aile ≈ 0,5 milyon, 4.000 aile ≈ 1 milyon) birincil tabloyla bu kez doğrulayamadım; kaba tahmin olarak alın</td>
+</tr>
+<tr>
+<td><strong>Okuma hızı</strong></td>
+<td>~1,1 milyon / 6 ay</td>
+<td>Okuma hızı kazancı için yılda en az ~200 bin kelime (<a href="https://scholarspace.manoa.hawaii.edu/items/dd514c21-74d8-457f-8813-acb63bf3e596/full" rel="noopener noreferrer" target="_blank">Beglar &amp; Hunt 2014</a>)</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> ~5 katı</td>
+</tr>
+<tr>
+<td><strong>Kapsama</strong></td>
+<td>Kitaplar sayfa testiyle ≥%98'de</td>
+<td>IELTS okumasında %95 için ~4.000 aile (<a href="https://journals.sagepub.com/doi/xml/10.1177/21582440251362269" rel="noopener noreferrer" target="_blank">SAGE Open 2025</a>); gerçek metinde asgari %95 ≈ 4.000–5.000 aile</td>
+<td><span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> Bu eşiğe ulaşmak Anki'nize bağlı; Mid-frequency Readers ~120. günden destekler</td>
+</tr>
+<tr>
+<td><strong>Dinleme ve izleme</strong></td>
+<td>~300 saat (≈2 milyon duyulan kelime)</td>
+<td>Dinlemede %95 için 2.000–3.000 aile; TV'de %95 için ~3.000 aile + özel adlar</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> 6 Minute English B1'de, dizi başlama testiyle</td>
+</tr>
+<tr>
+<td><strong>Telaffuz</strong></td>
+<td>~52 saat; bunun ~7 saati algı eğitimi</td>
+<td>Algı eğitimi ortalaması 294 dk, kazanç ~400 dk'ya kadar artıyor; ASR'de orta-uzun süre daha iyi; gölgelemede 8 hafta × haftada ≥4 × ≥10 dk küçük bir çalışmada etkili bulundu</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> Üçünün de üzerinde</td>
+</tr>
+<tr>
+<td><strong>Çıktı</strong></td>
+<td>~160 saat konuşma (~38 saati insanla), ~110 saat yazma (~160 metin)</td>
+<td>Belirli bir saat eşiği yok; etkili olan etkileşim, geri bildirim, planlama ve görev tekrarı</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> Her görevde dördü de var</td>
+</tr>
+<tr>
+<td><strong>Akıcılık</strong></td>
+<td>~100 saat ayrı çalışma + ~165 saat kolay akşam girdisi</td>
+<td>Nation: sürenin yaklaşık dörtte biri</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> ~%30 (akşam girdisiyle)</td>
+</tr>
+<tr>
+<td><strong>Toplam süre</strong></td>
+<td>4 bileşen ~850 saat (+ pazarlar); dil odaklı planınız ve IELTS tekniğiyle ~1.250 saat</td>
+<td>Cambridge'in rehber süreleri, sıfırdan birikimli: B1 350–400, B2 500–600, C1 700–800 saat; yalnızca rehberdir ve yoğunluğa, ders dışı maruziyete göre değişir (<a href="https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours" rel="noopener noreferrer" target="_blank">Cambridge English</a>)</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> Saat olarak yeterli; risk, saatlerin çok kısa bir takvime sıkışması</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Dürüst sınırlar</strong></p>
+<ol type="1">
+<li>Meta-analiz sonuçları grup ortalamasıdır; bireysel sonuç farklı olabilir.</li>
+<li>Sıfırdan B2.2'ye 180 gün çok iddialı. Saat yeterli olsa da kelime dağarcığı büyümesi Nation'ın varsaydığı hızın kat kat üstünde olmalı; bu da Anki'nin düzenli işlemesine bağlı.</li>
+<li>Yapay zekâ araçlarına ve ELSA'ya özgü kanıt sınırlı.</li>
+<li>Telaffuz kazanımının kendiliğinden konuşmaya aktarımı belirsiz; bu yüzden aktarım adımı ve insanla konuşma planda.</li>
+<li>Bazı sayılar yalnızca özetlerden doğrulanabildi (<a class="xref" href="#s12-8">§12.8</a>).</li>
+</ol>
+
+</section><section aria-labelledby="s12-title" class="sec" id="s12"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s12">§12</a></span><h2 id="s12-title">Araştırma özeti</h2></div>
+<h3 id="s12-1"><span class="h-num">12.1</span> Girdi</h3>
+<div class="table-wrap"><table class="cols-2">
+<thead>
+<tr>
+<th>Bulgu</th>
+<th>Kaynak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yaygın okuma okuma becerisinde küçük-orta etki gösterdi (49 çalışma, 71 örneklem, 5.919 katılımcı). Etki yetişkinlerde, yabancı dil (EFL) ortamında ve web tabanlı hikâyelerde (basılı kitaplara göre) daha büyüktü; yaygın okuma müfredatın bir parçası olduğunda en büyüktü</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://scholarspace.manoa.hawaii.edu/items/b52a5591-ec04-4026-816f-434361a4e899" rel="noopener noreferrer" target="_blank">Jeon &amp; Day 2016</a></td>
+</tr>
+<tr>
+<td>Ayrı bir meta-analizde (34 çalışma, 3.942 katılımcı) grup karşılaştırmalarında d=0,46, ön-son testlerde d=0,71</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://metatoc.com/papers/42892-a-meta-analysis-of-extensive-reading-research" rel="noopener noreferrer" target="_blank">Nakanishi 2015</a></td>
+</tr>
+<tr>
+<td>Girdiden kendiliğinden kelime öğrenimi: hedef kelimelerin %9–18'i (hemen), %6–17'si (gecikmeli)</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://www.cambridge.org/core/product/E38E3468FD2090B1FA3051051DE8E70C" rel="noopener noreferrer" target="_blank">Webb, Uchihara &amp; Yanagisawa 2023</a></td>
+</tr>
+<tr>
+<td>Gereken girdi: 2. bin düzeyi ~200 bin, 9. bin düzeyi ~3 milyon kelime; 12 karşılaşma düzey ortalaması; yılda ~1.000 aile varsayımı</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://nflrc.hawaii.edu/rfl/item-detail/303" rel="noopener noreferrer" target="_blank">Nation 2014</a></td>
+</tr>
+<tr>
+<td>Okumada %95 kapsama ≈ 4.000–5.000 aile (asgari), %98 ≈ 8.000 aile (optimal); küçük kelime artışları kapsamayı az değiştirse de anlamayı artırıyor</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://scholarspace.manoa.hawaii.edu/items/eaead47e-853e-4797-ba6f-596df150c1d7" rel="noopener noreferrer" target="_blank">Laufer &amp; Ravenhorst-Kalovski 2010</a></td>
+</tr>
+<tr>
+<td>İzlemede %95 optimal, %80 asgari yeterli anlama</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://www.cambridge.org/core/product/DFCA6605076705D5762C98F286D16B27" rel="noopener noreferrer" target="_blank">Durbahn vd. 2024</a></td>
+</tr>
+<tr>
+<td>Yalnız dinlemede 3 ay sonra kalan kelime yok; okuma yollarında 28'de 1</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://www2.hawaii.edu/~readfl/rfl/October2008/brown/brown.html" rel="noopener noreferrer" target="_blank">Brown, Waring &amp; Donkaewbua 2008</a></td>
+</tr>
+<tr>
+<td>Aynı belgeseli okuma, dinleme ve izleme arasında anlamlı fark yok</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://www.cambridge.org/core/journals/studies-in-second-language-acquisition/article/learning-vocabulary-through-reading-listening-and-viewing/415CF118C5A114BB2D9C3B79B9656AFF" rel="noopener noreferrer" target="_blank">Feng &amp; Webb 2020</a></td>
+</tr>
+<tr>
+<td>Aynı alt türdeki TV programları: daha az kelime ailesi, nadir kelimelerde daha çok tekrar</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://revistas.um.es/ijes/article/view/137131" rel="noopener noreferrer" target="_blank">Webb 2011</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s12-2"><span class="h-num">12.2</span> Telaffuz</h3>
+<p><a class="xref" href="#s6-1">§6.1</a>'deki tablo: Lee, Jang &amp; Plonsky 2015 · Saito &amp; Plonsky 2019 · Sakai &amp; Moorman 2018 · Uchihara, Karas &amp; Thomson 2024 ve 2025 · Ngo, Chen &amp; Lai 2024 · Foote &amp; McDonough 2017 · gölgeleme derlemesi · Hamada · CEFR sesbilgisel denetim ölçeği. Türkçe konuşanlara özgü çalışmalar <a class="xref" href="#s6-2">§6.2</a>'de.</p>
+<h3 id="s12-3"><span class="h-num">12.3</span> Çıktı</h3>
+<div class="table-wrap"><table class="cols-2">
+<thead>
+<tr>
+<th>Bulgu</th>
+<th>Kaynak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Etkileşim dil gelişimini destekliyor</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://eprints.lancs.ac.uk/id/eprint/59863/" rel="noopener noreferrer" target="_blank">Mackey &amp; Goo 2007</a></td>
+</tr>
+<tr>
+<td>İpucu veren düzeltme, doğru biçimi söyleyen düzeltmeden etkili</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://www.cambridge.org/core/product/4999EE1C8379B2BF026B148EAF373CA1" rel="noopener noreferrer" target="_blank">Lyster &amp; Saito 2010</a></td>
+</tr>
+<tr>
+<td>Yazılı düzeltici geri bildirim doğruluğu artırıyor</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://doi.org/10.1111/j.1540-4781.2015.12187.x" rel="noopener noreferrer" target="_blank">Kang &amp; Han 2015</a></td>
+</tr>
+<tr>
+<td>Otomatik yazma geri bildirimi orta etkili</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10351274/" rel="noopener noreferrer" target="_blank">Fleckenstein vd. 2023</a></td>
+</tr>
+<tr>
+<td>Yapay zekâ geri bildirimi uzmana yakın ama daha zayıf</td>
+<td><span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> <a href="https://hechingerreport.org/proof-points-writing-ai-feedback/" rel="noopener noreferrer" target="_blank">Steiss vd. 2024 — özet</a></td>
+</tr>
+<tr>
+<td>Diyalog tabanlı sistemler konuşmada orta etkili (g≈0,61)</td>
+<td><span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> <a href="https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/31847710516602398819C5E594038E7B/S0958344025100268a.pdf/dialogue-based-computer-assisted-language-learning-systems-for-second-language-speaking-development-a-three-level-meta-analysis.pdf" rel="noopener noreferrer" target="_blank">meta-analiz</a></td>
+</tr>
+<tr>
+<td>Görev tekrarı ve planlama</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> Abdi Tabari vd. 2025 — <a href="https://hilpub.uni-hildesheim.de/handle/ubhi/19120" rel="noopener noreferrer" target="_blank">kayıt</a> · <a href="https://english.ecu.edu/?p=13678" rel="noopener noreferrer" target="_blank">Johnson &amp; Abdi Tabari</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s12-4"><span class="h-num">12.4</span> Akıcılık</h3>
+<div class="table-wrap"><table class="cols-2">
+<thead>
+<tr>
+<th>Bulgu</th>
+<th>Kaynak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aynı konuyu tekrar anlatmak akıcılık kazanımını koruyor</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://www.lrdc.pitt.edu/perfettilab/pubpdfs/de%20Jong%20Language%20Learning.pdf" rel="noopener noreferrer" target="_blank">De Jong &amp; Perfetti 2011</a></td>
+</tr>
+<tr>
+<td>Azalan süre akıcılığı artırıyor; karmaşıklık ve doğruluk değişmiyor</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://metatoc.com/papers/74068-repeating-a-monologue-under-increasing-time-pressure-effects-on-fluency-complexity-and-accuracy" rel="noopener noreferrer" target="_blank">Thai &amp; Boers 2016</a></td>
+</tr>
+<tr>
+<td>4/3/2 + gecikmeli düzeltme: akıcılık ve doğruluk birlikte</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://discovery.ucl.ac.uk/10128571/1/LTR2021.pdf" rel="noopener noreferrer" target="_blank">Tran &amp; Saito 2021</a></td>
+</tr>
+<tr>
+<td>Hızlı okuma kursu hızı artırıyor; başka metinlere aktarım ön çalışma düzeyinde</td>
+<td><span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> <a href="https://scholarspace.manoa.hawaii.edu/items/5e8ccae9-2c47-4614-9877-3dae5c7810ad" rel="noopener noreferrer" target="_blank">Macalister 2010</a></td>
+</tr>
+<tr>
+<td>Okuma hızı kazancı için yılda ≥200 bin kelime kolay okuma</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://scholarspace.manoa.hawaii.edu/items/dd514c21-74d8-457f-8813-acb63bf3e596/full" rel="noopener noreferrer" target="_blank">Beglar &amp; Hunt 2014</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s12-5"><span class="h-num">12.5</span> Bilişsel yük ve kaynak sayısı</h3>
+<div class="table-wrap"><table class="cols-2">
+<thead>
+<tr>
+<th>Bulgu</th>
+<th>Kaynak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Destek acemiye yararlı, bilgi arttıkça gereksiz yük</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://www.uky.edu/~gmswan3/EDC608/Kalyuga2007_Article_ExpertiseReversalEffectAndItsI.pdf" rel="noopener noreferrer" target="_blank">Kalyuga 2007</a></td>
+</tr>
+<tr>
+<td>Yazılı + sözlü sunum yalnız sözlüden iyi (düşük ön bilgi, sistem hızı, resimsiz materyal); yalnız yazılıdan farksız</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842" rel="noopener noreferrer" target="_blank">Adesope &amp; Nesbit 2012</a></td>
+</tr>
+<tr>
+<td>İngilizce altyazılı video kelime öğrenimine güçlü katkı (g≈0,87)</td>
+<td><span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> <a href="https://doi.org/10.1016/j.system.2013.07.013" rel="noopener noreferrer" target="_blank">Montero Perez vd. 2013</a> (ikincil aktarım)</td>
+</tr>
+<tr>
+<td>Alışkanlık oluşumu medyan ~66 gün</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://bps.org.uk/research-digest/how-form-habit" rel="noopener noreferrer" target="_blank">Lally vd. 2010 — özet</a></td>
+</tr>
+<tr>
+<td>Görev geçiş maliyeti</td>
+<td><span aria-label="Doğrulandı ya da güçlü kanıt" class="mark ok" role="img" title="Doğrulandı ya da güçlü kanıt">✓</span> <a href="https://modeldb.science/citations/102732" rel="noopener noreferrer" target="_blank">Monsell 2003</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s12-6"><span class="h-num">12.6</span> Düzeyler, kelime ve süre</h3>
+<ul>
+<li><strong>Nation'ın CEFR tablosu:</strong> A1 ~120 kelime ve kalıp (hayatta kalma dağarcığı); A2 en sık 1.000 kelime ailesi; B1 en sık 2.000–3.000; B2 ~4.000 (2.000–3.000 yüksek sıklıklı + amaca uygun 1.000–2.000 kelime; IELTS için akademik kelimeler); C1 5.000–6.000; C2 7.000–9.000 (<a href="https://wgtn.ac.nz/lals/resources/paul-nations-resources/vocabulary-lists/vocabulary-cefr-and-word-family-size/vocabulary-and-the-cefr-docx" rel="noopener noreferrer" target="_blank">Nation — Vocabulary and the CEFR</a>). "B2.2" bu ölçekte ~4.000 ile 5.000–6.000 arasına düşer.</li>
+<li><strong>CEFR'de resmî bir "B2.2" yok;</strong> Avrupa Konseyi'nin ölçeklerinde B2 ve ara basamak B2+ var. IELTS'in kendi araştırmasına göre C1'in alt eşiği 6.5 ile 7 arasında (<a href="https://ielts.org/organisations/ielts-for-organisations/compare-ielts/ielts-and-the-cefr" rel="noopener noreferrer" target="_blank">IELTS and the CEFR</a>). Hedefiniz pratikte "B2+ / C1 eşiği".</li>
+<li><strong>Rehber süreler</strong> (Cambridge, sıfırdan birikimli): B1 350–400, B2 500–600, C1 700–800 saat; yalnızca rehber (<a href="https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours" rel="noopener noreferrer" target="_blank">Cambridge English</a>).</li>
+</ul>
+<h3 id="s12-7"><span class="h-num">12.7</span> Düzeltmeler ve doğrulamayı geçemeyen iddialar</h3>
+<div class="table-wrap"><table class="cols-3">
+<thead>
+<tr>
+<th>#</th>
+<th>İddia</th>
+<th>Sonuç</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"Jeon &amp; Day 2016: grup karşılaştırmalarında d=0,46, ön-son testlerde d=0,71" (araştırma belgesi, <a class="xref" href="#s1-1">§1.1</a>)</td>
+<td><span aria-label="Doğrulamayı geçemedi" class="mark bad" role="img" title="Doğrulamayı geçemedi">✕</span> Bu iki değer Nakanishi 2015'e ait. Jeon &amp; Day 2016 küçük-orta etki bildiriyor. <a href="https://github.com/uensalbaris613-rgb/fdsdfsdfsdfsfsdfsd/blob/claude/180-day-english-plan-s81skx/degerlendirme/anlam_odakli_girdi_cikti_plani.md" rel="noopener noreferrer" target="_blank">Araştırma belgesinde</a> düzeltildi</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"Konuşma tanıma pratiği başkalarıyla yapıldığında yalnız yapılmasından belirgin biçimde daha etkili" (en az kaynakla plan, §2.6)</td>
+<td><span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> Özette yön doğru (akranla büyük, yalnız küçük etki), ama bu farklı çalışmaların karşılaştırması ve farkın anlamlılığı raporlanmıyor. "Belirgin biçimde" ifadesi <a href="https://github.com/uensalbaris613-rgb/fdsdfsdfsdfsfsdfsd/blob/claude/180-day-english-plan-s81skx/degerlendirme/en_az_kaynakla_dort_bilesen_plani.md" rel="noopener noreferrer" target="_blank">o belgede</a> yumuşatıldı</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"İzleyerek kelime öğrenimi okumanın yarısından az; okuma, dinleme ve okurken dinleme birbirinin yerine geçer"</td>
+<td><span aria-label="Doğrulamayı geçemedi" class="mark bad" role="img" title="Doğrulamayı geçemedi">✕</span> Meta-analizdeki yol ortalamaları farklı çalışmalardan geliyor. Aynı belgeseli kullanan kontrollü çalışmada yollar arasında fark çıkmadı (Feng &amp; Webb 2020). Başlangıç düzeyinde yalnız dinleme ise okumanın gerisinde kaldı (Brown vd. 2008). Bu planda kullanılmadı</td>
+</tr>
+<tr>
+<td>4</td>
+<td>"İzlemede kapsama düştükçe anlama kademeli düşer, eşik yoktur"</td>
+<td><span aria-label="Doğrulamayı geçemedi" class="mark bad" role="img" title="Doğrulamayı geçemedi">✕</span> Dört koşullu tasarım bunu ayırt edemiyor. Kullanılmadı</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ASR meta-analizinin güven aralığı (0,31–1,08) ve akran/yalnız alt grup değerleri (0,89/0,44)</td>
+<td><span aria-label="Doğrulanamadı" class="mark unk" role="img" title="Doğrulanamadı">?</span> Doğrulanamadı; yalnızca özetteki yön kullanıldı</td>
+</tr>
+<tr>
+<td>6</td>
+<td>HVPT doz ayrıntıları (ortalama 294 dk; 400 dk altında doz-yanıt)</td>
+<td><span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> Bulgular bölümünden arama özetleriyle doğrulandı; tam metinle teyit edilmedi</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Nation'ın ara düzey girdi değerleri (3.000 aile ≈ 0,5 milyon, 4.000 aile ≈ 1 milyon kelime)</td>
+<td><span aria-label="Doğrulanamadı" class="mark unk" role="img" title="Doğrulanamadı">?</span> Bu kez birincil tabloyla doğrulanamadı; kaba tahmin olarak işaretlendi</td>
+</tr>
+<tr>
+<td>8</td>
+<td>English Accent Coach'un ücretsiz olduğu (en az kaynakla plan)</td>
+<td><span aria-label="Doğrulanamadı" class="mark unk" role="img" title="Doğrulanamadı">?</span> Bu kez doğrulanamadı; ücretini sitesinden kontrol edin</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s12-8"><span class="h-num">12.8</span> Yöntem</h3>
+<ul>
+<li><strong>Beş araştırma ekseni:</strong> (1) girdi hacmi ve kapsama, (2) telaffuz eğitiminin türü ve dozu, Türkçe kaynaklı sorunlar, (3) akıcılık ve çıktı, (4) bilişsel yük ve en az kaynak ilkeleri, (5) 2026 kaynak durumu ve resmî ölçütler.</li>
+<li><strong>Otomatik derin araştırma:</strong> 24 kaynak tarandı, 40 iddia çıkarıldı. En önemli 25 iddia, her biri 3 bağımsız doğrulayıcı tarafından sınandı: 19 doğrulandı, 3 çürütüldü, 3'ü kullanım sınırı nedeniyle sınanamadı. Son sentez adımı da kullanım sınırı nedeniyle tamamlanamadı; sentez elle yapıldı.</li>
+<li><strong>Elle tamamlanan doğrulamalar:</strong> Sınanamayan 3 iddianın 2'si doğrulandı (Laufer &amp; Ravenhorst-Kalovski'nin yöntemi ve küçük kelime artışlarının etkisi). Üçüncüsü (Nation ile Milton'ın düzey tahminlerinin karşılaştırması) plan için gerekli olmadığından dışarıda bırakıldı. Ayrıca akıcılık (Thai &amp; Boers; Tran &amp; Saito; Macalister), gölgeleme (Foote &amp; McDonough), bilişsel yük (Adesope &amp; Nesbit; Webb 2011), resmî süreler (Cambridge), Türkçe konuşanlara özgü telaffuz çalışmaları, yaygın okuma meta-analizleri (Jeon &amp; Day; Nakanishi) ve Brown vd. 2008 için ek aramalar yapıldı.</li>
+<li><strong>Sınırlılık:</strong> Yayınevi sayfalarına bu ortamdan doğrudan erişilemedi. Sayılar özetlerden ve arama dizinindeki metinlerden doğrulandı; bulgular bölümünden gelen birkaç sayı <span aria-label="Sınırlı ya da koşullu kanıt" class="mark lim" role="img" title="Sınırlı ya da koşullu kanıt">≈</span> ile işaretlendi.</li>
+</ul>
+
+</section><section aria-labelledby="s13-title" class="sec" id="s13"><div class="sec-head"><span class="sec-num"><a class="xref" href="#s13">§13</a></span><h2 id="s13-title">Kaynakça</h2></div>
+<p><strong>Girdi ve kelime</strong></p>
+<ul>
+<li><a href="https://nflrc.hawaii.edu/rfl/item-detail/303" rel="noopener noreferrer" target="_blank">Nation 2014 — How much input do you need?</a> · <a href="https://wgtn.ac.nz/lals/resources/paul-nations-resources/vocabulary-lists/vocabulary-cefr-and-word-family-size/vocabulary-and-the-cefr-docx" rel="noopener noreferrer" target="_blank">Nation — Vocabulary and the CEFR</a> · <a href="https://assets.cambridge.org/97810090/98359/excerpt/9781009098359_excerpt.pdf" rel="noopener noreferrer" target="_blank">Nation — Four Strands, örnek bölüm</a></li>
+<li><a href="https://scholarspace.manoa.hawaii.edu/items/eaead47e-853e-4797-ba6f-596df150c1d7" rel="noopener noreferrer" target="_blank">Laufer &amp; Ravenhorst-Kalovski 2010</a> · <a href="https://www.cambridge.org/core/product/DFCA6605076705D5762C98F286D16B27" rel="noopener noreferrer" target="_blank">Durbahn, Rodgers, Macis &amp; Peters 2024</a> · van Zeeland &amp; Schmitt 2013, <em>Applied Linguistics</em> 34(4), 457–479</li>
+<li><a href="https://www.cambridge.org/core/product/E38E3468FD2090B1FA3051051DE8E70C" rel="noopener noreferrer" target="_blank">Webb, Uchihara &amp; Yanagisawa 2023</a> · <a href="https://www2.hawaii.edu/~readfl/rfl/October2008/brown/brown.html" rel="noopener noreferrer" target="_blank">Brown, Waring &amp; Donkaewbua 2008</a> · <a href="https://www.cambridge.org/core/journals/studies-in-second-language-acquisition/article/learning-vocabulary-through-reading-listening-and-viewing/415CF118C5A114BB2D9C3B79B9656AFF" rel="noopener noreferrer" target="_blank">Feng &amp; Webb 2020</a></li>
+<li><a href="https://scholarspace.manoa.hawaii.edu/items/b52a5591-ec04-4026-816f-434361a4e899" rel="noopener noreferrer" target="_blank">Jeon &amp; Day 2016</a> · <a href="https://metatoc.com/papers/42892-a-meta-analysis-of-extensive-reading-research" rel="noopener noreferrer" target="_blank">Nakanishi 2015</a> · <a href="https://www2.hawaii.edu/~readfl/rfl/October2002/day/day.html" rel="noopener noreferrer" target="_blank">Day &amp; Bamford 2002</a> · <a href="https://scholarspace.manoa.hawaii.edu/items/dd514c21-74d8-457f-8813-acb63bf3e596/full" rel="noopener noreferrer" target="_blank">Beglar &amp; Hunt 2014</a></li>
+<li><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.992638/full" rel="noopener noreferrer" target="_blank">Webb &amp; Rodgers 2009 — özet</a> · <a href="https://revistas.um.es/ijes/article/view/137131" rel="noopener noreferrer" target="_blank">Webb 2011 — aynı türden TV programları</a> · <a href="https://doi.org/10.1016/j.system.2013.07.013" rel="noopener noreferrer" target="_blank">Montero Perez vd. 2013</a> · <a href="https://lirias.kuleuven.be/bitstream/123456789/652883/2/Peters_imagery_final.pdf" rel="noopener noreferrer" target="_blank">Peters, Heynen &amp; Puimège 2016</a></li>
+<li><a href="https://www.er-central.com/?p=1076" rel="noopener noreferrer" target="_blank">ER Central — dinleme materyali seçimi</a> · Chang &amp; Millett 2014, <em>ELT Journal</em> 68(1) · <a href="https://journals.sagepub.com/doi/xml/10.1177/21582440251362269" rel="noopener noreferrer" target="_blank">SAGE Open 2025 — IELTS okuma kapsaması</a></li>
+</ul>
+<p><strong>Telaffuz</strong></p>
+<ul>
+<li><a href="https://experts.nau.edu/en/publications/the-effectiveness-of-second-language-pronunciation-instruction-a-/" rel="noopener noreferrer" target="_blank">Lee, Jang &amp; Plonsky 2015</a> · <a href="https://experts.nau.edu/en/publications/effects-of-second-language-pronunciation-teaching-revisited-a-pro/" rel="noopener noreferrer" target="_blank">Saito &amp; Plonsky 2019</a> · <a href="https://www.cambridge.org/core/product/57401D28450902EE96659AD10AA11488" rel="noopener noreferrer" target="_blank">Sakai &amp; Moorman 2018</a></li>
+<li><a href="https://resolve.cambridge.org/core/journals/studies-in-second-language-acquisition/article/high-variability-phonetic-training-hvpt-a-metaanalysis-of-l2-perceptual-training-studies/6ABB8C1F32D88D53EA8D05A4565E76F6/core-reader" rel="noopener noreferrer" target="_blank">Uchihara, Karas &amp; Thomson 2025 — HVPT ve algı</a> · <a href="https://www.cambridge.org/core/product/E38D8F5CE65DC708137B0E95F97C6BC7" rel="noopener noreferrer" target="_blank">Uchihara, Karas &amp; Thomson 2024 — HVPT ve üretim</a></li>
+<li><a href="https://resolve.cambridge.org/core/journals/recall/article/effectiveness-of-automatic-speech-recognition-in-eslefl-pronunciation-a-metaanalysis/A915444CF252B61D14961D2FE733822D" rel="noopener noreferrer" target="_blank">Ngo, Chen &amp; Lai 2024 — ASR meta-analizi</a> · <a href="https://journal.ikipsiliwangi.ac.id/project/article/view/26923" rel="noopener noreferrer" target="_blank">ELSA çalışmaları — derleme</a></li>
+<li><a href="https://doi.org/10.1075/jslp.3.1.02foo" rel="noopener noreferrer" target="_blank">Foote &amp; McDonough 2017</a> · <a href="https://ora.ox.ac.uk/objects/uuid:3104cae1-3a6b-400a-b173-de44384238d2" rel="noopener noreferrer" target="_blank">Gölgeleme sistematik derlemesi (Oxford)</a> · <a href="https://journals.sagepub.com/doi/10.1177/0033688218771380" rel="noopener noreferrer" target="_blank">Hamada — RELC</a></li>
+<li><a href="https://oalib-perpustakaan.upi.edu/Record/doaj_a0d041011de64b18853c1d55df365628/Details" rel="noopener noreferrer" target="_blank">Türk öğrencilerin telaffuz sorunları — Kuzey Kıbrıs</a> · <a href="https://avesis.metu.edu.tr/yonetilen-tez/48e68483-9832-4cc4-8092-d9628a571741/common-pronunciation-errors-of-seventh-grade-efl-learners-a-case-from-turkey" rel="noopener noreferrer" target="_blank">ODTÜ tezi</a> · <a href="https://rm.coe.int/the-new-scale-for-phonological-control-piccardo-/1680788b29" rel="noopener noreferrer" target="_blank">CEFR sesbilgisel denetim ölçeği</a></li>
+<li><a href="https://apps-cce.grad-college.iastate.edu/resource-database/view/556" rel="noopener noreferrer" target="_blank">English Accent Coach — kaynak kaydı</a></li>
+</ul>
+<p><strong>Çıktı ve akıcılık</strong></p>
+<ul>
+<li><a href="https://eprints.lancs.ac.uk/id/eprint/59863/" rel="noopener noreferrer" target="_blank">Mackey &amp; Goo 2007</a> · <a href="https://www.cambridge.org/core/product/4999EE1C8379B2BF026B148EAF373CA1" rel="noopener noreferrer" target="_blank">Lyster &amp; Saito 2010</a> · <a href="https://doi.org/10.1111/j.1540-4781.2015.12187.x" rel="noopener noreferrer" target="_blank">Kang &amp; Han 2015</a> · <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10351274/" rel="noopener noreferrer" target="_blank">Fleckenstein vd. 2023</a> · <a href="https://hechingerreport.org/proof-points-writing-ai-feedback/" rel="noopener noreferrer" target="_blank">Steiss vd. 2024 — özet</a></li>
+<li><a href="https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/31847710516602398819C5E594038E7B/S0958344025100268a.pdf/dialogue-based-computer-assisted-language-learning-systems-for-second-language-speaking-development-a-three-level-meta-analysis.pdf" rel="noopener noreferrer" target="_blank">Diyalog tabanlı sistemler — meta-analiz</a> · Abdi Tabari vd. 2025 — <a href="https://hilpub.uni-hildesheim.de/handle/ubhi/19120" rel="noopener noreferrer" target="_blank">görev tekrarı</a> · <a href="https://english.ecu.edu/?p=13678" rel="noopener noreferrer" target="_blank">Johnson &amp; Abdi Tabari — planlama</a> · Swain — <a href="https://en.wikipedia.org/wiki/Merrill_Swain" rel="noopener noreferrer" target="_blank">özet</a></li>
+<li><a href="https://www.lrdc.pitt.edu/perfettilab/pubpdfs/de%20Jong%20Language%20Learning.pdf" rel="noopener noreferrer" target="_blank">De Jong &amp; Perfetti 2011</a> · <a href="https://metatoc.com/papers/74068-repeating-a-monologue-under-increasing-time-pressure-effects-on-fluency-complexity-and-accuracy" rel="noopener noreferrer" target="_blank">Thai &amp; Boers 2016</a> · <a href="https://discovery.ucl.ac.uk/10128571/1/LTR2021.pdf" rel="noopener noreferrer" target="_blank">Tran &amp; Saito 2021</a> · <a href="https://scholarspace.manoa.hawaii.edu/items/5e8ccae9-2c47-4614-9877-3dae5c7810ad" rel="noopener noreferrer" target="_blank">Macalister 2010</a> · <a href="https://jalt-publications.org/tlt/departments/myshare/articles/3053-boosting-writing-speed-through-timed-continuous-writing" rel="noopener noreferrer" target="_blank">Süreli yazma (JALT)</a> · <a href="https://jalt-publications.org/tlt/departments/book-reviews/articles/514-reading-speed-and-fluency-1" rel="noopener noreferrer" target="_blank">Nation — okuma hızı kitabı incelemesi</a></li>
+</ul>
+<p><strong>Bilişsel yük ve alışkanlık</strong></p>
+<ul>
+<li><a href="https://www.uky.edu/~gmswan3/EDC608/Kalyuga2007_Article_ExpertiseReversalEffectAndItsI.pdf" rel="noopener noreferrer" target="_blank">Kalyuga 2007</a> · <a href="https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842" rel="noopener noreferrer" target="_blank">Adesope &amp; Nesbit 2012</a> · <a href="https://bps.org.uk/research-digest/how-form-habit" rel="noopener noreferrer" target="_blank">Lally vd. 2010 — özet</a> · <a href="https://modeldb.science/citations/102732" rel="noopener noreferrer" target="_blank">Monsell 2003</a></li>
+</ul>
+<p><strong>Kaynaklar ve resmî ölçütler</strong></p>
+<ul>
+<li><a href="https://www.xreading.com/" rel="noopener noreferrer" target="_blank">Xreading</a> · <a href="https://www.oup.es/en/oxfordreadingclub" rel="noopener noreferrer" target="_blank">Oxford Reading Club — OUP Spain</a> · <a href="https://www.oupjapan.co.jp/en/node/62840" rel="noopener noreferrer" target="_blank">OUP Japan</a> · <a href="https://www.oupjapan.co.jp/en/gradedreaders/bookworms.shtml" rel="noopener noreferrer" target="_blank">Oxford Bookworms düzeyleri</a> · <a href="https://www.er-central.com/help/" rel="noopener noreferrer" target="_blank">ER Central</a> · <a href="https://www.wgtn.ac.nz/lals/resources/readers" rel="noopener noreferrer" target="_blank">Mid-frequency Readers</a></li>
+<li><a href="https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" rel="noopener noreferrer" target="_blank">6 Minute English</a> · <a href="https://languatalk.com/blog/whats-the-best-ai-for-language-learning/" rel="noopener noreferrer" target="_blank">LanguaTalk</a> · <a href="https://www.englishaccentcoach.com" rel="noopener noreferrer" target="_blank">English Accent Coach</a></li>
+<li><a href="https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours" rel="noopener noreferrer" target="_blank">Cambridge English — guided learning hours</a> · <a href="https://ielts.org/organisations/ielts-for-organisations/compare-ielts/ielts-and-the-cefr" rel="noopener noreferrer" target="_blank">IELTS and the CEFR</a></li>
+</ul>
+
+</section><section aria-labelledby="ek-a-title" class="sec" id="ek-a"><div class="sec-head"><span class="sec-num">Ek A</span><h2 id="ek-a-title">Yapay zekâ komutları</h2></div>
+<p>Komutlar İngilizce; konuşmanın tamamı İngilizce olsun. Süslü parantez içlerini kendinize göre doldurun.</p>
+<figure class="prompt" id="prompt-a1"><figcaption><span class="prompt-id">A-1</span><span class="prompt-title">İlk konuşmalar (A1, 15. günden)</span><button class="copy" data-target="pre-a1" type="button">Kopyala</button></figcaption><pre id="pre-a1"><code>You are my English conversation partner. I am a beginner (A1). Use very short,
+simple sentences and common words only. Ask me one simple question at a time about
+{my day / my family / the story I read today}. If I answer with one word, ask me to
+say a full sentence. Do not correct me during the conversation. At the end, show me
+3 of my sentences corrected, and 3 useful sentences for next time.</code></pre></figure>
+
+<figure class="prompt" id="prompt-a2"><figcaption><span class="prompt-id">A-2</span><span class="prompt-title">Konuşma partneri ve canlandırma (A2–B1)</span><button class="copy" data-target="pre-a2" type="button">Kopyala</button></figcaption><pre id="pre-a2"><code>You are my English conversation partner. My level is {A2}. Talk with me about
+{topic}, or role-play {situation: shopping / asking for directions / making an
+appointment} with me. Use short, clear sentences and ask one question at a time.
+Do not correct me during the conversation. At the end, give me: (1) up to 3
+recurring errors, quoting my sentence, the corrected version and a one-line rule;
+(2) 5 useful phrases I could have used.</code></pre></figure>
+
+<figure class="prompt" id="prompt-a3"><figcaption><span class="prompt-id">A-3</span><span class="prompt-title">"Önce sen düzelt" türü geri bildirim (B1)</span><button class="copy" data-target="pre-a3" type="button">Kopyala</button></figcaption><pre id="pre-a3"><code>When I make a grammar mistake, do not give me the correct form. Repeat the part with
+the mistake and ask me to try again (for example: "Yesterday I go...? Try again.").
+Do this for at most one mistake per turn, and keep the conversation going.</code></pre></figure>
+
+<figure class="prompt" id="prompt-a4"><figcaption><span class="prompt-id">A-4</span><span class="prompt-title">Odaklı, dolaylı yazma geri bildirimi (A2–B1)</span><button class="copy" data-target="pre-a4" type="button">Kopyala</button></figcaption><pre id="pre-a4"><code>Here is my text (level {B1}). Check only these error types: {articles, verb tenses,
+subject-verb agreement}. Mark each error with [ ] and give a hint, not the
+correction. Then give 2 strengths and 2 priorities for next time. Do not rewrite my
+whole text.</code></pre></figure>
+
+<figure class="prompt" id="prompt-a5"><figcaption><span class="prompt-id">A-5</span><span class="prompt-title">IELTS Speaking Part 3 (B2)</span><button class="copy" data-target="pre-a5" type="button">Kopyala</button></figcaption><pre id="pre-a5"><code>Act as an IELTS Speaking examiner for Part 3 on the topic {topic}. Ask one question
+at a time, follow up on my answers, and continue for about 5 minutes. Afterwards,
+give feedback on Fluency and Coherence, Lexical Resource, Grammatical Range and
+Accuracy, and Pronunciation, using examples from my answers. Do not give me a band
+score; tell me the 2 most important things to improve.</code></pre></figure>
+
+<figure class="prompt" id="prompt-a6"><figcaption><span class="prompt-id">A-6</span><span class="prompt-title">IELTS Writing geri bildirimi (B2)</span><button class="copy" data-target="pre-a6" type="button">Kopyala</button></figcaption><pre id="pre-a6"><code>Here is the question and my IELTS Academic Writing {Task 1 / Task 2} answer.
+Evaluate it against the four public criteria. For each criterion, quote two
+sentences that show my current level and suggest one concrete change. List my
+errors by type with counts. Do not rewrite the essay and do not give a band score.</code></pre></figure>
+
+<figure class="prompt" id="prompt-a7"><figcaption><span class="prompt-id">A-7</span><span class="prompt-title">Gecikmeli düzeltme (4/3/2 sonrası, B1'den haftada 2)</span><button class="copy" data-target="pre-a7" type="button">Kopyala</button></figcaption><pre id="pre-a7"><code>Below is a transcript of my 2-minute talk (level {B1}). It was made with phone
+dictation, so ignore obvious dictation errors. Do not rewrite the talk. Find at most
+3 recurring grammar or vocabulary errors. For each: quote my sentence, give a short
+rule in simple English, and give one correct example sentence. Then give me 3 phrases
+that would make the talk sound more natural. I will give the same talk again
+tomorrow.</code></pre></figure>
+
+
+</section><section aria-labelledby="ek-b-title" class="sec" id="ek-b"><div class="sec-head"><span class="sec-num">Ek B</span><h2 id="ek-b-title">Haftalık kayıt şablonu</h2></div>
+<div class="table-wrap"><table class="cols-8">
+<thead>
+<tr>
+<th>Hafta</th>
+<th>Kitap / düzey</th>
+<th>Okunan kelime</th>
+<th>Sayfada bilinmeyen</th>
+<th>2 dk anlatım: kelime/dk</th>
+<th>Hata sayısı</th>
+<th>Hedef ses: ELSA (EAC %)</th>
+<th>İnsanla konuşma (dk)</th>
+<th>Yazılan metin</th>
+<th>Yorgunluk (1–5)</th>
+<th>Karar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Starter — …</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>—</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>…</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</section>
+    <footer class="foot"><p>Bu sayfa, <a href="https://github.com/uensalbaris613-rgb/fdsdfsdfsdfsfsdfsd/blob/claude/180-day-english-plan-s81skx/degerlendirme/nihai_dort_bilesen_plani.md" target="_blank" rel="noopener noreferrer">nihai_dort_bilesen_plani.md</a> belgesinin HTML sürümüdür; içerik aynıdır. Dil odaklı öğrenme bu planın kapsamı dışındadır.</p></footer>
+  </main>
+</div>
+</div>
+<script>
+(function () {
+  'use strict';
+  try { document.documentElement.setAttribute('lang', 'tr'); } catch (e) {}
+
+  var store = {
+    get: function (k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } },
+    set: function (k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} },
+    del: function (k) { try { window.localStorage.removeItem(k); } catch (e) {} }
+  };
+  var KEY_START = 'nihai-plan:start';
+  var memStart = null;
+  var PHASES = [
+    { id: 'A1', to: 28, cls: 'p1' },
+    { id: 'A2', to: 63, cls: 'p2' },
+    { id: 'B1', to: 105, cls: 'p3' },
+    { id: 'B2.1', to: 133, cls: 'p4' },
+    { id: 'B2.2', to: 180, cls: 'p5' }
+  ];
+  var MILESTONES = [
+    [28, 'A1 çıkış ölçütü'], [63, 'A2 çıkış ölçütü'], [90, 'ilk tam IELTS denemesi'],
+    [105, 'B1 çıkış ölçütü'], [120, 'tam IELTS denemesi'], [133, 'B2.1 çıkış ölçütü'],
+    [145, 'IELTS Progress Check (yaklaşık)'], [150, 'sınav tarihi kararı'],
+    [170, 'iki tam deneme ve son karar (gün 170–175)'], [180, 'sınav ya da kaydırılmış tarih']
+  ];
+
+  function $(id) { return document.getElementById(id); }
+  function toArray(list) { return Array.prototype.slice.call(list); }
+  function clean(t) { return (t || '').replace(/\s+/g, ' ').trim(); }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function todayISO() {
+    var d = new Date();
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  }
+  function parseISO(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || '');
+    if (!m) return null;
+    var t = Date.UTC(+m[1], +m[2] - 1, +m[3]);
+    return isNaN(t) ? null : t;
+  }
+  function daysSince(iso) {
+    var s = parseISO(iso);
+    if (s === null) return null;
+    var n = new Date();
+    return Math.round((Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()) - s) / 86400000);
+  }
+  function phaseOf(day) {
+    for (var i = 0; i < PHASES.length; i++) { if (day <= PHASES[i].to) return PHASES[i]; }
+    return PHASES[PHASES.length - 1];
+  }
+  function fmtDate(iso) {
+    var s = parseISO(iso);
+    if (s === null) return iso;
+    try {
+      return new Date(s).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+    } catch (e) { return iso; }
+  }
+  function getStart() {
+    var v = store.get(KEY_START);
+    return (v && parseISO(v) !== null) ? v : memStart;
+  }
+
+  // Calendar rows, with "Aynı" (same as last week) resolved to the text it repeats.
+  var calRows = toArray(document.querySelectorAll('table.cal tbody tr'));
+  var calHead = toArray(document.querySelectorAll('table.cal thead th')).map(function (th) { return clean(th.textContent); });
+  var resolved = [];
+  calRows.forEach(function (tr, r) {
+    var cells = tr.querySelectorAll('td');
+    var out = [];
+    for (var c = 1; c < cells.length; c++) {
+      var txt = clean(cells[c].textContent);
+      var prev = r > 0 ? resolved[r - 1][c - 1] : '';
+      if (txt === 'Aynı') txt = prev;
+      else if (txt.indexOf('Aynı · ') === 0) txt = prev.split(' · ')[0] + ' · ' + txt.slice('Aynı · '.length);
+      out.push(txt);
+    }
+    resolved.push(out);
+  });
+
+  function minutesFor(phaseId) {
+    var tr = document.querySelector('#minutes tbody tr[data-phase="' + phaseId + '"]');
+    if (!tr) return null;
+    var heads = toArray(document.querySelectorAll('#minutes thead th')).map(function (th) { return clean(th.textContent); });
+    var vals = toArray(tr.querySelectorAll('td')).map(function (td) { return clean(td.textContent); });
+    return { heads: heads, vals: vals };
+  }
+
+  function fillKV(dl, pairs) {
+    if (!dl) return;
+    while (dl.firstChild) dl.removeChild(dl.firstChild);
+    pairs.forEach(function (p) {
+      var row = document.createElement('div');
+      row.className = 'kv' + (p[2] ? ' ' + p[2] : '');
+      var dt = document.createElement('dt');
+      dt.textContent = p[0];
+      var dd = document.createElement('dd');
+      dd.textContent = p[1];
+      row.appendChild(dt);
+      row.appendChild(dd);
+      dl.appendChild(row);
+    });
+  }
+
+  // Daily checklist (§3): one saved state per calendar day, only in this browser.
+  var KEY_CHK = 'nihai-plan:chk:' + todayISO();
+  var boxes = toArray(document.querySelectorAll('input.daily-check'));
+  var saved = [];
+  try { saved = JSON.parse(store.get(KEY_CHK) || '[]') || []; } catch (e) { saved = []; }
+  boxes.forEach(function (b, i) {
+    b.disabled = false;
+    b.checked = !!saved[i];
+    b.addEventListener('change', function () {
+      store.set(KEY_CHK, JSON.stringify(boxes.map(function (x) { return x.checked; })));
+      updateChecklistCount();
+    });
+  });
+
+  function updateChecklistCount() {
+    var el = $('t-check');
+    if (!el || !boxes.length) return;
+    var n = boxes.filter(function (b) { return b.checked; }).length;
+    while (el.firstChild) el.removeChild(el.firstChild);
+    el.appendChild(document.createTextNode('Günlük kontrol listesi: ' + n + '/' + boxes.length + ' işaretli · '));
+    var a = document.createElement('a');
+    a.href = '#s3-list';
+    a.className = 'xref';
+    a.textContent = 'listeye git';
+    el.appendChild(a);
+  }
+
+  function render() {
+    var start = getStart();
+    var input = $('start-date');
+    var day = 1;
+    var isExample = true;
+    var msg;
+    if (start) {
+      if (input && input.value !== start) input.value = start;
+      isExample = false;
+      day = daysSince(start) + 1;
+      msg = 'Başlangıç: ' + fmtDate(start) + '. ';
+      if (day < 1) { msg += 'Plan ' + (1 - day) + ' gün sonra başlıyor; aşağıda 1. günün hedefleri var.'; day = 1; }
+      else if (day > 180) { msg += '180 gün tamamlandı; aşağıda son haftanın hedefleri var.'; day = 180; }
+      else { msg += 'Bugün planın ' + day + '. günü.'; }
+      if (new Date().getDay() === 0) msg += ' Bugün pazar: en fazla 3 saatlik hafif gün ve 10 dakikalık haftalık ölçüm.';
+    } else {
+      if (input) input.value = '';
+      msg = 'Örnek gösterim: 1. gün. Başlangıç tarihinizi seçin; bugünün günü, haftası ve hedefleri burada görünür. Tarih yalnızca bu tarayıcıda saklanır.';
+    }
+    var status = $('today-status');
+    if (status) status.textContent = msg;
+
+    var week = Math.min(26, Math.ceil(day / 7));
+    var ph = phaseOf(day);
+    $('t-day').textContent = 'Gün ' + day;
+    $('t-week').textContent = week + '. hafta / 26';
+    var chip = $('t-phase');
+    chip.textContent = ph.id;
+    chip.className = 'chip ' + ph.cls;
+
+    var next = null;
+    for (var i = 0; i < MILESTONES.length; i++) { if (MILESTONES[i][0] >= day) { next = MILESTONES[i]; break; } }
+    $('t-next').textContent = next
+      ? 'Sıradaki kontrol noktası: gün ' + next[0] + ', ' + next[1] + (next[0] === day ? ' (bugün).' : ' (' + (next[0] - day) + ' gün sonra).')
+      : 'Tüm kontrol noktaları geride kaldı.';
+
+    var mins = minutesFor(ph.id);
+    if (mins) {
+      var pairs = [];
+      for (var k = 1; k <= 6; k++) pairs.push([mins.heads[k], mins.vals[k]]);
+      pairs.push([mins.heads[7], mins.vals[7], 'kv-total']);
+      pairs.push(['Kalan', mins.vals[8], 'kv-rest']);
+      fillKV($('t-min'), pairs);
+    }
+    var row = resolved[week - 1];
+    if (row) {
+      fillKV($('t-weekrow'), calHead.slice(1).map(function (h, j) {
+        return [h, row[j] === '—' ? 'Bu hafta ayrı bir ölçüm yok' : row[j]];
+      }));
+    }
+
+    calRows.forEach(function (tr, idx) { tr.classList.toggle('is-current', !isExample && idx === week - 1); });
+    toArray(document.querySelectorAll('#minutes tbody tr')).forEach(function (tr) {
+      tr.classList.toggle('is-current', !isExample && tr.getAttribute('data-phase') === ph.id);
+    });
+    var mark = $('ruler-today');
+    if (mark) {
+      if (isExample) {
+        mark.hidden = true;
+      } else {
+        mark.hidden = false;
+        mark.style.left = ((day - 0.5) / 180 * 100) + '%';
+        mark.setAttribute('aria-label', 'Bugün: gün ' + day);
+        mark.setAttribute('data-tip', 'Bugün · gün ' + day + ' · ' + ph.id);
+      }
+    }
+    updateChecklistCount();
+  }
+
+  var input = $('start-date');
+  if (input) {
+    input.addEventListener('change', function () {
+      if (input.value && parseISO(input.value) !== null) {
+        memStart = input.value;
+        store.set(KEY_START, input.value);
+      } else {
+        memStart = null;
+        store.del(KEY_START);
+      }
+      render();
+    });
+  }
+  var clearBtn = $('start-clear');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function () {
+      memStart = null;
+      store.del(KEY_START);
+      if (input) input.value = '';
+      render();
+    });
+  }
+  var form = $('today-form');
+  if (form) form.addEventListener('submit', function (e) { e.preventDefault(); });
+
+  // Ruler tooltips: same text on hover and keyboard focus.
+  var tip = $('ruler-tip');
+  var rulerBody = document.querySelector('.ruler-body');
+  function showTip(el) {
+    if (!tip || !rulerBody) return;
+    var text = el.getAttribute('data-tip');
+    if (!text) return;
+    tip.textContent = text;
+    tip.hidden = false;
+    var br = rulerBody.getBoundingClientRect();
+    var r = el.getBoundingClientRect();
+    var w = tip.offsetWidth;
+    var x = r.left + r.width / 2 - br.left;
+    x = Math.max(w / 2, Math.min(br.width - w / 2, x));
+    tip.style.left = x + 'px';
+  }
+  function hideTip() { if (tip) tip.hidden = true; }
+  toArray(document.querySelectorAll('.ruler [data-tip]')).forEach(function (el) {
+    el.addEventListener('pointerenter', function () { showTip(el); });
+    el.addEventListener('pointerleave', hideTip);
+    el.addEventListener('focus', function () { showTip(el); });
+    el.addEventListener('blur', hideTip);
+  });
+
+  // Copy buttons for the prompts in Ek A.
+  toArray(document.querySelectorAll('button.copy')).forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var pre = $(btn.getAttribute('data-target'));
+      if (!pre) return;
+      var text = pre.textContent;
+      function done(label) {
+        btn.textContent = label;
+        setTimeout(function () { btn.textContent = 'Kopyala'; }, 1800);
+      }
+      function selectText() {
+        try {
+          var range = document.createRange();
+          range.selectNodeContents(pre);
+          var sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+          done('Metin seçildi, kopyalayın');
+        } catch (e) { done('Metni elle seçin'); }
+      }
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () { done('Kopyalandı'); }, selectText);
+        } else {
+          selectText();
+        }
+      } catch (e) { selectText(); }
+    });
+  });
+
+  // Highlight the current section in the index.
+  try {
+    if ('IntersectionObserver' in window) {
+      var links = {};
+      toArray(document.querySelectorAll('.toc a[href^="#"]')).forEach(function (a) {
+        var id = a.getAttribute('href').slice(1);
+        (links[id] = links[id] || []).push(a);
+      });
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          Object.keys(links).forEach(function (k) {
+            links[k].forEach(function (a) { a.removeAttribute('aria-current'); });
+          });
+          (links[entry.target.id] || []).forEach(function (a) { a.setAttribute('aria-current', 'true'); });
+        });
+      }, { rootMargin: '-15% 0px -75% 0px' });
+      toArray(document.querySelectorAll('main section[id]')).forEach(function (s) { observer.observe(s); });
+    }
+  } catch (e) {}
+
+  render();
+})();
+
+</script>
+</body>
+</html>
