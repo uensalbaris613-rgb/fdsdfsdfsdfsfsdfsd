@@ -2,6 +2,8 @@
 
 **Mevcut 8 saatlik planınıza blok blok yerleşen, hacmi hesaplanmış, ilerlemenize göre basamak atlatan sürüm** · 12 Ekim 2026
 
+**Kaynak sayısını 6'ya indiren ve telaffuzu da kapsayan sürüm:** [En Az Kaynakla Dört Bileşen Planı](en_az_kaynakla_dort_bilesen_plani.md) (haftalık hacimler aynı; bu belgedeki kaynak listesinin yerine geçer).
+
 Araştırma gerekçeleri, yapay zekâ komutları ve görev bankası için: [Anlam Odaklı Girdi ve Çıktı Planı (araştırma ve araç seti)](anlam_odakli_girdi_cikti_plani.md) · Planın genel değerlendirmesi: [180 günlük planın değerlendirmesi](180_gunluk_plan_degerlendirmesi.md)
 
 ---

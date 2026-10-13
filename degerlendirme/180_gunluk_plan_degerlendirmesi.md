@@ -416,7 +416,7 @@ Not: Nation'ın resmî bir "protokolü" yoktur; Dört Bileşen bir müfredat den
 
 ### 4.11 Bölüm 8 — Kaynaklar
 
-Ayrıntı için §6'daki doğrulama tablosuna bakın. Öne çıkanlar: ❓ "Oqou" adlı bir kaynak bulamadım; ❌ Extensive Reading Central "8.000 kelimeye kadar" değil, 20 seviyede ~50 kelimeden 12.000–18.000 kelimeye kadar gidiyor ([ER-Central levels](https://www.er-central.com/?p=2628)); 🟡 VOA'nın durumu belirsiz.
+Ayrıntı için §6'daki doğrulama tablosuna bakın. Öne çıkanlar: ❓ "Oqou" adlı bir kaynak bulamadım; ✅ Extensive Reading Central: düzey ölçeği ~50 kelimeden 12.000–18.000'e kadar uzanıyor ama bir incelemeye göre en zor metinler ~8.000 headword düzeyinde, yani planın "8.000 kelimeye kadar" ifadesi pratikte doğru ([ER-Central levels](https://www.er-central.com/?p=2628); [ERF](https://erfoundation.org/wordpress/useful-resources/useful-sites-2/)) — *ilk sürümde bunu yanlışlıkla hatalı saymıştım*; 🟡 VOA'nın durumu belirsiz.
 
 ---
 
@@ -459,7 +459,7 @@ Ayrıntı için §6'daki doğrulama tablosuna bakın. Öne çıkanlar: ❓ "Oqou
 | English Accent Coach | ✅ | Ücretsiz web oyunları |
 | Forvo, YouGlish | ✅ | Bilinen kaynaklar; 2026 durumu bu çalışmada ayrıca doğrulanmadı |
 | English e-Reader | ✅ | Bilinen kaynak; ayrıca doğrulanmadı |
-| Extensive Reading Central | ✅ | 20 seviye; planın "8.000'e kadar" ifadesi ❌ |
+| Extensive Reading Central | ✅ | 20 düzeylik ölçek; metinler ~8.000 headword'e kadar (planın ifadesi pratikte doğru) |
 | FreeGradedReaders.com | ✅ | ER Foundation ve Victoria University listelerinde ([ERF](https://erfoundation.org/wordpress/?p=3361)) |
 | Oqou | ❓ | Bulunamadı |
 | ESL Bits | ✅ | Bilinen kaynak; ayrıca doğrulanmadı |
@@ -498,7 +498,7 @@ Ayrıntı için §6'daki doğrulama tablosuna bakın. Öne çıkanlar: ❓ "Oqou
 
 ## 8. Önerilen revizyon (planı bozmadan)
 
-Okuma, dinleme, yazma ve konuşma bloklarının seviye seviye ayrıntılı hali ayrı belgelerde: [8 basamaklı uygulama planı](girdi_cikti_uygulama_plani.md) ve araştırma gerekçeleri için [Anlam Odaklı Girdi ve Çıktı Planı](anlam_odakli_girdi_cikti_plani.md).
+**En az kaynakla uygulanacak güncel sürüm:** [En Az Kaynakla Dört Bileşen Planı](en_az_kaynakla_dort_bilesen_plani.md) (telaffuz, girdi, çıktı, akıcılık; 6 kaynak). Okuma, dinleme, yazma ve konuşma bloklarının seviye seviye ayrıntılı hali ayrı belgelerde: [8 basamaklı uygulama planı](girdi_cikti_uygulama_plani.md) ve araştırma gerekçeleri için [Anlam Odaklı Girdi ve Çıktı Planı](anlam_odakli_girdi_cikti_plani.md).
 
 ### 8.1 İlkeler
 
