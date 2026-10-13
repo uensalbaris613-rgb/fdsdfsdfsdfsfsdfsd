@@ -20,6 +20,7 @@ Bu belge, dört bileşen için uygulayacağınız **tek** plandır. Önceki üç
 | 6 | Kelime büyümesinin yükü açıkça **Anki'nize** verildi; girdi pekiştirme ve akıcılık sağlar | Girdiden kendiliğinden öğrenme kelime başına yavaş (%9–18); Nation'ın girdi hesapları yılda ~1.000 kelime ailesi varsayar |
 | 7 | **26 haftalık tam takvim**, faz çıkış ölçütleri, yeni komutlar | "Eksiksiz plan" isteği |
 | 8 | Önceki belgelerdeki **iki hatalı ifade** düzeltildi | §12.7 |
+| 9 | Kütüphane kararı verildi: **Oxford Reading Club** | Xreading bireysel olarak doğrudan alınamıyor (§1.1) |
 
 ---
 
@@ -50,7 +51,7 @@ Bu belge, dört bileşen için uygulayacağınız **tek** plandır. Önceki üç
 
 | # | Kaynak | Ne için | Ne zaman |
 |---|---|---|---|
-| 1 | **Sesli derecelendirilmiş kitap kütüphanesi** (Xreading ya da Oxford Reading Club; ücretsiz yedek: ER Central + Mid-frequency Readers) | Girdi, akıcılık, gölgeleme malzemesi, çıktının konusu | 1–180. gün |
+| 1 | **Sesli derecelendirilmiş kitap kütüphanesi: Oxford Reading Club** (yedek: ER Central; B2'de ücretsiz Mid-frequency Readers eklenir) | Girdi, akıcılık, gölgeleme malzemesi, çıktının konusu | 1–180. gün |
 | 2 | **ELSA Speak** | Telaffuz: üretim + açık geri bildirim | 1–180. gün |
 | 3 | **Tek bir sesli yapay zekâ asistanı** | Konuşma partneri; yazma ve gecikmeli düzeltme geri bildirimi; IELTS canlandırma | 15–180. gün |
 | 4 | **BBC Learning English — 6 Minute English** | Dinleme, gölgeleme | ~64–180. gün |
@@ -84,17 +85,48 @@ Kaynak sayılmayan araçlar: telefonun ses kaydedicisi ve dikte (sesle yazma) ö
 
 ## 1. Kaynaklar (6 temel, 1 süreli)
 
-### 1.1 Sesli kitap kütüphanesi — planın omurgası
+### 1.1 Sesli kitap kütüphanesi: Oxford Reading Club
 
-Bir kütüphane seçin ve 180 gün değiştirmeyin.
+**Karar:** Kütüphaneniz **Oxford Reading Club (ORC)**. 180 gün boyunca değiştirmeyin.
 
-| Seçenek | Neler var | Ücret | Not |
+**Neden bu?**
+
+| Ölçüt | Oxford Reading Club | Xreading | ER Central (ücretsiz) |
 |---|---|---|---|
-| **A. Xreading** | 2.000+ derecelendirilmiş kitap (birçok yayınevi), çoğunda ses, kitap sonu kısa test, okunan kelimenin otomatik kaydı | Yıllık bireysel lisans ([Xreading](https://www.xreading.com/)); güncel fiyat doğrulanamadı | Okunan kelimeyi kendisi saydığı için ölçüm yükü sıfır |
-| **B. Oxford Reading Club** | 700–1.000+ e-kitap (Oxford Bookworms ve diğer Oxford dizileri); ses, yerleşik sözlük, kendi sesini kaydetme ve konuşma tanımayla telaffuz kontrolü | İspanya'da 12 ay €27, 14 gün deneme ([OUP Spain](https://www.oup.es/en/oxfordreadingclub)); Japonya'da aylık ¥990'dan ([OUP Japan](https://www.oupjapan.co.jp/en/node/62840)) | Türkiye'de bireysel satış doğrulanamadı; OUP Türkiye'ye sorun |
-| **C. Ücretsiz yedek** | ER Central (düzeylere ayrılmış okuma ve dinleme metinleri) ([yardım sayfası](https://www.er-central.com/help/)) → B2'de Nation'ın Mid-frequency Readers'ı (4.000/6.000/8.000 düzeyleri) ([Wellington](https://www.wgtn.ac.nz/lals/resources/readers)) | Ücretsiz | Haftalık kelime hedefini tutturmak zorlaşabilir; iki hafta üst üste hedefin %70'inin altında kalırsanız A ya da B'ye geçin |
+| Bireysel olarak alınabiliyor mu? | ✅ 1, 6 ve 12 aylık erişim kodları OUP'un bölgesel mağazalarında bireylere satılıyor ([OUP Spain](https://www.oup.es/oxfordreadingclub/); [OUP global katalog](https://elt.oup.com/catalogue/items/global/orc/9780194095631)) | ❌ Hesaplar okul ve öğretmen üzerinden açılıyor; bireysel satış sayfası yok ([Xreading](https://www.xreading.com/); [öğretmen kılavuzu](https://www.xreading.com/theme/xrbook/pix/pfd/Tutorial_for_teachers_2014_July_English.pdf)) | ✅ Ücretsiz kayıt ([ER Central](https://www.er-central.com/help/)) |
+| Ses | ✅ Kitaplar sesli, ses hızı ayarlanabiliyor ([App Store](https://apps.apple.com/tr/app/oxford-reading-club/id1454391176?l=tr)) | ✅ Neredeyse bütün kitaplarda | 🟡 Ses ayrı dinleme odasında |
+| Düzey aralığı | ✅ Oxford Bookworms Starter (250 headword, A1) → Stage 6 (2.500, B2/C1); ayrıca Dominoes | ✅ 51–100 headword'den başlıyor | ✅ 20 düzey |
+| Kitap sayısı | ✅ 700–1.000+ e-kitap (bir kısmı çocuk dizileri) | ✅ 2.000+ | 🟡 "Yüzlerce" metin |
+| Okunan kelime kaydı | 🟡 Otomatik kelime sayımı doğrulanamadı; indirilebilir aylık okuma raporu var ([okul duyurusu](https://script.lu/news/2021-10/free-access-e-books-oxford-reading-club)). Bookworms kitaplarının kapağında kelime sayısı yazıyor | ✅ Otomatik | ❓ Doğrulanamadı |
+| Ek araçlar | Yerleşik sözlük, kendi sesini kaydetme, konuşma tanımalı telaffuz kontrolü (Speak Up) ([OUP Japan](https://www.oupjapan.co.jp/en/node/60844)); çevrimdışı uygulama, en fazla 2 cihaz | Kitap sonu kısa testler | Kısa testler, hız okuma sayacı |
+| Ücret | 1 ay 3,50 $ (OUP global katalog); 12 ay İspanya'da €27, Japonya'da ¥11.000. Fiyat bölgeye göre değişiyor | Öğrenci başına aylık 6 $ (kurumsal) | Ücretsiz |
 
-**Seçim kuralı:** İkisini de alabiliyorsanız A (kelime sayımı otomatik, yayınevi çeşidi fazla). Yalnızca birini alabiliyorsanız onu. Hiçbirini alamıyorsanız C.
+Xreading'in okuma takibi en iyisi, ama bireysel olarak doğrudan alınamıyor. ER Central ücretsiz, ama metin sayısı ve ses desteği 180 günlük hacim için yetmeyebilir. ORC hemen alınabiliyor ve planın bütün düzeylerini tek kütüphanede, sesli olarak karşılıyor.
+
+**Nasıl başlanır:**
+1. **Ücretsiz hesap açın.** Tarayıcıdan ORC sitesine kaydolun. Yeni hesaplarda 80 kitaplık deneme kütüphanesi açılıyor (İspanya'da 14 gün) ([OUP Japan kod kılavuzu](https://www.oupjapan.co.jp/sites/default/files/contents/media/ORC_how-to-redeem_EN.pdf); [OUP Spain](https://www.oup.es/oxfordreadingclub/)). İlk günler bu kitaplarla başlayabilirsiniz.
+2. **12 aylık erişim kodu alın.** 180 günü ve olası sınav ertelemesini karşılar; ay başına en ucuz seçenektir. Türkiye için satın alma yolu doğrulanamadı; şu sırayla deneyin:
+   - OUP'un [Oxford Reading Club sayfası](https://elt.oup.com/feature/global/oxford-reading-club/)ndaki erişim bağlantısı;
+   - olmazsa OUP'un ELT destek adresine (`eltsupport@oup.com`) ya da OUP Türkiye'ye yazıp bireysel erişim kodu isteyin.
+
+   Forum ilanlarındaki ikinci el kodları almayın; kod geçersiz çıkabilir.
+3. **Kodu tarayıcıda girin.** Kod "My Library" ekranından girilir; iOS uygulamasında kod girilemiyor. Sonra uygulamayı indirip aynı hesapla giriş yapın. Türkçe adım adım anlatım: [ORC hesap oluşturma ve kod kullanma kılavuzu (Van YYÜ)](https://www.yyu.edu.tr/images/files/orc_kayit_kilavuzu.pdf).
+
+**Planda hangi kitaplar:**
+
+| Faz | ORC'de okuyacağınız |
+|---|---|
+| A1 (1–28) | Bookworms Starter + aynı düzeydeki Dominoes kitapları |
+| A2 (29–63) | Bookworms Stage 1 → 2 + aynı düzeydeki Dominoes kitapları |
+| B1 (64–105) | Bookworms Stage 3 → 4 |
+| B2.1 (106–133) | Bookworms Stage 5 → 6; ~120. günden Mid-frequency Readers (ücretsiz, ORC dışında) |
+| B2.2 (134–180) | Bookworms Stage 6 + Mid-frequency Readers 4.000 → 6.000 |
+
+**Okunan kelimeyi kaydetme:** Bitirdiğiniz her kitabın kapağındaki kelime sayısını haftalık şablona ekleyin; tekrar okumaları da sayın. Kelime sayısını bulamazsanız aşağıdaki düzey ortalamasını kullanın.
+
+**Tek telaffuz aracı kuralı:** ORC'nin kendi sesini kaydetme düğmesi gölgeleme kaydı için yeterli. Telaffuz puanını ELSA'dan izleyin; Speak Up'ı ikinci bir puan kaynağı olarak takip etmeyin.
+
+**Yedek:** ORC'yi hiçbir yoldan alamazsanız ER Central ile başlayın; kodu almaya çalışmayı sürdürün.
 
 **Oxford Bookworms düzeyleri** (diğer serilerde de benzer basamaklar var): Starter 250 headword (A1) · Stage 1: 400 (A1/A2, kitap başına ~5.200 kelime) · Stage 2: 700 (A2/B1, ~6.500) · Stage 3: 1.000 (B1, ~10.000) · Stage 4: 1.400 (B1/B2, ~16.000) · Stage 5: 1.800 (B2, ~23.000) · Stage 6: 2.500 (B2/C1, ~30.000) ([OUP Japan](https://www.oupjapan.co.jp/en/gradedreaders/bookworms.shtml)).
 
@@ -134,7 +166,7 @@ Haftalık, ücretsiz, transkriptli, orta düzeye yönelik program ([BBC Learning
 
 ### 1.8 Planda olmayanlar
 
-İkinci bir yapay zekâ uygulaması (Praktika, TalkPal), ikinci bir kelime tekrar sistemi (LingQ, Readlang), Busuu, ESLPod, VOA, English e-Reader, birden fazla podcast ya da kitap havuzu. Gerekçeleri: [en az kaynakla plan, §1](en_az_kaynakla_dort_bilesen_plani.md#1-paylaştığınız-listenin-değerlendirmesi).
+İkinci bir yapay zekâ uygulaması (Praktika, TalkPal), ikinci bir kelime tekrar sistemi (LingQ, Readlang), ikinci bir kitap kütüphanesi (Xreading), Busuu, ESLPod, VOA, English e-Reader, birden fazla podcast ya da kitap havuzu. Gerekçeleri: [en az kaynakla plan, §1](en_az_kaynakla_dort_bilesen_plani.md#1-paylaştığınız-listenin-değerlendirmesi).
 
 ---
 
@@ -149,7 +181,7 @@ Haftalık, ücretsiz, transkriptli, orta düzeye yönelik program ([BBC Learning
 | 5. **Her gün aynı sıra** | Döngü 180 gün değişmez; yalnızca düzey değişir | Basit günlük davranışların otomatikleşmesi medyan ~66 gün sürdü (18–254) ([Lally vd. 2010 — özet](https://bps.org.uk/research-digest/how-form-habit)) |
 | 6. **Az araç** | 6 sürekli kaynak + 8 haftalık algı aracı | Görevler arası geçiş yavaşlama ve hata maliyeti doğurur ([Monsell 2003](https://modeldb.science/citations/102732)) |
 | 7. **Önceden karar** | Kitap listesi, haftanın hedef sesi ve görev türü önceden yazılı (§5) | Günlük karar sayısını azaltır (pratik ilke) |
-| 8. **Otomatik ölçüm** | Kütüphane okunan kelimeyi, ELSA ve EAC puanları kendisi tutar; haftada yalnızca 3 sayı kaydedilir | Ölçüm yükünü azaltır (pratik ilke) |
+| 8. **Kolay ölçüm** | Okunan kelime kitap kapağındaki sayıdan, ELSA ve EAC puanları uygulamadan alınır; haftada yalnızca 3 sayı kaydedilir | Ölçüm yükünü azaltır (pratik ilke) |
 
 **Altyazı ve okurken dinleme üzerine:** Bilişsel yük kuramı, aynı metni hem görüp hem duymanın gereksiz yük getirebileceğini öngörür ("redundancy"). Ama 57 çalışmalık bir meta-analizde yazılı + sözlü sunum yalnız sözlü sunumdan daha iyi sonuç verdi. Üstünlük ön bilgisi düşük öğrenenlerde, hızı sistemin belirlediği materyalde ve resimsiz materyalde görüldü. Yazılı + sözlü ile yalnız yazılı arasında fark çıkmadı; anlatımın tamamı yerine anahtar kelimeleri göstermek daha iyi sonuç verdi ([Adesope & Nesbit 2012](https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842)). Ses kaydı hızı kendisi belirlenen bir materyaldir ve başlangıçta ön bilginiz düşüktür. Bu yüzden destek **başta tam, sonra kademeli olarak azalır**.
 
@@ -436,7 +468,7 @@ A2'den her gün 10 dk durmadan yazma (konu: dünkü bölüm); kelime sayısını
 
 ### 10.1 Haftada 3 sayı (pazar, 10 dk)
 
-1. **Okuma:** Haftalık okunan kelime (kütüphane kaydı) + bir sayfadaki bilinmeyen kelime sayısı.
+1. **Okuma:** Haftalık okunan kelime (bitirilen kitapların kapağındaki kelime sayılarının toplamı) + bir sayfadaki bilinmeyen kelime sayısı.
 2. **Konuşma:** 2 dakikalık anlatım kaydında dakikadaki kelime sayısı ve hata sayısı.
 3. **Telaffuz:** Haftanın hedef sesinde ELSA puanı (1–8. hafta EAC doğruluk yüzdesi de).
 
@@ -604,7 +636,7 @@ Telaffuz kayıtları ve dikte testi (§6.4) · bir düzey aşağı metinde okuma
 - [Kalyuga 2007](https://www.uky.edu/~gmswan3/EDC608/Kalyuga2007_Article_ExpertiseReversalEffectAndItsI.pdf) · [Adesope & Nesbit 2012](https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842) · [Lally vd. 2010 — özet](https://bps.org.uk/research-digest/how-form-habit) · [Monsell 2003](https://modeldb.science/citations/102732)
 
 **Kaynaklar ve resmî ölçütler**
-- [Xreading](https://www.xreading.com/) · [Oxford Reading Club — OUP Spain](https://www.oup.es/en/oxfordreadingclub) · [OUP Japan](https://www.oupjapan.co.jp/en/node/62840) · [Oxford Bookworms düzeyleri](https://www.oupjapan.co.jp/en/gradedreaders/bookworms.shtml) · [ER Central](https://www.er-central.com/help/) · [Mid-frequency Readers](https://www.wgtn.ac.nz/lals/resources/readers)
+- [Oxford Reading Club — OUP](https://elt.oup.com/feature/global/oxford-reading-club/) · [OUP global katalog (1 ay)](https://elt.oup.com/catalogue/items/global/orc/9780194095631) · [Oxford Reading Club — OUP Spain](https://www.oup.es/oxfordreadingclub/) · [OUP Japan — kod kılavuzu](https://www.oupjapan.co.jp/sites/default/files/contents/media/ORC_how-to-redeem_EN.pdf) · [OUP Japan — Speak Up](https://www.oupjapan.co.jp/en/node/60844) · [ORC kayıt kılavuzu (Van YYÜ)](https://www.yyu.edu.tr/images/files/orc_kayit_kilavuzu.pdf) · [Xreading](https://www.xreading.com/) · [OUP Japan](https://www.oupjapan.co.jp/en/node/62840) · [Oxford Bookworms düzeyleri](https://www.oupjapan.co.jp/en/gradedreaders/bookworms.shtml) · [ER Central](https://www.er-central.com/help/) · [Mid-frequency Readers](https://www.wgtn.ac.nz/lals/resources/readers)
 - [6 Minute English](https://www.bbc.co.uk/learningenglish/english/features/6-minute-english) · [LanguaTalk](https://languatalk.com/blog/whats-the-best-ai-for-language-learning/) · [English Accent Coach](https://www.englishaccentcoach.com)
 - [Cambridge English — guided learning hours](https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours) · [IELTS and the CEFR](https://ielts.org/organisations/ielts-for-organisations/compare-ielts/ielts-and-the-cefr)
 
