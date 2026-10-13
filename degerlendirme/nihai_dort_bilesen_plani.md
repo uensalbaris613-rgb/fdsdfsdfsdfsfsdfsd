@@ -20,7 +20,7 @@ Bu belge, dört bileşen için uygulayacağınız **tek** plandır. Önceki üç
 | 6 | Kelime büyümesinin yükü açıkça **Anki'nize** verildi; girdi pekiştirme ve akıcılık sağlar | Girdiden kendiliğinden öğrenme kelime başına yavaş (%9–18); Nation'ın girdi hesapları yılda ~1.000 kelime ailesi varsayar |
 | 7 | **26 haftalık tam takvim**, faz çıkış ölçütleri, yeni komutlar | "Eksiksiz plan" isteği |
 | 8 | Önceki belgelerdeki **iki hatalı ifade** düzeltildi | §12.7 |
-| 9 | Kütüphane kararı verildi: **Oxford Reading Club** | Xreading bireysel olarak doğrudan alınamıyor (§1.1) |
+| 9 | Kütüphane: **English e-Reader** (sizin tercihiniz); kitap seçimi ve okuma yöntemi eklendi | §1.1, §7.2, §7.3 |
 
 ---
 
@@ -51,7 +51,7 @@ Bu belge, dört bileşen için uygulayacağınız **tek** plandır. Önceki üç
 
 | # | Kaynak | Ne için | Ne zaman |
 |---|---|---|---|
-| 1 | **Sesli derecelendirilmiş kitap kütüphanesi: Oxford Reading Club** (yedek: ER Central; B2'de ücretsiz Mid-frequency Readers eklenir) | Girdi, akıcılık, gölgeleme malzemesi, çıktının konusu | 1–180. gün |
+| 1 | **Sesli derecelendirilmiş kitap kütüphanesi: English e-Reader** (sizin tercihiniz; yedek: Oxford Reading Club ya da ER Central; B2'de ücretsiz Mid-frequency Readers eklenir) | Girdi, akıcılık, gölgeleme malzemesi, çıktının konusu | 1–180. gün |
 | 2 | **ELSA Speak** | Telaffuz: üretim + açık geri bildirim | 1–180. gün |
 | 3 | **Tek bir sesli yapay zekâ asistanı** | Konuşma partneri; yazma ve gecikmeli düzeltme geri bildirimi; IELTS canlandırma | 15–180. gün |
 | 4 | **BBC Learning English — 6 Minute English** | Dinleme, gölgeleme | ~64–180. gün |
@@ -59,7 +59,7 @@ Bu belge, dört bileşen için uygulayacağınız **tek** plandır. Önceki üç
 | 6 | **English Online canlı dersleri** ya da tek bir eğitmen | İnsanla etkileşim ve geri bildirim | 29–180. gün |
 | 7 | **English Accent Coach** (süreli) | Telaffuz: algı eğitimi | Yalnızca 1–8. hafta, toplam ~400 dk |
 
-Kaynak sayılmayan araçlar: telefonun ses kaydedicisi ve dikte (sesle yazma) özelliği, kronometre, Anki (dil odaklı planınız), son fazdaki IELTS deneme kitapları ("Son Faz" planınızda zaten var).
+Kaynak sayılmayan araçlar: telefonun ses kaydedicisi ve dikte (sesle yazma) özelliği, EPUB okuyucu, hız ayarlı ses oynatıcı, kronometre, Anki (dil odaklı planınız), son fazdaki IELTS deneme kitapları ("Son Faz" planınızda zaten var).
 
 **En az kaynakla da çalışır:** Diziyi çıkarırsanız plan 5 sürekli kaynağa iner; akşam girdisi kütüphanenin sesli kitapları olur. Dizi yalnızca doğal konuşma ve motivasyon için önerilir.
 
@@ -85,52 +85,24 @@ Kaynak sayılmayan araçlar: telefonun ses kaydedicisi ve dikte (sesle yazma) ö
 
 ## 1. Kaynaklar (6 temel, 1 süreli)
 
-### 1.1 Sesli kitap kütüphanesi: Oxford Reading Club
+### 1.1 Sesli kitap kütüphanesi: English e-Reader
 
-**Karar:** Kütüphaneniz **Oxford Reading Club (ORC)**. 180 gün boyunca değiştirmeyin.
+**Seçiminiz:** [English e-Reader](https://english-e-reader.net/). 180 gün boyunca kitaplarınız buradan gelir; başka bir kitap havuzu eklemeyin.
 
-**Neden bu?**
+**Sitede kullanacağınız özellikler:**
 
-| Ölçüt | Oxford Reading Club | Xreading | ER Central (ücretsiz) |
-|---|---|---|---|
-| Bireysel olarak alınabiliyor mu? | ✅ 1, 6 ve 12 aylık erişim kodları OUP'un bölgesel mağazalarında bireylere satılıyor ([OUP Spain](https://www.oup.es/oxfordreadingclub/); [OUP global katalog](https://elt.oup.com/catalogue/items/global/orc/9780194095631)) | ❌ Hesaplar okul ve öğretmen üzerinden açılıyor; bireysel satış sayfası yok ([Xreading](https://www.xreading.com/); [öğretmen kılavuzu](https://www.xreading.com/theme/xrbook/pix/pfd/Tutorial_for_teachers_2014_July_English.pdf)) | ✅ Ücretsiz kayıt ([ER Central](https://www.er-central.com/help/)) |
-| Ses | ✅ Kitaplar sesli, ses hızı ayarlanabiliyor ([App Store](https://apps.apple.com/tr/app/oxford-reading-club/id1454391176?l=tr)) | ✅ Neredeyse bütün kitaplarda | 🟡 Ses ayrı dinleme odasında |
-| Düzey aralığı | ✅ Oxford Bookworms Starter (250 headword, A1) → Stage 6 (2.500, B2/C1); ayrıca Dominoes | ✅ 51–100 headword'den başlıyor | ✅ 20 düzey |
-| Kitap sayısı | ✅ 700–1.000+ e-kitap (bir kısmı çocuk dizileri) | ✅ 2.000+ | 🟡 "Yüzlerce" metin |
-| Okunan kelime kaydı | 🟡 Otomatik kelime sayımı doğrulanamadı; indirilebilir aylık okuma raporu var ([okul duyurusu](https://script.lu/news/2021-10/free-access-e-books-oxford-reading-club)). Bookworms kitaplarının kapağında kelime sayısı yazıyor | ✅ Otomatik | ❓ Doğrulanamadı |
-| Ek araçlar | Yerleşik sözlük, kendi sesini kaydetme, konuşma tanımalı telaffuz kontrolü (Speak Up) ([OUP Japan](https://www.oupjapan.co.jp/en/node/60844)); çevrimdışı uygulama, en fazla 2 cihaz | Kitap sonu kısa testler | Kısa testler, hız okuma sayacı |
-| Ücret | 1 ay 3,50 $ (OUP global katalog); 12 ay İspanya'da €27, Japonya'da ¥11.000. Fiyat bölgeye göre değişiyor | Öğrenci başına aylık 6 $ (kurumsal) | Ücretsiz |
-
-Xreading'in okuma takibi en iyisi, ama bireysel olarak doğrudan alınamıyor. ER Central ücretsiz, ama metin sayısı ve ses desteği 180 günlük hacim için yetmeyebilir. ORC hemen alınabiliyor ve planın bütün düzeylerini tek kütüphanede, sesli olarak karşılıyor.
-
-**Nasıl başlanır:**
-1. **Ücretsiz hesap açın.** Tarayıcıdan ORC sitesine kaydolun. Yeni hesaplarda 80 kitaplık deneme kütüphanesi açılıyor (İspanya'da 14 gün) ([OUP Japan kod kılavuzu](https://www.oupjapan.co.jp/sites/default/files/contents/media/ORC_how-to-redeem_EN.pdf); [OUP Spain](https://www.oup.es/oxfordreadingclub/)). İlk günler bu kitaplarla başlayabilirsiniz.
-2. **12 aylık erişim kodu alın.** 180 günü ve olası sınav ertelemesini karşılar; ay başına en ucuz seçenektir. Türkiye için satın alma yolu doğrulanamadı; şu sırayla deneyin:
-   - OUP'un [Oxford Reading Club sayfası](https://elt.oup.com/feature/global/oxford-reading-club/)ndaki erişim bağlantısı;
-   - olmazsa OUP'un ELT destek adresine (`eltsupport@oup.com`) ya da OUP Türkiye'ye yazıp bireysel erişim kodu isteyin.
-
-   Forum ilanlarındaki ikinci el kodları almayın; kod geçersiz çıkabilir.
-3. **Kodu tarayıcıda girin.** Kod "My Library" ekranından girilir; iOS uygulamasında kod girilemiyor. Sonra uygulamayı indirip aynı hesapla giriş yapın. Türkçe adım adım anlatım: [ORC hesap oluşturma ve kod kullanma kılavuzu (Van YYÜ)](https://www.yyu.edu.tr/images/files/orc_kayit_kilavuzu.pdf).
-
-**Planda hangi kitaplar:**
-
-| Faz | ORC'de okuyacağınız |
+| Özellik | Ne işe yarar |
 |---|---|
-| A1 (1–28) | Bookworms Starter + aynı düzeydeki Dominoes kitapları |
-| A2 (29–63) | Bookworms Stage 1 → 2 + aynı düzeydeki Dominoes kitapları |
-| B1 (64–105) | Bookworms Stage 3 → 4 |
-| B2.1 (106–133) | Bookworms Stage 5 → 6; ~120. günden Mid-frequency Readers (ücretsiz, ORC dışında) |
-| B2.2 (134–180) | Bookworms Stage 6 + Mid-frequency Readers 4.000 → 6.000 |
+| Düzey menüsü: A1 starter · A2 elementary · B1 pre-intermediate · B1+ intermediate · B2 intermediate-plus · B2+ upper-intermediate · C1 advanced · C2 unabridged | Haftanın düzeyini seçmek (§7.2) |
+| Kapaktaki ses simgesi ve *Download audio* | Okurken dinleme, dinleme ve gölgeleme sesi (§7.3) |
+| *Total words* (toplam kelime) | Haftalık okunan kelimeyi hesaplamak (§10.1) |
+| *Unique words* (farklı kelime) ve *Hard words* (zor kelimeler) | Aynı düzeyde kolaydan zora sıralamak ve hızlı ön eleme (§7.2) |
+| Tür (ör. *documentary*), *Series*, *Tags* | Belgesel kitapları ve aynı dizinin kitaplarını bulmak |
+| *Download*: EPUB ya da TXT | Telefonda ya da bilgisayarda okumak |
 
-**Okunan kelimeyi kaydetme:** Bitirdiğiniz her kitabın kapağındaki kelime sayısını haftalık şablona ekleyin; tekrar okumaları da sayın. Kelime sayısını bulamazsanız aşağıdaki düzey ortalamasını kullanın.
+**Not:** Sitede kitapları dağıtma izni hakkında bir bilgi yok; bazı kitaplar yayınevlerinin ücretli kitaplarıyla aynı görünüyor ([blog tartışması](https://www.cristinacabal.com/?p=14070)). Site erişilemez olursa yedek: lisanslı ve ucuz [Oxford Reading Club](https://elt.oup.com/feature/global/oxford-reading-club/) (1 ay ~3,50 $) ya da ücretsiz [ER Central](https://www.er-central.com/help/). B2'deki Mid-frequency Readers zaten ücretsiz ve yasal.
 
-**Tek telaffuz aracı kuralı:** ORC'nin kendi sesini kaydetme düğmesi gölgeleme kaydı için yeterli. Telaffuz puanını ELSA'dan izleyin; Speak Up'ı ikinci bir puan kaynağı olarak takip etmeyin.
-
-**Yedek:** ORC'yi hiçbir yoldan alamazsanız ER Central ile başlayın; kodu almaya çalışmayı sürdürün.
-
-**Oxford Bookworms düzeyleri** (diğer serilerde de benzer basamaklar var): Starter 250 headword (A1) · Stage 1: 400 (A1/A2, kitap başına ~5.200 kelime) · Stage 2: 700 (A2/B1, ~6.500) · Stage 3: 1.000 (B1, ~10.000) · Stage 4: 1.400 (B1/B2, ~16.000) · Stage 5: 1.800 (B2, ~23.000) · Stage 6: 2.500 (B2/C1, ~30.000) ([OUP Japan](https://www.oupjapan.co.jp/en/gradedreaders/bookworms.shtml)).
-
-**Kitap listesi önceden hazır olsun:** Her düzey için ilginizi çeken 8–10 kitabı bir listeye yazın ve sırayla gidin. Mümkünse aynı yazarın ya da aynı dizinin kitaplarını art arda okuyun (dar okuma). Her gün "ne okusam" kararı vermeyin.
+Kitap seçimi: §7.2 · Okuma yöntemi: §7.3.
 
 ### 1.2 ELSA Speak
 
@@ -166,7 +138,7 @@ Haftalık, ücretsiz, transkriptli, orta düzeye yönelik program ([BBC Learning
 
 ### 1.8 Planda olmayanlar
 
-İkinci bir yapay zekâ uygulaması (Praktika, TalkPal), ikinci bir kelime tekrar sistemi (LingQ, Readlang), ikinci bir kitap kütüphanesi (Xreading), Busuu, ESLPod, VOA, English e-Reader, birden fazla podcast ya da kitap havuzu. Gerekçeleri: [en az kaynakla plan, §1](en_az_kaynakla_dort_bilesen_plani.md#1-paylaştığınız-listenin-değerlendirmesi).
+İkinci bir yapay zekâ uygulaması (Praktika, TalkPal), ikinci bir kelime tekrar sistemi (LingQ, Readlang), ikinci bir kitap kütüphanesi (Xreading; Oxford Reading Club yalnızca yedek), Busuu, ESLPod, VOA, birden fazla podcast ya da kitap havuzu. Gerekçeleri: [en az kaynakla plan, §1](en_az_kaynakla_dort_bilesen_plani.md#1-paylaştığınız-listenin-değerlendirmesi).
 
 ---
 
@@ -181,7 +153,7 @@ Haftalık, ücretsiz, transkriptli, orta düzeye yönelik program ([BBC Learning
 | 5. **Her gün aynı sıra** | Döngü 180 gün değişmez; yalnızca düzey değişir | Basit günlük davranışların otomatikleşmesi medyan ~66 gün sürdü (18–254) ([Lally vd. 2010 — özet](https://bps.org.uk/research-digest/how-form-habit)) |
 | 6. **Az araç** | 6 sürekli kaynak + 8 haftalık algı aracı | Görevler arası geçiş yavaşlama ve hata maliyeti doğurur ([Monsell 2003](https://modeldb.science/citations/102732)) |
 | 7. **Önceden karar** | Kitap listesi, haftanın hedef sesi ve görev türü önceden yazılı (§5) | Günlük karar sayısını azaltır (pratik ilke) |
-| 8. **Kolay ölçüm** | Okunan kelime kitap kapağındaki sayıdan, ELSA ve EAC puanları uygulamadan alınır; haftada yalnızca 3 sayı kaydedilir | Ölçüm yükünü azaltır (pratik ilke) |
+| 8. **Kolay ölçüm** | Okunan kelime kitap sayfasındaki *Total words* sayısından, ELSA ve EAC puanları uygulamadan alınır; haftada yalnızca 3 sayı kaydedilir | Ölçüm yükünü azaltır (pratik ilke) |
 
 **Altyazı ve okurken dinleme üzerine:** Bilişsel yük kuramı, aynı metni hem görüp hem duymanın gereksiz yük getirebileceğini öngörür ("redundancy"). Ama 57 çalışmalık bir meta-analizde yazılı + sözlü sunum yalnız sözlü sunumdan daha iyi sonuç verdi. Üstünlük ön bilgisi düşük öğrenenlerde, hızı sistemin belirlediği materyalde ve resimsiz materyalde görüldü. Yazılı + sözlü ile yalnız yazılı arasında fark çıkmadı; anlatımın tamamı yerine anahtar kelimeleri göstermek daha iyi sonuç verdi ([Adesope & Nesbit 2012](https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842)). Ses kaydı hızı kendisi belirlenen bir materyaldir ve başlangıçta ön bilginiz düşüktür. Bu yüzden destek **başta tam, sonra kademeli olarak azalır**.
 
@@ -192,7 +164,7 @@ Haftalık, ücretsiz, transkriptli, orta düzeye yönelik program ([BBC Learning
 | Sıra | Adım | Bileşen | A1–A2 | B1 | B2 |
 |---|---|---|---|---|---|
 | 1 | **Dünü hızlı tekrar** | Akıcılık | Dünkü bölümü daha hızlı okuma; dünkü anlatımı azalan sürede tekrarlama (2/1,5/1 → 3/2/1 dk) | 4/3/2 (dünkü konu); haftada 2 kez son tura gecikmeli düzeltme (A-7) | 4/3/2 (IELTS konusu) + gecikmeli düzeltme |
-| 2 | **Yeni bölümü oku** | Girdi | Okurken dinleme; bölüm 2–3 kez | Sessiz okuma, sözlük yok | Aynı; ~120. günden Mid-frequency Readers |
+| 2 | **Yeni bölümü oku** | Girdi | Okurken dinleme: A1'de bölüm 2–3 kez, A2'de 1–2 kez (§7.3) | Sessiz okuma, sözlük yok | Aynı; ~120. günden Mid-frequency Readers |
 | 3 | **Aynı bölümü dinle** | Girdi | Okuduktan sonra metinsiz dinleme: içerik bilindiği için tanıdık kelimelerin sesi çalışılır | Önce dinle, sonra oku (ya da tersi) + 6 Minute English | 6 Minute English; B2.2'de IELTS dinleme bölümleri |
 | 4 | **Bir parçayı gölgele** | Telaffuz | Bölüm sesinden 30–45 sn + EAC (1–8. hafta) + ELSA | 6 Minute English'ten 60 sn + ELSA | IELTS Part 2 model cevabından gölgeleme + ELSA (kişisel hata listesi) |
 | 5 | **Sesli anlat** | Çıktı | 3–5 cümle → 1–2 dk anlatım (kayıt); 15. günden yapay zekâyla soru-cevap | 2–3 dk anlatım ya da gerekçeli görüş; yapay zekâyla tartışma; canlı ders | Part 2 kartı (ertesi gün aynı kart); Part 3; eğitmen |
@@ -244,10 +216,10 @@ Bunlar pratik hedeflerdir, araştırma eşiği değildir. Bir ölçüt tutmazsa 
 
 | Gün | Okuma | Dinleme | Konuşma | Yazma | Telaffuz |
 |---|---|---|---|---|---|
-| **28 (A1)** | Stage 1, okurken dinlemeyle sayfada ≤2 bilinmeyen kelime | Okunmuş bölümün sesini metinsiz takip edebilme | Bir sayfayı 3–5 cümleyle anlatma; 10 sabit soruya duraksamadan cevap | 50–70 kelime | EAC'de /iː/–/ɪ/ ve /æ/–/e/ ayrımında ≥%80 doğru |
-| **63 (A2)** | Stage 2 rahat (sayfada ≤2 bilinmeyen), kaba hız ~80–100 kelime/dk | Stage 1–2 kitap seslerini metinsiz anlama | 2 dk anlatım, uzun duraklama az; insanla 10 dk günlük konuşma | 120 kelimelik özet | EAC hedef karşıtlıklarında ≥%85; ELSA hedef ses puanları yükseliyor |
-| **105 (B1)** | Stage 4 rahat, kaba hız ~120–150 kelime/dk | 6 Minute English bölümünün ana fikirleri transkriptsiz | 3 dk gerekçeli görüş | 200 kelimelik görüş yazısı | Kişisel hata listesi ≤5 madde |
-| **133 (B2.1)** | Stage 6 ya da Mid-frequency Readers 4.000 rahat, kaba hız ~150–180 kelime/dk | Dizi bölümünün ana olayı altyazısız (ikinci izlemede) | IELTS Part 2'de 2 dk kesintisiz | Task 2: 40 dk'da 250+ kelime | Aylık kayıtlarda anlaşılırlık puanı yükseliyor |
+| **28 (A1)** | A1 starter'ın uzun kitapları, okurken dinlemeyle sayfada ≤2 bilinmeyen kelime | Okunmuş bölümün sesini metinsiz takip edebilme | Bir sayfayı 3–5 cümleyle anlatma; 10 sabit soruya duraksamadan cevap | 50–70 kelime | EAC'de /iː/–/ɪ/ ve /æ/–/e/ ayrımında ≥%80 doğru |
+| **63 (A2)** | A2 elementary rahat (sayfada ≤2 bilinmeyen), kaba hız ~80–100 kelime/dk | A1–A2 kitap seslerini metinsiz anlama | 2 dk anlatım, uzun duraklama az; insanla 10 dk günlük konuşma | 120 kelimelik özet | EAC hedef karşıtlıklarında ≥%85; ELSA hedef ses puanları yükseliyor |
+| **105 (B1)** | B1+ intermediate rahat, kaba hız ~120–150 kelime/dk | 6 Minute English bölümünün ana fikirleri transkriptsiz | 3 dk gerekçeli görüş | 200 kelimelik görüş yazısı | Kişisel hata listesi ≤5 madde |
+| **133 (B2.1)** | B2+ upper-intermediate ya da Mid-frequency Readers 4.000 rahat, kaba hız ~150–180 kelime/dk | Dizi bölümünün ana olayı altyazısız (ikinci izlemede) | IELTS Part 2'de 2 dk kesintisiz | Task 2: 40 dk'da 250+ kelime | Aylık kayıtlarda anlaşılırlık puanı yükseliyor |
 | **180 (B2.2)** | — | — | — | — | IELTS kararları (§10.4) |
 
 ---
@@ -258,26 +230,26 @@ Kelime sayıları tekrar okumalar dahil haftalık hedeflerdir; ±%20 sapma norma
 
 | Hafta · gün | Okuma (düzey · haftalık kelime) | Dinleme ve izleme | Telaffuz odağı | Çıktı | Akıcılık | Ölçüm / karar |
 |---|---|---|---|---|---|---|
-| 1 · 1–7 | Starter; okurken dinleme, her bölüm 2–3 kez · ~10 bin | Bölüm sesleri (akşam tekrar) | Ses sistemi, ses-yazım; /iː/–/ɪ/ (*sheep/ship*) | 10 sabit soruya sesli cevap (kayıt); 30–50 kelime kendini tanıtma | Dünkü bölümü hızlı yeniden okuma | Gün 1: başlangıç kaydı (§6.4) |
-| 2 · 8–14 | Starter · ~14 bin | Aynı | /æ/–/e/ (*bad/bed*), /ʌ/–/ɑː/ (*cut/cart*) | Kitaptan bir sahneyi 3–5 cümleyle anlatma; 40–60 kelime | + 2/1,5/1 dk mini anlatım | — |
-| 3 · 15–21 | Starter → Stage 1 · ~17 bin | Aynı | /ʊ/–/uː/ (*full/fool*), /ɔː/, /əʊ/, /aʊ/; schwa /ə/ | **Yapay zekâyla 10 dk soru-cevap başlar** (A-1); 50–60 kelime | Aynı | — |
-| 4 · 22–28 | Stage 1 · ~20 bin | Aynı | /v/–/w/ (*vest/west*) | Günlük rutin anlatımı; 50–70 kelime | Aynı | Gün 28: A1 çıkış ölçütü; 1. ay kaydı |
-| 5 · 29–35 | Stage 1 · ~26 bin | Okunmuş kitapların sesleri | /ŋ/ (*sin/sing*); söz sonu ötümlü ünsüzler (*bag/back*) | 1–2 dk anlatım (kaydet → dinle → yeniden kaydet); 70–100 kelime özet; **ilk insan dersi (haftada 30 dk)** | 3/2/1; 10 dk durmadan yazma başlar | — |
-| 6 · 36–42 | Stage 1 → 2 · ~30 bin | Aynı | Ünsüz kümeleri, araya ünlü eklememe (*school, street, spring*) | Canlandırma: alışveriş, yol tarifi, randevu (A-2); 80–120 kelime e-posta | Aynı | — |
-| 7 · 43–49 | Stage 2 · ~32 bin | Aynı | /θ/–/ð/ algı + temel üretim (*think, this*) | Geçmiş bir olayı anlatma; 100–120 kelime | Aynı | — |
-| 8 · 50–56 | Stage 2 · ~34 bin | Aynı | Kelime vurgusu (*-tion, -ic, -ity*); **EAC biter (~400 dk)** | Basit görüş (1–2 dk); 100–120 kelime | Aynı | 2. ay kaydı |
-| 9 · 57–63 | Stage 2 → 3 · ~36 bin | Aynı | Zayıf biçimler (*to, for, can, of*) | 2 dk anlatım; 120 kelimelik özet | Aynı | Gün 63: A2 çıkış ölçütü |
-| 10 · 64–70 | Stage 3 · ~43 bin | **6 Minute English başlar** (haftada 3–4 bölüm); **dizi başlama testi** (§7.4) | Cümle vurgusu, bağlama; 6 Minute English'ten 60 sn gölgeleme | 2–3 dk anlatım ya da gerekçeli görüş; yapay zekâyla tartışma (A-3); 130–200 kelime; **English Online haftada 3 ders** | 4/3/2; haftada 3 süreli hızlı okuma | — |
-| 11 · 71–77 | Stage 3 · ~45 bin | 6 Minute English + dizi (İngilizce altyazı) | Düşünce gruplarına bölme (chunking) | Karşılaştırma, artı ve eksiler; 150–200 kelime | **+ gecikmeli düzeltme, haftada 2** (A-7) | — |
-| 12 · 78–84 | Stage 3 → 4 · ~47 bin | Aynı | Tonlama: soru türleri | Sorun-çözüm konuşması; resmî e-posta | Aynı | 3. ay kaydı |
-| 13 · 85–91 | Stage 4 · ~48 bin | Aynı | Tonlama: liste, karşıtlık vurgusu | **Gün 90: ilk tam IELTS denemesi** (bilgi amaçlı) | Aynı | Gün 90 kararı |
-| 14 · 92–98 | Stage 4 · ~50 bin | Aynı | Kayıtlardan kişisel hata listesi | IELTS Part 1–2 tarzı konuşma; ~200 kelimelik görüş yazısı | Aynı | — |
-| 15 · 99–105 | Stage 4 → 5 · ~50 bin | Aynı | Kişisel hata listesi | Bir 6 Minute English bölümünün 150 kelimelik özeti; Part 2 kartları | Aynı | Gün 105: B1 çıkış ölçütü |
-| 16 · 106–112 | Stage 5 · ~55 bin | 6 Minute English + dizi (sevdiğiniz bölümler altyazısız 2. kez); isteğe bağlı tek doğal hızlı podcast | Part 2 cevaplarında düşünce grupları ve vurgu; model cevaplardan gölgeleme | Her gün bir Part 2 kartı (ertesi gün aynı kart); haftada 3 Part 3 (A-5); haftada 2 Task 2 + 1 Task 1 + 2 özet (A-6); **eğitmen haftada 2 × 50 dk** | 4/3/2 (IELTS konuları) + gecikmeli düzeltme; hızlı okuma | 4. ay kaydı |
-| 17 · 113–119 | Stage 5 → 6 · ~57 bin | Aynı | Aynı | Aynı | Aynı | — |
-| 18 · 120–126 | Stage 6 → Mid-frequency Readers 4.000 · ~58 bin | Aynı | Aynı | **Gün 120: tam deneme** | Aynı | Gün 120 kararı |
-| 19 · 127–133 | Mid-frequency Readers 4.000 · ~58 bin | Aynı | Aynı | Aynı | Aynı | Gün 133: B2.1 çıkış ölçütü |
-| 20 · 134–140 | Mid-frequency Readers 4.000 → 6.000 + IELTS okuma metinleri · ~56 bin | 6 Minute English + IELTS dinleme + dizi | Kişisel hata listesi; Speaking akışı | Haftada 5 Task 2 + 3 Task 1; 2–3 tam Speaking denemesi; eğitmen haftada 2 kez | 4/3/2 + hızlı okuma | 5. ay kaydı |
+| 1 · 1–7 | A1 starter, en kısa kitaplar; okurken dinleme, her bölüm 2–3 kez · ~10 bin | Bölüm sesleri (akşam tekrar) | Ses sistemi, ses-yazım; /iː/–/ɪ/ (*sheep/ship*) | 10 sabit soruya sesli cevap (kayıt); 30–50 kelime kendini tanıtma | Dünkü bölümü hızlı yeniden okuma | Gün 1: başlangıç kaydı (§6.4) |
+| 2 · 8–14 | A1 starter, kısa kitaplar · ~14 bin | Aynı | /æ/–/e/ (*bad/bed*), /ʌ/–/ɑː/ (*cut/cart*) | Kitaptan bir sahneyi 3–5 cümleyle anlatma; 40–60 kelime | + 2/1,5/1 dk mini anlatım | — |
+| 3 · 15–21 | A1 starter · ~17 bin | Aynı | /ʊ/–/uː/ (*full/fool*), /ɔː/, /əʊ/, /aʊ/; schwa /ə/ | **Yapay zekâyla 10 dk soru-cevap başlar** (A-1); 50–60 kelime | Aynı | — |
+| 4 · 22–28 | A1 starter, daha uzun kitaplar · ~20 bin | Aynı | /v/–/w/ (*vest/west*) | Günlük rutin anlatımı; 50–70 kelime | Aynı | Gün 28: A1 çıkış ölçütü; 1. ay kaydı |
+| 5 · 29–35 | A1 starter → A2 elementary · ~26 bin | Okunmuş kitapların sesleri | /ŋ/ (*sin/sing*); söz sonu ötümlü ünsüzler (*bag/back*) | 1–2 dk anlatım (kaydet → dinle → yeniden kaydet); 70–100 kelime özet; **ilk insan dersi (haftada 30 dk)** | 3/2/1; 10 dk durmadan yazma başlar | — |
+| 6 · 36–42 | A2 elementary · ~30 bin | Aynı | Ünsüz kümeleri, araya ünlü eklememe (*school, street, spring*) | Canlandırma: alışveriş, yol tarifi, randevu (A-2); 80–120 kelime e-posta | Aynı | — |
+| 7 · 43–49 | A2 elementary · ~32 bin | Aynı | /θ/–/ð/ algı + temel üretim (*think, this*) | Geçmiş bir olayı anlatma; 100–120 kelime | Aynı | — |
+| 8 · 50–56 | A2 elementary · ~34 bin | Aynı | Kelime vurgusu (*-tion, -ic, -ity*); **EAC biter (~400 dk)** | Basit görüş (1–2 dk); 100–120 kelime | Aynı | 2. ay kaydı |
+| 9 · 57–63 | A2 elementary → B1 pre-intermediate · ~36 bin | Aynı | Zayıf biçimler (*to, for, can, of*) | 2 dk anlatım; 120 kelimelik özet | Aynı | Gün 63: A2 çıkış ölçütü |
+| 10 · 64–70 | B1 pre-intermediate · ~43 bin | **6 Minute English başlar** (haftada 3–4 bölüm); **dizi başlama testi** (§7.4) | Cümle vurgusu, bağlama; 6 Minute English'ten 60 sn gölgeleme | 2–3 dk anlatım ya da gerekçeli görüş; yapay zekâyla tartışma (A-3); 130–200 kelime; **English Online haftada 3 ders** | 4/3/2; haftada 3 süreli hızlı okuma | — |
+| 11 · 71–77 | B1 pre-intermediate · ~45 bin | 6 Minute English + dizi (İngilizce altyazı) | Düşünce gruplarına bölme (chunking) | Karşılaştırma, artı ve eksiler; 150–200 kelime | **+ gecikmeli düzeltme, haftada 2** (A-7) | — |
+| 12 · 78–84 | B1 pre-intermediate → B1+ intermediate · ~47 bin | Aynı | Tonlama: soru türleri | Sorun-çözüm konuşması; resmî e-posta | Aynı | 3. ay kaydı |
+| 13 · 85–91 | B1+ intermediate · ~48 bin | Aynı | Tonlama: liste, karşıtlık vurgusu | **Gün 90: ilk tam IELTS denemesi** (bilgi amaçlı) | Aynı | Gün 90 kararı |
+| 14 · 92–98 | B1+ intermediate · ~50 bin | Aynı | Kayıtlardan kişisel hata listesi | IELTS Part 1–2 tarzı konuşma; ~200 kelimelik görüş yazısı | Aynı | — |
+| 15 · 99–105 | B1+ intermediate → B2 intermediate-plus · ~50 bin | Aynı | Kişisel hata listesi | Bir 6 Minute English bölümünün 150 kelimelik özeti; Part 2 kartları | Aynı | Gün 105: B1 çıkış ölçütü |
+| 16 · 106–112 | B2 intermediate-plus · ~55 bin | 6 Minute English + dizi (sevdiğiniz bölümler altyazısız 2. kez); isteğe bağlı tek doğal hızlı podcast | Part 2 cevaplarında düşünce grupları ve vurgu; model cevaplardan gölgeleme | Her gün bir Part 2 kartı (ertesi gün aynı kart); haftada 3 Part 3 (A-5); haftada 2 Task 2 + 1 Task 1 + 2 özet (A-6); **eğitmen haftada 2 × 50 dk** | 4/3/2 (IELTS konuları) + gecikmeli düzeltme; hızlı okuma | 4. ay kaydı |
+| 17 · 113–119 | B2 intermediate-plus → B2+ upper-intermediate · ~57 bin | Aynı | Aynı | Aynı | Aynı | — |
+| 18 · 120–126 | B2+ upper-intermediate → Mid-frequency Readers 4.000 · ~58 bin | Aynı | Aynı | **Gün 120: tam deneme** | Aynı | Gün 120 kararı |
+| 19 · 127–133 | Mid-frequency Readers 4.000 + B2+ upper-intermediate · ~58 bin | Aynı | Aynı | Aynı | Aynı | Gün 133: B2.1 çıkış ölçütü |
+| 20 · 134–140 | Mid-frequency Readers 4.000 → 6.000 + B2+ upper-intermediate + IELTS okuma metinleri · ~56 bin | 6 Minute English + IELTS dinleme + dizi | Kişisel hata listesi; Speaking akışı | Haftada 5 Task 2 + 3 Task 1; 2–3 tam Speaking denemesi; eğitmen haftada 2 kez | 4/3/2 + hızlı okuma | 5. ay kaydı |
 | 21 · 141–147 | Aynı · ~56 bin | Aynı | Aynı | **~145. gün IELTS Progress Check** | Aynı | — |
 | 22 · 148–154 | Aynı · ~56 bin | Aynı | Aynı | Aynı | Aynı | **Gün 150 kararı** |
 | 23 · 155–161 | Aynı · ~56 bin | Aynı | /θ/–/ð/ inceltme | Aynı | Aynı | — |
@@ -365,18 +337,88 @@ Kelime sayıları tekrar okumalar dahil haftalık hedeflerdir; ±%20 sapma norma
 
 **Önemli ayrıntı:** Laufer & Ravenhorst-Kalovski'de kelime bilgisindeki küçük artışlar, metin kapsamasını neredeyse değiştirmese de okuduğunu anlamayı artırdı. Eşik bir duvar değildir; her yeni kelime işe yarar. Bu eşikler, ulusal bir sınavın okuma metinlerinden çıkarılmıştır; kolay okuma kitapları için değil.
 
-### 7.2 Düzey seçimi
+### 7.2 Kitap seçimi
 
-- **Sayfa testi:** Kitabın ilk iki sayfasını okuyun, bilinmeyen kelimeleri sayın. Başlangıçta sayfada ≤1–2, orta düzeyde ≤4–5 bilinmeyen kelime varsa düzey uygundur; daha fazlası varsa bir düzey aşağı inin.
-- **Dinleme materyali:** Okuma düzeyinizin 1–2 düzey altında olsun. Birçok öğrenen, akıcı okuyabildiği düzeyin iki altındaki materyali akıcı dinleyebiliyor ([ER Central](https://www.er-central.com/?p=1076)).
-- **Yükselme:** İki hafta üst üste sayfada ≤2 bilinmeyen kelime ve rahat okuma → bir üst düzey.
+Kitabı dört şeye göre seçin: **düzey, sesi olması, sayfa testi ve ilgi.** Kitap sayfasındaki düzey, *Total words*, *Unique words*, *Hard words* ve ses simgesi bunun için yeterli.
 
-### 7.3 Okurken dinlemeden yalnız dinlemeye
+**Hangi hafta hangi düzey** (takvimdeki tempo; düzeyi tarih değil sayfa testi belirler):
 
-- **A1–A2: önce okurken dinleme.** Okuma, okurken dinleme ve yalnız dinlemeyi karşılaştıran çalışmada üç yolla da kelime öğrenildi, ama çoğu kelime öğrenilmedi. Üç ay sonra, ipucu verilmeden hatırlamada, okuma yollarında 28 kelimeden yalnızca 1'inin anlamı kaldı; yalnız dinlemede hiçbiri kalmadı. Metinde sık geçen kelimeler daha iyi öğrenildi ve daha geç unutuldu ([Brown, Waring & Donkaewbua 2008](https://www2.hawaii.edu/~readfl/rfl/October2008/brown/brown.html)). Yazılı + sözlü sunum da düşük ön bilgide yalnız sözlüden iyi (§2).
-- **Bu yüzden:** A1–A2'de yeni bölüm önce okurken dinlenir. Metinsiz dinleme yalnızca **okunmuş** malzemeyle yapılır; amaç yeni kelime değil, tanıdık kelimelerin sesini tanımaktır.
-- **B1:** Önce dinle, sonra oku (ya da tersi). **B2:** Yalnız dinleme; transkript sonra.
-- Orta-ileri düzeyde aynı belgeseli okumak, dinlemek ve izlemek arasında kelime öğreniminde anlamlı fark çıkmadı ([Feng & Webb 2020](https://www.cambridge.org/core/journals/studies-in-second-language-acquisition/article/learning-vocabulary-through-reading-listening-and-viewing/415CF118C5A114BB2D9C3B79B9656AFF)). B1'den sonra izleme de geçerli bir girdi yoludur.
+| Hafta | Sitedeki düzey |
+|---|---|
+| 1–4 | A1 starter (ilk iki hafta en kısa kitaplar) |
+| 5 | A1 starter → A2 elementary |
+| 6–8 | A2 elementary |
+| 9 | A2 elementary → B1 pre-intermediate |
+| 10–11 | B1 pre-intermediate |
+| 12 | B1 pre-intermediate → B1+ intermediate |
+| 13–14 | B1+ intermediate |
+| 15 | B1+ intermediate → B2 intermediate-plus |
+| 16 | B2 intermediate-plus |
+| 17 | B2 intermediate-plus → B2+ upper-intermediate |
+| 18 | B2+ upper-intermediate → Mid-frequency Readers 4.000 |
+| 19–26 | Mid-frequency Readers 4.000 → 6.000 + B2+ upper-intermediate; 20. haftadan IELTS okuma metinleri |
+
+Sayfa testini rahat geçiyorsanız son haftalarda C1 advanced kitaplara geçebilirsiniz. C2 unabridged (kısaltılmamış özgün metin) bu planın dışında.
+
+**Seçim kuralları**
+1. **Sesi olsun.** A1–B1 arasında yalnızca kapağında ses simgesi olan kitapları seçin; sesi *Download audio* ile indirin. B2'de ses tercih edilir ama şart değil.
+2. **Kolaydan zora gidin.** Aynı düzeyde önce *Unique words* sayısı düşük ve kısa (*Total words* küçük) kitapları okuyun; düzeyin sonuna doğru büyüklere geçin. Örnek: *Davy Crockett* (A1 starter) 546 farklı, 2.548 toplam kelime içeriyor.
+3. **Sayfa testi yapın (3. haftadan itibaren).** Önce *Hard words* listesine bakın; çoğunu bilmiyorsanız kitabı atlayın (pratik kestirme). Sonra ilk iki sayfayı okuyup bilmediğiniz kelimeleri sayın: A1–A2'de sayfada en fazla 1–2, B1 ve sonrasında en fazla 4–5. Fazlası varsa başka bir kitap seçin ya da bir düzey inin. İlk iki hafta bu test tutmaz; o dönemde en kısa A1 kitaplarını sesle 2–3 kez okuyun.
+4. **İlginizi çeksin.** Sıkıldığınız kitabı ilk bölümden sonra bırakın. Kendi seçmek ve sıkılınca bırakmak yaygın okumanın temel ilkelerindendir ([Day & Bamford 2002](https://www2.hawaii.edu/~readfl/rfl/October2002/day/day.html)).
+5. **Dar okuyun.** Bir yazarın ya da dizinin (*Series*) kitaplarını art arda okuyun; aynı karakterler ve konular kelime yükünü azaltır.
+6. **B1'den itibaren her üç kitaptan biri belgesel olsun** (*documentary*). Çevre, bilim, sağlık ve tarih konuları IELTS okuma metinlerine yakın.
+
+**Haftada kaç kitap:** Takvimdeki haftalık kelime hedefini (§5) kitabın *Total words* sayısına bölün; tekrar okumalar da sayılır. Örnek: 1. haftanın hedefi ~10 bin kelime. *Davy Crockett*'ı üç kez okumak ~7.600 kelime eder; kısa bir A1 kitabı daha eklenince hedef tamamlanır.
+
+**Dinleme materyali:** Okuma düzeyinizin 1–2 düzey altında olsun. Birçok öğrenen, akıcı okuyabildiği düzeyin iki altındaki materyali akıcı dinleyebiliyor ([ER Central](https://www.er-central.com/?p=1076)). Akşam dinlemesinde önceden okuduğunuz kitapların sesleri bu yüzden uygun.
+
+**Düzey değiştirme:**
+- İki hafta üst üste sayfada en fazla 2 bilinmeyen kelime ve rahat okuma → bir üst düzey.
+- Sayfada 4–5'ten fazla bilinmeyen kelime → bir düzey aşağı.
+- Okunan kelime iki hafta üst üste hedefin %70'inin altındaysa süreyi değil düzeyi düşürün (§10.4).
+
+**Pazar rutini (5 dk):** Gelecek haftanın kitaplarını bu kurallarla seçip listeye yazın; hafta içinde kitap seçimiyle uğraşmayın.
+
+### 7.3 Okuma yöntemi
+
+**Her fazda geçerli kurallar**
+1. **Anlam için okuyun.** Amaç hikâyeyi ya da bilgiyi anlamak; dil kurallarını incelemek dil odaklı planınızın işi.
+2. **Sözlük kullanmayın.** Bilmediğiniz kelimeyi bağlamdan tahmin edin ya da geçin. Aynı kelime üçüncü kez karşınıza çıkıp anlamayı engelliyorsa bir kez hızlıca bakın (pratik kural).
+3. **Kelime listesi tutmayın.** Bölüm sonunda en fazla 3 kalıp (ör. *at the end of*, *I'm afraid*) not edin ve o günün sesli anlatımında kullanın.
+4. **Akıcı okuyun.** Tek bir kelimeye takılıp geri dönmeyin; anlamadığınız cümleyi geçin, çoğu zaman sonraki cümle açıklar. Yaygın okumada okuma hızı yavaş değil hızlıdır; bunu kolay metin sağlar ([Day & Bamford 2002](https://www2.hawaii.edu/~readfl/rfl/October2002/day/day.html)).
+5. **Anlamayı sesli anlatımla kontrol edin.** Bölümü 3–5 cümleyle anlatamıyorsanız (günlük döngünün 5. adımı) bölümü sesle bir kez daha okuyun. İki gün üst üste anlatamıyorsanız düzey zordur; bir düzey inin.
+6. **Ses hızını ayarlayın.** A1'de ses hızlı geliyorsa oynatıcıda 0,8–0,9× ile başlayın, A2 sonunda 1,0×'a çıkın (pratik kural).
+7. **Dosyaları düzenli tutun.** Kitabı EPUB (telefonda) ya da TXT, sesini MP3 olarak indirin; her kitap için tek klasör açın. Hız ayarı olan herhangi bir oynatıcı yeter.
+8. **Kaydı tutun.** Kitabı bitirince adını, düzeyini ve *Total words* × okuma sayısını haftalık şablona yazın (Ek B).
+
+**A1 (gün 1–28): her bölüm 2–3 kez, sesle**
+- Okuma bloğu (60 dk):
+  1. Kapağa, resimlere ve kitap tanıtımına bakın (1–2 dk).
+  2. Bölümü sesle birlikte okuyun; okunan cümleyi parmağınızla ya da imleçle izleyin.
+  3. Aynı bölümü sesle bir kez daha okuyun.
+  4. Anlamadığınız yer kaldıysa üçüncü kez okuyun.
+- Dinleme bloğu: Bugünkü ve önceki bölümleri metinsiz dinleyin. İçerik tanıdık; amaç bildiğiniz kelimelerin sesini tanımak.
+- İlk iki hafta: En kısa kitapları seçin; anlamadığınız cümlede durmayın, resimden ve sesten yararlanın.
+
+**A2 (gün 29–63): her bölüm 1–2 kez, sesle**
+- Okuma bloğu: Bölümü bir kez sesle okuyun; zor bölümü bir kez daha. Kalan sürede sonraki bölüme geçin.
+- Dinleme bloğu: O gün okuduğunuz bölümleri metinsiz dinleyin.
+
+**B1 (gün 64–105): sessiz okumaya geçiş**
+- Okuma bloğu: Sessiz okuyun (ses yok), kendi hızınızda.
+- Dinleme bloğu: Yeni bölümü önce metinsiz dinleyip sonra okuyun ya da önce okuyup sonra dinleyin; hangisi rahatsa. Artı 6 Minute English (§7.5).
+- Haftada 3 gün: bir düzey aşağı bir kitaptan 5–7 dk süreli hızlı okuma (§9.2).
+
+**B2 (gün 106–180): hızlı sessiz okuma, ayrı dinleme**
+- Okuma bloğu: Sessiz ve hızlı okuyun; her üç kitaptan biri belgesel. ~120. günden Mid-frequency Readers.
+- Dinleme bloğu: Sesli kitabı ya da 6 Minute English'i metinsiz dinleyin; metne yalnızca sonra bakın.
+
+**Her fazda:** Ertesi gün dünkü bölümü daha hızlı yeniden okuyun (§9.2); akşam önceden okuduğunuz bölümlerin seslerini dinleyin.
+
+**Neden bu sıra?**
+- Okuma, okurken dinleme ve yalnız dinlemeyi karşılaştıran çalışmada üç yolla da kelime öğrenildi, ama çoğu kelime öğrenilmedi. Üç ay sonra, ipucu verilmeden hatırlamada okuma yollarında 28 kelimeden yalnızca 1'inin anlamı kaldı; yalnız dinlemede hiçbiri kalmadı. Metinde sık geçen kelimeler daha iyi öğrenildi ve daha geç unutuldu ([Brown, Waring & Donkaewbua 2008](https://www2.hawaii.edu/~readfl/rfl/October2008/brown/brown.html)). Bu yüzden A1–A2'de yeni bölüm önce okurken dinlenir; metinsiz dinleme yalnızca okunmuş malzemeyle yapılır.
+- Yazılı + sözlü sunum, ön bilgisi düşük öğrenende yalnız sözlü sunumdan daha iyi sonuç verdi (§2). Bilgi arttıkça bu destek gereksiz yüke dönüşür; bu yüzden B1'de sessiz okumaya geçilir (§2, kural 3).
+- Orta-ileri düzeyde aynı belgeseli okumak, dinlemek ve izlemek arasında kelime öğreniminde anlamlı fark çıkmadı ([Feng & Webb 2020](https://www.cambridge.org/core/journals/studies-in-second-language-acquisition/article/learning-vocabulary-through-reading-listening-and-viewing/415CF118C5A114BB2D9C3B79B9656AFF)). B1'den sonra dinleme ve izleme de geçerli girdi yollarıdır.
 
 ### 7.4 Dizi kuralları
 
@@ -468,7 +510,7 @@ A2'den her gün 10 dk durmadan yazma (konu: dünkü bölüm); kelime sayısını
 
 ### 10.1 Haftada 3 sayı (pazar, 10 dk)
 
-1. **Okuma:** Haftalık okunan kelime (bitirilen kitapların kapağındaki kelime sayılarının toplamı) + bir sayfadaki bilinmeyen kelime sayısı.
+1. **Okuma:** Haftalık okunan kelime (okunan kitapların *Total words* × okuma sayısı toplamı) + bir sayfadaki bilinmeyen kelime sayısı.
 2. **Konuşma:** 2 dakikalık anlatım kaydında dakikadaki kelime sayısı ve hata sayısı.
 3. **Telaffuz:** Haftanın hedef sesinde ELSA puanı (1–8. hafta EAC doğruluk yüzdesi de).
 
@@ -599,6 +641,7 @@ Telaffuz kayıtları ve dikte testi (§6.4) · bir düzey aşağı metinde okuma
 | 6 | HVPT doz ayrıntıları (ortalama 294 dk; 400 dk altında doz-yanıt) | 🟡 Bulgular bölümünden arama özetleriyle doğrulandı; tam metinle teyit edilmedi |
 | 7 | Nation'ın ara düzey girdi değerleri (3.000 aile ≈ 0,5 milyon, 4.000 aile ≈ 1 milyon kelime) | ❓ Bu kez birincil tabloyla doğrulanamadı; kaba tahmin olarak işaretlendi |
 | 8 | English Accent Coach'un ücretsiz olduğu (en az kaynakla plan) | ❓ Bu kez doğrulanamadı; ücretini sitesinden kontrol edin |
+| 9 | English e-Reader'ın kitapları dağıtma izni olduğu | ❓ Doğrulanamadı: sitede lisans bilgisi yok; bir blog yorumunda kitapların yayınevi kitaplarıyla aynı olduğu söyleniyor ([blog](https://www.cristinacabal.com/?p=14070)). Sizin tercihinizle plana alındı; yedekler §1.1'de |
 
 ### 12.8 Yöntem
 
@@ -636,7 +679,7 @@ Telaffuz kayıtları ve dikte testi (§6.4) · bir düzey aşağı metinde okuma
 - [Kalyuga 2007](https://www.uky.edu/~gmswan3/EDC608/Kalyuga2007_Article_ExpertiseReversalEffectAndItsI.pdf) · [Adesope & Nesbit 2012](https://rex.libraries.wsu.edu/esploro/outputs/journalArticle/Verbal-Redundancy-in-Multimedia-Learning-Environments/99900601157101842) · [Lally vd. 2010 — özet](https://bps.org.uk/research-digest/how-form-habit) · [Monsell 2003](https://modeldb.science/citations/102732)
 
 **Kaynaklar ve resmî ölçütler**
-- [Oxford Reading Club — OUP](https://elt.oup.com/feature/global/oxford-reading-club/) · [OUP global katalog (1 ay)](https://elt.oup.com/catalogue/items/global/orc/9780194095631) · [Oxford Reading Club — OUP Spain](https://www.oup.es/oxfordreadingclub/) · [OUP Japan — kod kılavuzu](https://www.oupjapan.co.jp/sites/default/files/contents/media/ORC_how-to-redeem_EN.pdf) · [OUP Japan — Speak Up](https://www.oupjapan.co.jp/en/node/60844) · [ORC kayıt kılavuzu (Van YYÜ)](https://www.yyu.edu.tr/images/files/orc_kayit_kilavuzu.pdf) · [Xreading](https://www.xreading.com/) · [OUP Japan](https://www.oupjapan.co.jp/en/node/62840) · [Oxford Bookworms düzeyleri](https://www.oupjapan.co.jp/en/gradedreaders/bookworms.shtml) · [ER Central](https://www.er-central.com/help/) · [Mid-frequency Readers](https://www.wgtn.ac.nz/lals/resources/readers)
+- [English e-Reader](https://english-e-reader.net/) · [lisans tartışması (blog)](https://www.cristinacabal.com/?p=14070) · [Oxford Reading Club — OUP](https://elt.oup.com/feature/global/oxford-reading-club/) · [OUP global katalog (1 ay)](https://elt.oup.com/catalogue/items/global/orc/9780194095631) · [Oxford Reading Club — OUP Spain](https://www.oup.es/oxfordreadingclub/) · [OUP Japan — kod kılavuzu](https://www.oupjapan.co.jp/sites/default/files/contents/media/ORC_how-to-redeem_EN.pdf) · [OUP Japan — Speak Up](https://www.oupjapan.co.jp/en/node/60844) · [ORC kayıt kılavuzu (Van YYÜ)](https://www.yyu.edu.tr/images/files/orc_kayit_kilavuzu.pdf) · [Xreading](https://www.xreading.com/) · [OUP Japan](https://www.oupjapan.co.jp/en/node/62840) · [Oxford Bookworms düzeyleri](https://www.oupjapan.co.jp/en/gradedreaders/bookworms.shtml) · [ER Central](https://www.er-central.com/help/) · [Mid-frequency Readers](https://www.wgtn.ac.nz/lals/resources/readers)
 - [6 Minute English](https://www.bbc.co.uk/learningenglish/english/features/6-minute-english) · [LanguaTalk](https://languatalk.com/blog/whats-the-best-ai-for-language-learning/) · [English Accent Coach](https://www.englishaccentcoach.com)
 - [Cambridge English — guided learning hours](https://support.cambridgeenglish.org/hc/en-gb/articles/202838506-Guided-learning-hours) · [IELTS and the CEFR](https://ielts.org/organisations/ielts-for-organisations/compare-ielts/ielts-and-the-cefr)
 
@@ -711,7 +754,7 @@ tomorrow.
 
 ## Ek B. Haftalık kayıt şablonu
 
-| Hafta | Kitap / düzey | Okunan kelime | Sayfada bilinmeyen | 2 dk anlatım: kelime/dk | Hata sayısı | Hedef ses: ELSA (EAC %) | İnsanla konuşma (dk) | Yazılan metin | Yorgunluk (1–5) | Karar |
+| Hafta | Kitap / düzey | Okunan kelime (*Total words* × okuma) | Sayfada bilinmeyen | 2 dk anlatım: kelime/dk | Hata sayısı | Hedef ses: ELSA (EAC %) | İnsanla konuşma (dk) | Yazılan metin | Yorgunluk (1–5) | Karar |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 1 | Starter — … | | | | | | — | | | |
 | 2 | | | | | | | | | | |
