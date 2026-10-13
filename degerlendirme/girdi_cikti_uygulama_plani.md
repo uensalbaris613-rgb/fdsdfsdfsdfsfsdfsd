@@ -2,7 +2,7 @@
 
 **Mevcut 8 saatlik planınıza blok blok yerleşen, hacmi hesaplanmış, ilerlemenize göre basamak atlatan sürüm** · 12 Ekim 2026
 
-**Kaynak sayısını 6'ya indiren ve telaffuzu da kapsayan sürüm:** [En Az Kaynakla Dört Bileşen Planı](en_az_kaynakla_dort_bilesen_plani.md) (haftalık hacimler aynı; bu belgedeki kaynak listesinin yerine geçer).
+**Güncel ve tek başına yeterli sürüm:** [Nihai Plan](nihai_dort_bilesen_plani.md) (telaffuz, girdi, çıktı ve akıcılık; 6 temel kaynak; derin araştırmayla güncellendi). Bu belge ve [En Az Kaynakla Dört Bileşen Planı](en_az_kaynakla_dort_bilesen_plani.md) arka plan olarak kalır.
 
 Araştırma gerekçeleri, yapay zekâ komutları ve görev bankası için: [Anlam Odaklı Girdi ve Çıktı Planı (araştırma ve araç seti)](anlam_odakli_girdi_cikti_plani.md) · Planın genel değerlendirmesi: [180 günlük planın değerlendirmesi](180_gunluk_plan_degerlendirmesi.md)
 

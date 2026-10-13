@@ -498,7 +498,7 @@ Ayrıntı için §6'daki doğrulama tablosuna bakın. Öne çıkanlar: ❓ "Oqou
 
 ## 8. Önerilen revizyon (planı bozmadan)
 
-**En az kaynakla uygulanacak güncel sürüm:** [En Az Kaynakla Dört Bileşen Planı](en_az_kaynakla_dort_bilesen_plani.md) (telaffuz, girdi, çıktı, akıcılık; 6 kaynak). Okuma, dinleme, yazma ve konuşma bloklarının seviye seviye ayrıntılı hali ayrı belgelerde: [8 basamaklı uygulama planı](girdi_cikti_uygulama_plani.md) ve araştırma gerekçeleri için [Anlam Odaklı Girdi ve Çıktı Planı](anlam_odakli_girdi_cikti_plani.md).
+**Güncel ve tek başına yeterli sürüm:** [Nihai Plan](nihai_dort_bilesen_plani.md) (telaffuz, girdi, çıktı, akıcılık; 6 temel kaynak; derin araştırmayla güncellendi). Önceki sürüm: [En Az Kaynakla Dört Bileşen Planı](en_az_kaynakla_dort_bilesen_plani.md). Okuma, dinleme, yazma ve konuşma bloklarının seviye seviye ayrıntılı hali ayrı belgelerde: [8 basamaklı uygulama planı](girdi_cikti_uygulama_plani.md) ve araştırma gerekçeleri için [Anlam Odaklı Girdi ve Çıktı Planı](anlam_odakli_girdi_cikti_plani.md).
 
 ### 8.1 İlkeler
 

@@ -2,6 +2,8 @@
 
 **Telaffuz · Anlam odaklı girdi · Anlam odaklı çıktı · Akıcılık** — en az bilişsel yük ve en az farklı kaynakla · 13 Ekim 2026
 
+**Bu belgenin yerine geçen sürüm:** [Nihai Plan](nihai_dort_bilesen_plani.md). Derin araştırmayla güncellendi; 26 haftalık takvim, algı eğitimi dozu, gecikmeli düzeltme ve faz çıkış ölçütleri eklendi. Uygulamada onu kullanın.
+
 Bu plan, mevcut planınızdaki dil odaklı çalışmayı (Anki, Empower, Murphy) olduğu gibi bırakır; geri kalan dört bileşeni **6 temel kaynakla** yürütür. Önceki belgelerle ilişkisi: haftalık hacimler [8 basamaklı uygulama planı](girdi_cikti_uygulama_plani.md) ile aynıdır, ama kaynak sayısı ~20'den 6'ya indirilmiştir. Araştırma gerekçelerinin ayrıntısı: [araştırma ve araç seti](anlam_odakli_girdi_cikti_plani.md).
 
 **İşaretler:** ✅ doğru / uygun · 🟡 kısmen doğru veya koşullu · ❌ yanlış veya bu plana uygun değil · ❓ doğrulanamadı
@@ -111,7 +113,7 @@ Haftalık, ücretsiz, transkriptli; orta düzey için. Hem dinleme girdisi hem g
 Dizilerin %95'ini anlamak için ~3.000 kelime ailesi gerekiyor ([Webb & Rodgers 2009 — özet](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.992638/full)); bu yüzden dizi B1'de başlar. **Tek bir diziyi** baştan sona, **İngilizce altyazıyla** izleyin: aynı karakterler ve konular kelime yükünü azaltır; İngilizce altyazı kelime öğrenimine katkı sağlar ([Peters, Heynen & Puimège 2016](https://lirias.kuleuven.be/bitstream/123456789/652883/2/Peters_imagery_final.pdf)). A1–A2'de akşam dinlemesi, daha önce okuduğunuz kitapların sesleridir; yeni kaynak gerekmez.
 
 ### 2.6 İnsanla etkileşim
-Etkileşimin dil gelişimine olumlu etkisi meta-analizlerle gösterildi ([Mackey & Goo 2007](https://eprints.lancs.ac.uk/id/eprint/59863/)). Konuşma tanıma araçlarıyla pratik de başkalarıyla yapıldığında yalnız yapılmasından belirgin biçimde daha etkili bulundu ([Ngo vd. 2024](https://resolve.cambridge.org/core/journals/recall/article/effectiveness-of-automatic-speech-recognition-in-eslefl-pronunciation-a-metaanalysis/A915444CF252B61D14961D2FE733822D)). Planınızdaki English Online yeterli; yoksa tek bir eğitmen:
+Etkileşimin dil gelişimine olumlu etkisi meta-analizlerle gösterildi ([Mackey & Goo 2007](https://eprints.lancs.ac.uk/id/eprint/59863/)). Konuşma tanıma meta-analizinde akranlarla yapılan pratikte etki büyük, yalnız yapılan pratikte küçük çıktı; ancak bu farklı çalışmaların karşılaştırmasıdır ve farkın anlamlılığı özette raporlanmıyor ([Ngo vd. 2024](https://resolve.cambridge.org/core/journals/recall/article/effectiveness-of-automatic-speech-recognition-in-eslefl-pronunciation-a-metaanalysis/A915444CF252B61D14961D2FE733822D)). *Düzeltme (13 Ekim 2026): İlk sürümde "belirgin biçimde daha etkili" yazmıştım.* Planınızdaki English Online yeterli; yoksa tek bir eğitmen:
 - A2: haftada 30 dk
 - B1: haftada 3 canlı grup dersi
 - B2: haftada 2 × 50 dk (IELTS odaklı)
@@ -271,7 +273,7 @@ Etkileşimin dil gelişimine olumlu etkisi meta-analizlerle gösterildi ([Mackey
 
 **Ölçüm (ayda 1):** Aynı 1 dakikalık metni ve aynı 1 dakikalık serbest konuşmayı kaydedin. İlk kayıtla karşılaştırın; eğitmenden ya da yapay zekâdan 1–9 arası "anlaşılırlık" puanı isteyin; ELSA'da hedef ses puanlarını not edin.
 
-İsteğe bağlı (ilk 8 hafta): English Accent Coach (ücretsiz, çok konuşmacılı ses ayırt etme oyunu; günde 10 dk). Algı eğitimi kanıtı güçlü olduğu için tek istisna kaynak olarak eklenebilir.
+İsteğe bağlı (ilk 8 hafta): English Accent Coach (çok konuşmacılı ses ayırt etme alıştırması; günde 10 dk; ücretini sitesinden kontrol edin). *Nihai planda bu araç isteğe bağlı değil; toplam ~400 dk ile sınırlı.* Algı eğitimi kanıtı güçlü olduğu için tek istisna kaynak olarak eklenebilir.
 
 ---
 
@@ -294,7 +296,7 @@ Uzun vadeli okuma hızı hedefi, iyi anlamayla dakikada ~250 kelime ([Nation —
 
 | Hacim | Bu plan (180 gün) | Araştırma eşiği | Durum |
 |---|---|---|---|
-| Okuma | ~1,1 milyon kelime; ~63. günde ~240 bin, ~105. günde ~510 bin | Her kelimeyle ortalama ≥12 karşılaşma için: 2.000 aile ~200 bin, 3.000 aile ~500 bin, 4.000 aile ~1 milyon kelime ([Nation 2014](https://nflrc.hawaii.edu/rfl/item-detail/303)) | ✅ A2 sonunda 2.000, B1 sonunda 3.000, ~160–165. günde 4.000 aile eşiği |
+| Okuma | ~1,1 milyon kelime; ~63. günde ~240 bin, ~105. günde ~510 bin | Her kelimeyle ortalama ≥12 karşılaşma için: 2.000 aile ~200 bin, 3.000 aile ~500 bin, 4.000 aile ~1 milyon kelime ([Nation 2014](https://nflrc.hawaii.edu/rfl/item-detail/303); 3.000 ve 4.000 için ara değerler kaba tahmin, birincil tabloyla yeniden doğrulanamadı) | ✅ A2 sonunda 2.000, B1 sonunda 3.000, ~160–165. günde 4.000 aile eşiği |
 | Okuma akıcılığı | ~1,1 milyon / 6 ay | Yıllık asgari ~200 bin kelime ([Beglar & Hunt 2014](https://scholarspace.manoa.hawaii.edu/items/dd514c21-74d8-457f-8813-acb63bf3e596/full)) | ✅ ~5 katı |
 | IELTS kelime gereksinimi | Okuma + Anki (günde 25 kart ≈ 4.500 kart) | Okumanın %95'i için ~4.000, dinlemenin %95'i için ~3.000 aile ([SAGE Open 2025](https://journals.sagepub.com/doi/xml/10.1177/21582440251362269); [SAGE Open 2022](https://journals.sagepub.com/doi/xml/10.1177/21582440221079934)) | ✅ |
 | Dinleme | ~300 saat (≈ 2 milyon duyulan kelime) | Dizilerin %95'i için ~3.000 aile | ✅ Dizi B1'de başlar |

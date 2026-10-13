@@ -3,6 +3,8 @@
 **Mevcut 180 günlük plana entegre sürüm** · 12 Ekim 2026
 İlgili belgeler: [180 günlük planın değerlendirmesi](180_gunluk_plan_degerlendirmesi.md) · **Günlük uygulama için:** [8 basamaklı uygulama planı](girdi_cikti_uygulama_plani.md) (mevcut planınıza blok blok yerleşen, haftalık hacimleri hesaplanmış sürüm)
 
+**Güncel ve tek başına yeterli sürüm:** [Nihai Plan](nihai_dort_bilesen_plani.md) (telaffuz, girdi, çıktı ve akıcılık; derin araştırmayla güncellendi). Bu belge araştırma arka planı olarak kalır.
+
 Bu belge iki soruyu yanıtlar:
 1. **Nasıl kurulur?** Anlam odaklı girdi (MFI: okuma, dinleme, izleme) ve anlam odaklı çıktı (MFO: konuşma, yazma) planı hangi kurallara göre seçilir ve ayarlanır?
 2. **Ne yapılır?** Sıfırdan B2.2'ye beş seviyede günlük/haftalık plan; mevcut planınızda neyin yerine ne geleceği.
@@ -66,7 +68,7 @@ Bu belge iki soruyu yanıtlar:
 
 | Bileşen | Bulgu | Kanıt | Plana yansıması |
 |---|---|---|---|
-| Yaygın okuma | 49 çalışma, 5.919 katılımcı: grup karşılaştırmalarında d=0,46, ön-son testlerde d=0,71; yetişkinlerde ve yabancı dil (EFL) ortamında daha büyük etki ([Jeon & Day 2016](https://nflrc.hawaii.edu/rfl/item-detail/354)) | Güçlü | Her gün 45–60 dk derecelendirilmiş kitap (graded reader) |
+| Yaygın okuma | 49 çalışma, 5.919 katılımcı: küçük-orta etki; yetişkinlerde ve yabancı dil (EFL) ortamında daha büyük etki ([Jeon & Day 2016](https://nflrc.hawaii.edu/rfl/item-detail/354)). Ayrı bir meta-analizde (34 çalışma, 3.942 katılımcı) grup karşılaştırmalarında d=0,46, ön-son testlerde d=0,71 ([Nakanishi 2015](https://metatoc.com/papers/42892-a-meta-analysis-of-extensive-reading-research)). *Düzeltme (13 Ekim 2026): İlk sürümde bu iki d değerini yanlışlıkla Jeon & Day'e atfetmiştim.* | Güçlü | Her gün 45–60 dk derecelendirilmiş kitap (graded reader) |
 | %98 kapsama | Yardımsız okumada bilinen kelime oranı en az %98 olmalı ([Nation](https://assets.cambridge.org/97810090/98359/excerpt/9781009098359_excerpt.pdf); Hu & Nation 2000). Yardımlı okuma da, odak mesajda kaldıkça anlam odaklı girdi sayılır ([Nation röportajı](https://www.lingq.com/ko/learn-english-online/courses/23894/one-hundred-and-twenty-one-interview-wi-33541/)) | Orta | Sayfa testi; Seviye 1'de yardımlı okuma |
 | Kolay ve keyifli okuma | Yaygın okumanın ilk ilkesi "materyal kolaydır"; çeşitli, kendi seçtiğiniz, hızlı, keyifli okuma ([Day & Bamford 2002](https://www2.hawaii.edu/~readfl/rfl/October2002/day/day.html)). Başlangıçta sayfada ≤1–2, orta düzeyde ≤4–5 bilinmeyen ([OUP özeti](https://teachingenglishwithoxford.oup.com/2017/01/11/extensive-reading-and-language-learning)) | Uzman uzlaşısı | Kitap seçme kuralları |
 | Okuma hacmi | En büyük okuma hızı kazanımını sağlayanlar bir yılda ortalama ~208.600 kelime okudu, çoğunlukla 1.600 headword'e kadar basitleştirilmiş metin; yıllık asgari 200.000 kelime öneriliyor ([Beglar & Hunt 2014](https://scholarspace.manoa.hawaii.edu/items/dd514c21-74d8-457f-8813-acb63bf3e596/full)). Dört yıllık bir programda TOEIC artışı ~300.000 kelimeden sonra belirginleşti (ikincil aktarım; [Nishizawa vd. 2010](https://jalt-publications.org/archive/proceedings/2009/E035.pdf)) | Orta | Haftalık kelime hedefleri |
@@ -413,7 +415,7 @@ Her seviyede en fazla **1 okuma serisi + 1–2 dinleme kaynağı + 1 video kayna
 
 **Girdi**
 - Nation — [Four Strands, Cambridge örnek bölümü](https://assets.cambridge.org/97810090/98359/excerpt/9781009098359_excerpt.pdf) · [Nation röportajı (yardımlı okuma)](https://www.lingq.com/ko/learn-english-online/courses/23894/one-hundred-and-twenty-one-interview-wi-33541/) · [Nation 2014](https://nflrc.hawaii.edu/rfl/item-detail/303)
-- [Jeon & Day 2016 — ER meta-analizi](https://nflrc.hawaii.edu/rfl/item-detail/354)
+- [Jeon & Day 2016 — ER meta-analizi](https://nflrc.hawaii.edu/rfl/item-detail/354) · [Nakanishi 2015 — ER meta-analizi](https://metatoc.com/papers/42892-a-meta-analysis-of-extensive-reading-research)
 - [Day & Bamford 2002 — Top ten principles](https://www2.hawaii.edu/~readfl/rfl/October2002/day/day.html) · [OUP — ER and language learning](https://teachingenglishwithoxford.oup.com/2017/01/11/extensive-reading-and-language-learning)
 - [Beglar & Hunt 2014 — Pleasure reading and reading rate gains](https://scholarspace.manoa.hawaii.edu/items/dd514c21-74d8-457f-8813-acb63bf3e596/full) · [Nishizawa vd. 2010](https://jalt-publications.org/archive/proceedings/2009/E035.pdf)
 - [OUP Japan — Oxford Bookworms düzeyleri](https://www.oupjapan.co.jp/en/gradedreaders/bookworms.shtml)
